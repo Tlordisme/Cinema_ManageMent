@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.10" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.10">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.10">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Services\Movie\CM.Movie.ApplicantService\CM.Movie.ApplicantService.csproj" />
+	  <ProjectReference Include="..\Services\Movie\CM.Movie.Dtos\CM.Movie.Dtos.csproj" />
+	  <ProjectReference Include="..\Services\Showtime\CM.Showtime.ApplicantService\CM.Showtime.ApplicantService.csproj" />
+	  <ProjectReference Include="..\Services\User\CB.User.ApplicantService\CM.Auth.ApplicantService.csproj" />
+	</ItemGroup>
+
+</Project>

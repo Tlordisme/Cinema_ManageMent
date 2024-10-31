@@ -1,6 +1,0 @@
-@Coffee_Book_Api_HostAddress = http://localhost:5213
-
-GET {{Coffee_Book_Api_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

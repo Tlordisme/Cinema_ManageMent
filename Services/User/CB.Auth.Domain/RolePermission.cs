@@ -8,14 +8,15 @@ using System.Threading.Tasks;
 
 namespace CM.Auth.Domain
 {
-    [Table(nameof(Role))]
-    public class Role
+    [Table(nameof(RolePermission))]
+    public class RolePermission
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
+        public int RoleId { get; set; }
 
-        [MaxLength(50)]
-        public string Name { get; set; }
+        [MaxLength(100)]
+        public string PermissionKey { get; set; }
     }
 }

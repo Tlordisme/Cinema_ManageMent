@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+	  <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0" />
+	  <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.10" />
+	  <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.1.2" />
+	  <PackageReference Include="Portable.BouncyCastle" Version="1.9.0" />
+	  <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.1.2" />
+	  <PackageReference Include="System.Security.Claims" Version="4.3.0" />
+	</ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Share.ApplicationService\Share.ApplicationService.csproj" />
+    <ProjectReference Include="..\..\Shared\Share.Constant\Share.Constant.csproj" />
+    <ProjectReference Include="..\CB.User.Dtos\CM.Auth.Dtos.csproj" />
+    <ProjectReference Include="..\CB.User.Infrastructure\CM.Auth.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
