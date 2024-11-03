@@ -28,5 +28,7 @@ namespace CM.Auth.Domain
 
         public GenderType Gender { get; set; }
         public DateTime? DateOfBirth { get; set; }
+
+        //public virtual ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using CM.Auth.Domain;
@@ -13,8 +14,6 @@ namespace CM.Auth.Infrastructure
         public DbSet<User> Users { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<UserRole> UserRoles { get; set; }
-
-        public DbSet<RolePermission> RolePermissions { get; set; }
 
         public AuthDbContext(DbContextOptions<AuthDbContext> options)
             : base(options) { }
@@ -35,14 +34,8 @@ namespace CM.Auth.Infrastructure
                 .WithMany()
                 .HasForeignKey(e => e.RoleId)
                 .OnDelete(DeleteBehavior.Restrict);
-
-            modelBuilder
-                .Entity<RolePermission>()
-                .HasOne<Role>()
-                .WithMany()
-                .HasForeignKey(e => e.RoleId)
-                .OnDelete(DeleteBehavior.Restrict);
             base.OnModelCreating(modelBuilder);
         }
+
     }
 }

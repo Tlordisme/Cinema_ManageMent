@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CM_API.Migrations
 {
     [DbContext(typeof(AuthDbContext))]
-    [Migration("20241102172141_Init")]
+    [Migration("20241103204533_Init")]
     partial class Init
     {
         /// <inheritdoc />
@@ -41,29 +41,6 @@ namespace CM_API.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Role");
-                });
-
-            modelBuilder.Entity("CM.Auth.Domain.RolePermission", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("PermissionKey")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<int>("RoleId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("RoleId");
-
-                    b.ToTable("RolePermission");
                 });
 
             modelBuilder.Entity("CM.Auth.Domain.User", b =>
@@ -126,15 +103,6 @@ namespace CM_API.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("UserRole");
-                });
-
-            modelBuilder.Entity("CM.Auth.Domain.RolePermission", b =>
-                {
-                    b.HasOne("CM.Auth.Domain.Role", null)
-                        .WithMany()
-                        .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("CM.Auth.Domain.UserRole", b =>

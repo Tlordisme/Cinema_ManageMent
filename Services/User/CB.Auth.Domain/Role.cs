@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace CM.Auth.Domain
 {
+
     [Table(nameof(Role))]
     public class Role
     {
@@ -17,5 +18,7 @@ namespace CM.Auth.Domain
 
         [MaxLength(50)]
         public string Name { get; set; }
+
+        //public virtual ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
     }
 }

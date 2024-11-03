@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CM.Auth.Dtos
+namespace CM.Auth.Dtos.Role
 {
-    internal class CreateRoleDto
+    public class RoleDto
     {
+        public int Id { get; set; }
+        public string Name { get; set; }
     }
 }

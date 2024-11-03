@@ -10,14 +10,13 @@ namespace CM.Auth.Dtos
 {
     public class UpdateUserDto
     {
-        public int Id { get; set; } // Bạn có thể giữ ID để xác định người dùng cần cập nhật
+        public int Id { get; set; }
 
+        [EmailAddress]
         public string Email { get; set; }
-
         public string UserName { get; set; }
-
         public string FullName { get; set; }
-        public GenderType? Gender { get; set; } // Nullable nếu không muốn yêu cầu
+        public GenderType Gender { get; set; }
         public DateTime? DateOfBirth { get; set; }
     }
 }

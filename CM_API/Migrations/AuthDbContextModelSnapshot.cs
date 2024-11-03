@@ -40,29 +40,6 @@ namespace CM_API.Migrations
                     b.ToTable("Role");
                 });
 
-            modelBuilder.Entity("CM.Auth.Domain.RolePermission", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("PermissionKey")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<int>("RoleId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("RoleId");
-
-                    b.ToTable("RolePermission");
-                });
-
             modelBuilder.Entity("CM.Auth.Domain.User", b =>
                 {
                     b.Property<int>("Id")
@@ -123,15 +100,6 @@ namespace CM_API.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("UserRole");
-                });
-
-            modelBuilder.Entity("CM.Auth.Domain.RolePermission", b =>
-                {
-                    b.HasOne("CM.Auth.Domain.Role", null)
-                        .WithMany()
-                        .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("CM.Auth.Domain.UserRole", b =>

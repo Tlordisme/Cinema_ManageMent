@@ -1,5 +1,6 @@
 ﻿using CM.Auth.Domain;
 using CM.Auth.Dtos;
+using Microsoft.AspNetCore.Identity.Data;
 using Share.Constant.Permission;
 using System;
 using System.Collections.Generic;
@@ -10,11 +11,9 @@ using System.Threading.Tasks;
 
 namespace CM.Auth.ApplicantService.AuthModule.Abstracts
 {
-    public interface IUserService
+    public interface IAuthService
     {
-        Task<string> Register(RegisterUserDto registerDto);
-        Task<string> Login(LoginDto loginDto);
-        Task<string> CreateUser(RegisterUserDto createDto, int CreateUserId);
-
+        Task<LoginResponseDto> Login(LoginDto loginDto);
+        Task<UserDto> Register(RegisterUserDto registerDto);
     }
 }

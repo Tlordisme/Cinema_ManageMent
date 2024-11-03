@@ -5,9 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using CM.Auth.ApplicantService.AuthModule.Abstracts;
 using CM.Auth.ApplicantService.AuthModule.Implements;
+using CM.Auth.ApplicantService.RoleModule.Abstracts;
+using CM.Auth.ApplicantService.RoleModule.Implements;
+using CM.Auth.ApplicantService.UserModule.Abstracts;
+using CM.Auth.ApplicantService.UserModule.Implements;
+using CM.Auth.Domain;
 using CM.Auth.Infrastructure;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -34,32 +40,40 @@ namespace CM.Auth.ApplicationService.StartUp
                             );
                         }
                     );
-                }
+                },
+                ServiceLifetime.Scoped
             );
-            var jwtSettings = builder.Configuration.GetSection("Jwt");
-            var key = Encoding.UTF8.GetBytes(jwtSettings["Key"]);
-
-            builder.Services.AddAuthentication(options =>
-            {
-                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            })
-            .AddJwtBearer(options =>
-            {
-                options.TokenValidationParameters = new TokenValidationParameters
-                {
-                    ValidateIssuer = true,
-                    ValidateAudience = true,
-                    ValidateIssuerSigningKey = true,
-                    ValidIssuer = jwtSettings["Issuer"],
-                    ValidAudience = jwtSettings["Audience"],
-                    IssuerSigningKey = new SymmetricSecurityKey(key)
-                };
-            });
-
-           
-            builder.Services.AddScoped<IJwtService, JwtService>();
+            builder.Services.AddScoped<IAuthService, AuthService>();
             builder.Services.AddScoped<IUserService, UserService>();
+            builder.Services.AddScoped<IRoleService, RoleService>();
+            builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
+            // Cấu hình JWT Authentication
+
+            builder
+                .Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(options =>
+                {
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuer = true,
+                        ValidateAudience = true,
+                        ValidateLifetime = true,
+                        ValidateIssuerSigningKey = true,
+                        ValidIssuer = builder.Configuration["Jwt:Issuer"],
+                        ValidAudience = builder.Configuration["Jwt:Audience"],
+                        IssuerSigningKey = new SymmetricSecurityKey(
+                            Encoding.UTF8.GetBytes(builder.Configuration["Jwt:SecretKey"])
+                        ),
+                    };
+                });
+
+            // Cấu hình Authorization
+            //builder.Services.AddAuthorization(options =>
+            //{
+            //    // Ví dụ về cách cấu hình các quyền truy cập cho các vai trò khác nhau
+            //    options.AddPolicy("AdminOnly", policy => policy.RequireRole("Admin"));
+            //    options.AddPolicy("UserOnly", policy => policy.RequireRole("User"));
+            //});
         }
     }
 }
