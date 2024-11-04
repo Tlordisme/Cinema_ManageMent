@@ -4,8 +4,11 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using CM.Auth.ApplicantService.AuthModule.Abstracts;
+using CM.Auth.ApplicantService.Common;
+using CM.Auth.ApplicantService.Common.Abstracts;
 using CM.Auth.ApplicantService.RoleModule.Abstracts;
 using CM.Auth.Domain;
 using CM.Auth.Dtos;
@@ -20,17 +23,20 @@ using Share.Constant.Permission;
 
 namespace CM.Auth.ApplicantService.AuthModule.Implements
 {
-    public class AuthService : BaseService, IAuthService
+    public class AuthService : BaseService, IAuthService 
     {
         private readonly AuthDbContext _dbContext;
         private readonly IConfiguration _configuration;
         private readonly IPasswordHasher<User> _passwordHasher;
         private readonly IRoleService _roleService;
+        private readonly IValidateEmailService _validateEmailService;
+
         public AuthService(
             AuthDbContext dbContext,
             IConfiguration configuration,
             IPasswordHasher<User> passwordHasher,
             IRoleService roleService,
+            IValidateEmailService validateEmailService,
             ILogger<AuthService> logger
         )
             : base(logger)
@@ -39,10 +45,18 @@ namespace CM.Auth.ApplicantService.AuthModule.Implements
             _configuration = configuration;
             _passwordHasher = passwordHasher;
             _roleService = roleService;
+            _validateEmailService = validateEmailService;
         }
 
         public async Task<UserDto> Register(RegisterUserDto registerDto)
         {
+            if (!_validateEmailService.IsValidEmail(registerDto.Email))
+            {
+                LogWarning($"Invalid email format for {registerDto.Email}.");
+                throw new ArgumentException("Email không hợp lệ.");
+            }
+
+
             if (
                 await _dbContext.Users.AnyAsync(u =>
                     u.Email == registerDto.Email || u.UserName == registerDto.UserName
@@ -70,6 +84,7 @@ namespace CM.Auth.ApplicantService.AuthModule.Implements
                 UserName = user.UserName,
                 Email = user.Email,
                 FullName = user.FullName,
+                Gender = user.Gender
             };
         }
 
@@ -86,7 +101,10 @@ namespace CM.Auth.ApplicantService.AuthModule.Implements
             }
 
             // Kiểm tra mật khẩu
-            if (_passwordHasher.VerifyHashedPassword(user, user.Password, loginDto.Password) == PasswordVerificationResult.Failed)
+            if (
+                _passwordHasher.VerifyHashedPassword(user, user.Password, loginDto.Password)
+                == PasswordVerificationResult.Failed
+            )
             {
                 LogWarning($"Invalid login attempt for user {loginDto.Username}.");
                 throw new UnauthorizedAccessException("Invalid login attempt.");
@@ -102,18 +120,17 @@ namespace CM.Auth.ApplicantService.AuthModule.Implements
                 Token = await GenerateJwtTokenAsync(user),
                 UserName = user.UserName,
                 UserId = user.Id.ToString(), // Nếu ID là kiểu Guid, bạn có thể thay đổi tùy ý
-                FullName = user.FullName
+                FullName = user.FullName,
             };
         }
 
-
         private async Task<string> GenerateJwtTokenAsync(User user)
         {
-
             var claims = new List<Claim>
             {
-                new Claim(JwtRegisteredClaimNames.Sub, user.UserName),
-                new Claim(JwtRegisteredClaimNames.Jti, user.Id.ToString()),
+                new Claim("Id", user.Id.ToString()), // Add user ID claim
+                new Claim("Username", user.UserName), // Add username claim
+                new Claim("Email", user.Email),
             };
             if (_roleService == null)
             {
@@ -122,9 +139,9 @@ namespace CM.Auth.ApplicantService.AuthModule.Implements
 
             var roles = await _roleService.GetUserRolesAsync(user);
             LogInformation($"Roles for user {user.UserName}: {string.Join(", ", roles)}");
+
             var roleClaims = roles.Select(roleName => new Claim(ClaimTypes.Role, roleName));
 
-            // Thay vì claims.AddRange(roleClaims), ta dùng claims.AddRange(roleClaims.ToList())
             claims.AddRange(roleClaims);
 
             var key = new SymmetricSecurityKey(
@@ -136,7 +153,7 @@ namespace CM.Auth.ApplicantService.AuthModule.Implements
                 issuer: _configuration["Jwt:Issuer"],
                 audience: _configuration["Jwt:Audience"],
                 claims: claims,
-                expires: DateTime.Now.AddMinutes(30),
+                expires: DateTime.Now.AddMinutes(Convert.ToDouble(_configuration["Jwt:ExpiryMinutes"])),
                 signingCredentials: creds
             );
 

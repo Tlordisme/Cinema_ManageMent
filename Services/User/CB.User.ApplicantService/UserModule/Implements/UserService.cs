@@ -1,4 +1,5 @@
-﻿using CM.Auth.ApplicantService.UserModule.Abstracts;
+﻿using CM.Auth.ApplicantService.Common.Abstracts;
+using CM.Auth.ApplicantService.UserModule.Abstracts;
 using CM.Auth.Domain;
 using CM.Auth.Dtos;
 using CM.Auth.Infrastructure;
@@ -16,13 +17,20 @@ namespace CM.Auth.ApplicantService.UserModule.Implements
 {
     public class UserService : BaseService, IUserService
     {
-        private readonly AuthDbContext _context; 
-        public UserService(AuthDbContext context, ILogger<UserService> logger): base(logger)
+        private readonly AuthDbContext _context;
+        private readonly IValidateEmailService _validateEmailService;
+        public UserService(AuthDbContext context, IValidateEmailService validateEmailService, ILogger<UserService> logger): base(logger)
         {
             _context = context;
+            _validateEmailService = validateEmailService;
         }
         public async Task<UserDto> CreateUser(CreateUserDto createUserDto)
         {
+            if (!_validateEmailService.IsValidEmail(createUserDto.Email))
+            {
+                LogWarning($"Invalid email format for {createUserDto.Email}.");
+                throw new ArgumentException("Email không hợp lệ.");
+            }
             var user = new User
             {
                 Email = createUserDto.Email,

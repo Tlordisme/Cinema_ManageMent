@@ -1,6 +1,6 @@
-
 using CM.Auth.ApplicationService.StartUp;
 using CM.Movie.ApplicantService.StartUp;
+using Microsoft.OpenApi.Models;
 
 namespace CM_API
 {
@@ -19,8 +19,42 @@ namespace CM_API
             builder.ConfigureAuth(typeof(Program).Namespace);
             builder.ConfigureMovie(typeof(Program).Namespace);
 
+            builder.Services.AddSwaggerGen(options =>
+            {
+                options.AddSecurityDefinition(
+                    "Bearer",
+                    new OpenApiSecurityScheme()
+                    {
+                        Name = "Authorization",
+                        In = ParameterLocation.Header,
+                        Type = SecuritySchemeType.Http,
+                        Scheme = "Bearer",
+                    }
+                );
+
+                options.AddSecurityRequirement(
+                    new OpenApiSecurityRequirement
+                    {
+                        {
+                            new OpenApiSecurityScheme
+                            {
+                                Reference = new OpenApiReference
+                                {
+                                    Type = ReferenceType.SecurityScheme,
+                                    Id = "Bearer",
+                                },
+                            },
+                            Array.Empty<string>()
+                        },
+                    }
+                );
+            });
 
             var app = builder.Build();
+
+            //
+
+            //
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
@@ -33,7 +67,6 @@ namespace CM_API
 
             app.UseAuthentication();
             app.UseAuthorization();
-
 
             app.MapControllers();
 

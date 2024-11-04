@@ -29,6 +29,10 @@ namespace CM_API.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> Register([FromBody] RegisterUserDto registerDto)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
             var user = await _authService.Register(registerDto);
             return Ok(user);
         }
@@ -44,6 +48,10 @@ namespace CM_API.Controllers
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> CreateUser([FromBody] CreateUserDto createUserDto)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
             var createdUser = await _userService.CreateUser(createUserDto);
             return CreatedAtAction(nameof(GetUserData), new { id = createdUser.Id }, createdUser);
         }

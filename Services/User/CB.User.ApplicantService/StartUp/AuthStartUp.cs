@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using CM.Auth.ApplicantService.AuthModule.Abstracts;
 using CM.Auth.ApplicantService.AuthModule.Implements;
+using CM.Auth.ApplicantService.Common.Abstracts;
+using CM.Auth.ApplicantService.Common.Implements;
 using CM.Auth.ApplicantService.RoleModule.Abstracts;
 using CM.Auth.ApplicantService.RoleModule.Implements;
 using CM.Auth.ApplicantService.UserModule.Abstracts;
@@ -46,6 +48,7 @@ namespace CM.Auth.ApplicationService.StartUp
             builder.Services.AddScoped<IAuthService, AuthService>();
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<IRoleService, RoleService>();
+            builder.Services.AddScoped<IValidateEmailService, ValidateEmailService>();
             builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
             // Cấu hình JWT Authentication
 
@@ -67,13 +70,6 @@ namespace CM.Auth.ApplicationService.StartUp
                     };
                 });
 
-            // Cấu hình Authorization
-            //builder.Services.AddAuthorization(options =>
-            //{
-            //    // Ví dụ về cách cấu hình các quyền truy cập cho các vai trò khác nhau
-            //    options.AddPolicy("AdminOnly", policy => policy.RequireRole("Admin"));
-            //    options.AddPolicy("UserOnly", policy => policy.RequireRole("User"));
-            //});
         }
     }
 }

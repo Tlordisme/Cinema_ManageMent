@@ -18,5 +18,6 @@ namespace CM.Auth.Dtos
         public string FullName { get; set; }
         public GenderType Gender { get; set; }
         public DateTime? DateOfBirth { get; set; }
+
     }
 }

@@ -14,7 +14,6 @@ namespace CM.Auth.Dtos
         public string UserName { get; set; }
         public string FullName { get; set; }
         public GenderType Gender { get; set; }
-        public List<string> Roles { get; set; }
     }
 
 }

@@ -14,6 +14,7 @@ namespace CM.Auth.Domain
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
+
         [EmailAddress(ErrorMessage = "Invalid Email Address")]
         [MaxLength(256)]
         public string Email { get; set; }
@@ -27,6 +28,8 @@ namespace CM.Auth.Domain
         public string FullName { get; set; }
 
         public GenderType Gender { get; set; }
+        [DataType(DataType.Date)]
+        [Column(TypeName = "date")]
         public DateTime? DateOfBirth { get; set; }
 
         //public virtual ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
