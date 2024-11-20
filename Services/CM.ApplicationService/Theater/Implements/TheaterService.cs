@@ -31,7 +31,7 @@ namespace CM.ApplicationService.Theater.Implements
 
             var theater = new CMTheater
             {
-                Id = Guid.NewGuid().ToString(),
+                Id = dto.Id,
                 Name = dto.Name,
                 Location = dto.Location,
                 ChainId = dto.ChainId

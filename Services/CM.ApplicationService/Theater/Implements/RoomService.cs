@@ -14,7 +14,7 @@ namespace CM.ApplicationService.Theater.Implements
 {
     public class RoomService : ServiceBase, IRoomService
     {
-        public RoomService(CMDbContext dbContext, Logger<ServiceBase> logger)
+        public RoomService(CMDbContext dbContext, ILogger<ServiceBase> logger)
             : base(logger, dbContext) { }
 
         public string CreateRoom(RoomDto dto)
@@ -25,7 +25,7 @@ namespace CM.ApplicationService.Theater.Implements
 
             var room = new CMRoom
             {
-                Id = Guid.NewGuid().ToString(),
+                Id = dto.Id,
                 Name = dto.Name,
                 TheaterId = dto.TheaterId,
                 Type = dto.Type

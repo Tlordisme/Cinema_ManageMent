@@ -12,5 +12,6 @@ namespace CM.ApplicationService.Theater.Abstracts
     {
         string CreateRoom(RoomDto dto); 
         List<CMRoom> GetRoomsByTheaterId(string theaterId);
+        
     }
 }

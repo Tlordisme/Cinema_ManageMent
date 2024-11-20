@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CM_API.Migrations
 {
     [DbContext(typeof(CMDbContext))]
-    [Migration("20241117073820_Init")]
-    partial class Init
+    [Migration("20241120131251_First")]
+    partial class First
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -179,8 +179,7 @@ namespace CM_API.Migrations
 
                     b.HasIndex("MovieId");
 
-                    b.HasIndex("UserId")
-                        .IsUnique();
+                    b.HasIndex("UserId");
 
                     b.ToTable("Comments");
                 });
@@ -288,11 +287,14 @@ namespace CM_API.Migrations
 
             modelBuilder.Entity("CM.Domain.Seat.CMSeat", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Number")
+                        .HasColumnType("int");
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
@@ -301,18 +303,17 @@ namespace CM_API.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("SeatNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Row")
+                        .HasColumnType("int");
 
                     b.Property<string>("SeatType")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("isAvailable")
-                        .HasColumnType("bit");
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
 
-                    b.HasKey("ID");
+                    b.HasKey("Id");
 
                     b.HasIndex("RoomID");
 
@@ -447,8 +448,8 @@ namespace CM_API.Migrations
                         .IsRequired();
 
                     b.HasOne("CM.Domain.Auth.User", null)
-                        .WithOne()
-                        .HasForeignKey("CM.Domain.Movie.MoComment", "UserId")
+                        .WithMany()
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });

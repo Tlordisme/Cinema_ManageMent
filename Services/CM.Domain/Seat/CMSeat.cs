@@ -16,7 +16,7 @@ namespace CM.Domain.Seat
 
         public int Number { get; set; } 
         
-        public string Row { get; set; }
+        public int Row { get; set; }
 
         public string SeatType { get; set; }    
         public decimal Price { get; set; } 

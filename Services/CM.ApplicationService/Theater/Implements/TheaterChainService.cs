@@ -26,7 +26,7 @@ namespace CM.ApplicationService.Theater.Implements
         {
             var theaterChain = new CMTheaterChain
             {
-                Id = Guid.NewGuid().ToString(),
+                Id = dto.Id,
                 Name = dto.Name,
             };
 
