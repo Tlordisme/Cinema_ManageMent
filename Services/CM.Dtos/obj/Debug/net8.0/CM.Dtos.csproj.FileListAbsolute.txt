@@ -1,0 +1,16 @@
+D:\Cinema_Management\Cinema_Management\Services\CM.Dtos\bin\Debug\net8.0\CM.Dtos.deps.json
+D:\Cinema_Management\Cinema_Management\Services\CM.Dtos\bin\Debug\net8.0\CM.Dtos.dll
+D:\Cinema_Management\Cinema_Management\Services\CM.Dtos\bin\Debug\net8.0\CM.Dtos.pdb
+D:\Cinema_Management\Cinema_Management\Services\CM.Dtos\bin\Debug\net8.0\CM.Domain.dll
+D:\Cinema_Management\Cinema_Management\Services\CM.Dtos\bin\Debug\net8.0\CM.Domain.pdb
+D:\Cinema_Management\Cinema_Management\Services\CM.Dtos\obj\Debug\net8.0\CM.Dtos.csproj.AssemblyReference.cache
+D:\Cinema_Management\Cinema_Management\Services\CM.Dtos\obj\Debug\net8.0\CM.Dtos.GeneratedMSBuildEditorConfig.editorconfig
+D:\Cinema_Management\Cinema_Management\Services\CM.Dtos\obj\Debug\net8.0\CM.Dtos.AssemblyInfoInputs.cache
+D:\Cinema_Management\Cinema_Management\Services\CM.Dtos\obj\Debug\net8.0\CM.Dtos.AssemblyInfo.cs
+D:\Cinema_Management\Cinema_Management\Services\CM.Dtos\obj\Debug\net8.0\CM.Dtos.csproj.CoreCompileInputs.cache
+D:\Cinema_Management\Cinema_Management\Services\CM.Dtos\obj\Debug\net8.0\CM.Dtos.sourcelink.json
+D:\Cinema_Management\Cinema_Management\Services\CM.Dtos\obj\Debug\net8.0\CM.Dtos.csproj.Up2Date
+D:\Cinema_Management\Cinema_Management\Services\CM.Dtos\obj\Debug\net8.0\CM.Dtos.dll
+D:\Cinema_Management\Cinema_Management\Services\CM.Dtos\obj\Debug\net8.0\refint\CM.Dtos.dll
+D:\Cinema_Management\Cinema_Management\Services\CM.Dtos\obj\Debug\net8.0\CM.Dtos.pdb
+D:\Cinema_Management\Cinema_Management\Services\CM.Dtos\obj\Debug\net8.0\ref\CM.Dtos.dll

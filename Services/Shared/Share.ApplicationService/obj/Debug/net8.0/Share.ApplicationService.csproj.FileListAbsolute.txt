@@ -1,0 +1,13 @@
+D:\Cinema_Management\Cinema_Management\Services\Shared\Share.ApplicationService\bin\Debug\net8.0\Share.ApplicationService.deps.json
+D:\Cinema_Management\Cinema_Management\Services\Shared\Share.ApplicationService\bin\Debug\net8.0\Share.ApplicationService.dll
+D:\Cinema_Management\Cinema_Management\Services\Shared\Share.ApplicationService\bin\Debug\net8.0\Share.ApplicationService.pdb
+D:\Cinema_Management\Cinema_Management\Services\Shared\Share.ApplicationService\obj\Debug\net8.0\Share.ApplicationService.csproj.AssemblyReference.cache
+D:\Cinema_Management\Cinema_Management\Services\Shared\Share.ApplicationService\obj\Debug\net8.0\Share.ApplicationService.GeneratedMSBuildEditorConfig.editorconfig
+D:\Cinema_Management\Cinema_Management\Services\Shared\Share.ApplicationService\obj\Debug\net8.0\Share.ApplicationService.AssemblyInfoInputs.cache
+D:\Cinema_Management\Cinema_Management\Services\Shared\Share.ApplicationService\obj\Debug\net8.0\Share.ApplicationService.AssemblyInfo.cs
+D:\Cinema_Management\Cinema_Management\Services\Shared\Share.ApplicationService\obj\Debug\net8.0\Share.ApplicationService.csproj.CoreCompileInputs.cache
+D:\Cinema_Management\Cinema_Management\Services\Shared\Share.ApplicationService\obj\Debug\net8.0\Share.ApplicationService.sourcelink.json
+D:\Cinema_Management\Cinema_Management\Services\Shared\Share.ApplicationService\obj\Debug\net8.0\Share.ApplicationService.dll
+D:\Cinema_Management\Cinema_Management\Services\Shared\Share.ApplicationService\obj\Debug\net8.0\refint\Share.ApplicationService.dll
+D:\Cinema_Management\Cinema_Management\Services\Shared\Share.ApplicationService\obj\Debug\net8.0\Share.ApplicationService.pdb
+D:\Cinema_Management\Cinema_Management\Services\Shared\Share.ApplicationService\obj\Debug\net8.0\ref\Share.ApplicationService.dll

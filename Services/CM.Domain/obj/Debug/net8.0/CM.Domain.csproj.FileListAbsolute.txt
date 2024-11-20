@@ -1,0 +1,13 @@
+D:\Cinema_Management\Cinema_Management\Services\CM.Domain\bin\Debug\net8.0\CM.Domain.deps.json
+D:\Cinema_Management\Cinema_Management\Services\CM.Domain\bin\Debug\net8.0\CM.Domain.dll
+D:\Cinema_Management\Cinema_Management\Services\CM.Domain\bin\Debug\net8.0\CM.Domain.pdb
+D:\Cinema_Management\Cinema_Management\Services\CM.Domain\obj\Debug\net8.0\CM.Domain.csproj.AssemblyReference.cache
+D:\Cinema_Management\Cinema_Management\Services\CM.Domain\obj\Debug\net8.0\CM.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Cinema_Management\Cinema_Management\Services\CM.Domain\obj\Debug\net8.0\CM.Domain.AssemblyInfoInputs.cache
+D:\Cinema_Management\Cinema_Management\Services\CM.Domain\obj\Debug\net8.0\CM.Domain.AssemblyInfo.cs
+D:\Cinema_Management\Cinema_Management\Services\CM.Domain\obj\Debug\net8.0\CM.Domain.csproj.CoreCompileInputs.cache
+D:\Cinema_Management\Cinema_Management\Services\CM.Domain\obj\Debug\net8.0\CM.Domain.sourcelink.json
+D:\Cinema_Management\Cinema_Management\Services\CM.Domain\obj\Debug\net8.0\CM.Domain.dll
+D:\Cinema_Management\Cinema_Management\Services\CM.Domain\obj\Debug\net8.0\refint\CM.Domain.dll
+D:\Cinema_Management\Cinema_Management\Services\CM.Domain\obj\Debug\net8.0\CM.Domain.pdb
+D:\Cinema_Management\Cinema_Management\Services\CM.Domain\obj\Debug\net8.0\ref\CM.Domain.dll

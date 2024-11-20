@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="FoodDrink\**" />
+    <Compile Remove="Payment\**" />
+    <EmbeddedResource Remove="FoodDrink\**" />
+    <EmbeddedResource Remove="Payment\**" />
+    <None Remove="FoodDrink\**" />
+    <None Remove="Payment\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.9.0" />
+  </ItemGroup>
+
+</Project>

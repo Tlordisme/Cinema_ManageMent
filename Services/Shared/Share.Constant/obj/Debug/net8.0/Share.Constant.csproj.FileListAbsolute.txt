@@ -1,0 +1,12 @@
+D:\Cinema_Management\Cinema_Management\Services\Shared\Share.Constant\bin\Debug\net8.0\Share.Constant.deps.json
+D:\Cinema_Management\Cinema_Management\Services\Shared\Share.Constant\bin\Debug\net8.0\Share.Constant.dll
+D:\Cinema_Management\Cinema_Management\Services\Shared\Share.Constant\bin\Debug\net8.0\Share.Constant.pdb
+D:\Cinema_Management\Cinema_Management\Services\Shared\Share.Constant\obj\Debug\net8.0\Share.Constant.GeneratedMSBuildEditorConfig.editorconfig
+D:\Cinema_Management\Cinema_Management\Services\Shared\Share.Constant\obj\Debug\net8.0\Share.Constant.AssemblyInfoInputs.cache
+D:\Cinema_Management\Cinema_Management\Services\Shared\Share.Constant\obj\Debug\net8.0\Share.Constant.AssemblyInfo.cs
+D:\Cinema_Management\Cinema_Management\Services\Shared\Share.Constant\obj\Debug\net8.0\Share.Constant.csproj.CoreCompileInputs.cache
+D:\Cinema_Management\Cinema_Management\Services\Shared\Share.Constant\obj\Debug\net8.0\Share.Constant.sourcelink.json
+D:\Cinema_Management\Cinema_Management\Services\Shared\Share.Constant\obj\Debug\net8.0\Share.Constant.dll
+D:\Cinema_Management\Cinema_Management\Services\Shared\Share.Constant\obj\Debug\net8.0\refint\Share.Constant.dll
+D:\Cinema_Management\Cinema_Management\Services\Shared\Share.Constant\obj\Debug\net8.0\Share.Constant.pdb
+D:\Cinema_Management\Cinema_Management\Services\Shared\Share.Constant\obj\Debug\net8.0\ref\Share.Constant.dll
