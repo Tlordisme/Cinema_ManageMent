@@ -36,6 +36,7 @@ namespace CM.ApplicationService.UserModule.Implements
                 Email = createUserDto.Email,
                 UserName = createUserDto.UserName,
                 FullName = createUserDto.FullName,
+                PhoneNumber = createUserDto.PhoneNumber,
                 Password = new PasswordHasher<User>().HashPassword(null, createUserDto.Password),
                 DateOfBirth = createUserDto.DateOfBirth,
             };
@@ -75,6 +76,7 @@ namespace CM.ApplicationService.UserModule.Implements
             user.UserName = updateUserDto.UserName;
             user.Email = updateUserDto.Email;
             user.FullName = updateUserDto.FullName;
+            user.PhoneNumber = updateUserDto.PhoneNumber;
             user.Gender = updateUserDto.Gender;
             user.DateOfBirth = updateUserDto.DateOfBirth;
 
@@ -88,6 +90,7 @@ namespace CM.ApplicationService.UserModule.Implements
                 UserName = user.UserName,
                 Email = user.Email,
                 FullName = user.FullName,
+
                 Gender = user.Gender,
                 DateOfBirth = user.DateOfBirth,
             };

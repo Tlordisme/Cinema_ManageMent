@@ -11,8 +11,8 @@ using CM.ApplicationService.Movie.Abstracts;
 using CM.ApplicationService.Movie.Implements;
 using CM.ApplicationService.RoleModule.Abstracts;
 using CM.ApplicationService.RoleModule.Implements;
-//using CM.ApplicationService.Seat.Abstracts;
-//using CM.ApplicationService.Seat.Implements;
+using CM.ApplicationService.Seat.Abstracts;
+using CM.ApplicationService.Seat.Implements;
 using CM.ApplicationService.Showtime.Abstracts;
 using CM.ApplicationService.Showtime.Implements;
 using CM.ApplicationService.Theater.Abstracts;
@@ -83,7 +83,8 @@ namespace CM.ApplicationService.StartUp
             builder.Services.AddScoped<ITheaterService, TheaterService>();
             builder.Services.AddScoped<IRoomService, RoomService>();
             //Seat
-            //builder.Services.AddScoped<ISeatService, SeatService>();
+            builder.Services.AddScoped<ISeatService, SeatService>();
+            builder.Services.AddScoped<ISeatPriceService, SeatPriceService>();
             //Showtime
             builder.Services.AddScoped<IShowtimeService, ShowtimeService>();
             //Ticket

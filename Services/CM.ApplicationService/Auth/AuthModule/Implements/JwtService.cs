@@ -43,7 +43,7 @@ namespace CM.Auth.ApplicantService.Auth.Implements
             {
                 new Claim("Id", user.Id.ToString()), // Add user ID claim
                 new Claim("Username", user.UserName), // Add username claim
-                new Claim("Email", user.Email),
+                new Claim("Email", user.Email)
             };
 
 

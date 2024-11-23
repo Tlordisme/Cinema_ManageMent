@@ -60,6 +60,7 @@ namespace CM.ApplicationService.AuthModule.Implements
                 Email = registerDto.Email,
                 UserName = registerDto.UserName,
                 FullName = registerDto.FullName,
+                PhoneNumber = registerDto.PhoneNumber,
                 Gender = registerDto.Gender,
                 DateOfBirth = registerDto.DateOfBirth,
                 Password = _passwordHasher.HashPassword(null, registerDto.Password),
@@ -90,6 +91,7 @@ namespace CM.ApplicationService.AuthModule.Implements
                 Email = user.Email,
                 FullName = user.FullName,
                 Gender = user.Gender,
+                
                 DateOfBirth = user.DateOfBirth,
             };
         }
@@ -130,42 +132,6 @@ namespace CM.ApplicationService.AuthModule.Implements
             };
         }
 
-        //private async Task<string> GenerateJwtTokenAsync(User user)
-        //{
-        //    var claims = new List<Claim>
-        //    {
-        //        new Claim("Id", user.Id.ToString()), // Add user ID claim
-        //        new Claim("Username", user.UserName), // Add username claim
-        //        new Claim("Email", user.Email),
-        //    };
-        //    if (_roleService == null)
-        //    {
-        //        throw new InvalidOperationException("Role service has not been initialized.");
-        //    }
 
-        //    var roles = await _roleService.GetUserRolesAsync(user);
-        //    LogInformation($"Roles for user {user.UserName}: {string.Join(", ", roles)}");
-
-        //    var roleClaims = roles.Select(roleName => new Claim(ClaimTypes.Role, roleName));
-
-        //    claims.AddRange(roleClaims);
-
-        //    var key = new SymmetricSecurityKey(
-        //        Encoding.UTF8.GetBytes(_configuration["Jwt:SecretKey"])
-        //    );
-        //    var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-
-        //    var token = new JwtSecurityToken(
-        //        issuer: _configuration["Jwt:Issuer"],
-        //        audience: _configuration["Jwt:Audience"],
-        //        claims: claims,
-        //        expires: DateTime.Now.AddMinutes(
-        //            Convert.ToDouble(_configuration["Jwt:ExpiryMinutes"])
-        //        ),
-        //        signingCredentials: creds
-        //    );
-
-        //    return new JwtSecurityTokenHandler().WriteToken(token);
-        //}
     }
 }

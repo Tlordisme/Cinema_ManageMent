@@ -10,7 +10,7 @@ namespace CM.Dtos.Ticket
     {
         public int UserId { get; set; }
         public string ShowtimeId { get; set; }
-        public List<(string Row, int Number)> Seats { get; set; } 
+        //public List<(string Row, int Number)> Seats { get; set; } 
         //public decimal TotalPrice { get; set; }
     }
 }

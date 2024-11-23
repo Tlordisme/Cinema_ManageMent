@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace CM_API.Migrations
 {
     /// <inheritdoc />
-    public partial class First : Migration
+    public partial class Init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -70,6 +70,23 @@ namespace CM_API.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "SeatPrices",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    SeatType = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    RoomID = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    StartDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    EndDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_SeatPrices", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "TheaterChains",
                 columns: table => new
                 {
@@ -89,6 +106,7 @@ namespace CM_API.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: false),
                     UserName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    PhoneNumber = table.Column<string>(type: "nvarchar(15)", maxLength: 15, nullable: false),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     FullName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: false),
                     Gender = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -268,44 +286,19 @@ namespace CM_API.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "CMShowtime",
-                columns: table => new
-                {
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    StartTime = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    EndTime = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    RoomID = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    MovieID = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_CMShowtime", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_CMShowtime_Movies_MovieID",
-                        column: x => x.MovieID,
-                        principalTable: "Movies",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_CMShowtime_Rooms_RoomID",
-                        column: x => x.RoomID,
-                        principalTable: "Rooms",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Seats",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Number = table.Column<int>(type: "int", nullable: false),
-                    Row = table.Column<int>(type: "int", nullable: false),
-                    SeatType = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(4)", maxLength: 4, nullable: false),
+                    X = table.Column<int>(type: "int", nullable: false),
+                    Y = table.Column<int>(type: "int", nullable: false),
+                    SeatType = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
                     RoomID = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Status = table.Column<int>(type: "int", nullable: false)
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    IsDoubleSeat = table.Column<bool>(type: "bit", nullable: false),
+                    DoubleSeatId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -318,15 +311,88 @@ namespace CM_API.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.CreateIndex(
-                name: "IX_CMShowtime_MovieID",
-                table: "CMShowtime",
-                column: "MovieID");
+            migrationBuilder.CreateTable(
+                name: "Showtimes",
+                columns: table => new
+                {
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    StartTime = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    EndTime = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    RoomID = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    MovieID = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Showtimes", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Showtimes_Movies_MovieID",
+                        column: x => x.MovieID,
+                        principalTable: "Movies",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Showtimes_Rooms_RoomID",
+                        column: x => x.RoomID,
+                        principalTable: "Rooms",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
 
-            migrationBuilder.CreateIndex(
-                name: "IX_CMShowtime_RoomID",
-                table: "CMShowtime",
-                column: "RoomID");
+            migrationBuilder.CreateTable(
+                name: "Tickets",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    ShowtimeId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Status = table.Column<int>(type: "int", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    TotalPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Tickets", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Tickets_Showtimes_ShowtimeId",
+                        column: x => x.ShowtimeId,
+                        principalTable: "Showtimes",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Tickets_User_UserId",
+                        column: x => x.UserId,
+                        principalTable: "User",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "TicketSeats",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    TicketId = table.Column<int>(type: "int", nullable: false),
+                    SeatId = table.Column<int>(type: "int", nullable: false),
+                    SeatStatus = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TicketSeats", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_TicketSeats_Seats_SeatId",
+                        column: x => x.SeatId,
+                        principalTable: "Seats",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_TicketSeats_Tickets_TicketId",
+                        column: x => x.TicketId,
+                        principalTable: "Tickets",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Comments_MovieId",
@@ -364,9 +430,39 @@ namespace CM_API.Migrations
                 column: "RoomID");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Showtimes_MovieID",
+                table: "Showtimes",
+                column: "MovieID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Showtimes_RoomID",
+                table: "Showtimes",
+                column: "RoomID");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Theaters_ChainId",
                 table: "Theaters",
                 column: "ChainId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Tickets_ShowtimeId",
+                table: "Tickets",
+                column: "ShowtimeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Tickets_UserId",
+                table: "Tickets",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_TicketSeats_SeatId",
+                table: "TicketSeats",
+                column: "SeatId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_TicketSeats_TicketId",
+                table: "TicketSeats",
+                column: "TicketId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_UserRole_RoleId",
@@ -383,9 +479,6 @@ namespace CM_API.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "CMShowtime");
-
-            migrationBuilder.DropTable(
                 name: "Comments");
 
             migrationBuilder.DropTable(
@@ -398,7 +491,10 @@ namespace CM_API.Migrations
                 name: "RolePermission");
 
             migrationBuilder.DropTable(
-                name: "Seats");
+                name: "SeatPrices");
+
+            migrationBuilder.DropTable(
+                name: "TicketSeats");
 
             migrationBuilder.DropTable(
                 name: "UserRole");
@@ -410,16 +506,25 @@ namespace CM_API.Migrations
                 name: "Genres");
 
             migrationBuilder.DropTable(
-                name: "Movies");
+                name: "Seats");
 
             migrationBuilder.DropTable(
-                name: "Rooms");
+                name: "Tickets");
 
             migrationBuilder.DropTable(
                 name: "Role");
 
             migrationBuilder.DropTable(
+                name: "Showtimes");
+
+            migrationBuilder.DropTable(
                 name: "User");
+
+            migrationBuilder.DropTable(
+                name: "Movies");
+
+            migrationBuilder.DropTable(
+                name: "Rooms");
 
             migrationBuilder.DropTable(
                 name: "Theaters");

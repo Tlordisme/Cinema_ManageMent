@@ -29,8 +29,4 @@
     <ProjectReference Include="..\Shared\Share.Constant\Share.Constant.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Seat\Abstracts\" />
-  </ItemGroup>
-
 </Project>

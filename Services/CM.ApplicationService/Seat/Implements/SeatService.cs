@@ -137,7 +137,7 @@ namespace CM.ApplicationService.Seat.Implements
             {
                 if (seatDto.DoubleSeatId == null)
                 {
-                    throw new Exception("Ghế đôi phải có ghế đối diện.");
+                    throw new Exception("Ghế đôi phải có ghế bên cạnh.");
                 }
 
                 // Lấy ghế đối diện để kiểm tra
