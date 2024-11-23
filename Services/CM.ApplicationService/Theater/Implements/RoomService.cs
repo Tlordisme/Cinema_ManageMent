@@ -22,7 +22,8 @@ namespace CM.ApplicationService.Theater.Implements
             var theater = _dbContext.Theaters.Find(dto.TheaterId);
             if (theater == null)
                 throw new Exception("Theater không tồn tại.");
-
+            if (theater.Rooms == null)
+                theater.Rooms = new List<CMRoom>();
             var room = new CMRoom
             {
                 Id = dto.Id,
@@ -30,6 +31,7 @@ namespace CM.ApplicationService.Theater.Implements
                 TheaterId = dto.TheaterId,
                 Type = dto.Type
             };
+            theater.Rooms.Add(room);
 
             _dbContext.Rooms.Add(room);
             _dbContext.SaveChanges();

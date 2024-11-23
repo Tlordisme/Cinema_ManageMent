@@ -1,54 +1,82 @@
-﻿//using CM.ApplicationService.Movie.Abstracts;
-//using CM.ApplicationService.Seat.Abstracts;
-//using CM.Dtos.Movie;
-//using CM.Dtos.Seat;
-//using Microsoft.AspNetCore.Mvc;
+﻿using CM.ApplicationService.Movie.Abstracts;
+using CM.ApplicationService.Seat.Abstracts;
+using CM.Domain.Seat;
+using CM.Dtos.Movie;
+using CM.Dtos.Seat;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
-//namespace CM_API.Controllers
-//{
-//    public class SeatController : Controller
-//    {
-//        private readonly ISeatService _seatService;
+namespace CM_API.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class SeatController : ControllerBase
+    {
+        private readonly ISeatService _seatService;
 
-//        public SeatController(ISeatService seatService)
-//        {
-//            _seatService = seatService;
-//        }
+        public SeatController(ISeatService seatService)
+        {
+            _seatService = seatService;
+        }
 
-//        // Endpoint để book một chỗ ngồi
-//        [HttpPost("book/{seatId}")]
-//        public async Task<ActionResult<SeatResponseDto>> BookSeat(int seatId)
-//        {
-//            var seat = await _seatService.BookSeat(seatId);
-//            if (seat == null)
-//            {
-//                return NotFound($"Seat with ID {seatId} is not available.");
-//            }
-//            return Ok(seat);
-//        }
+        // Lấy danh sách ghế theo phòng
+        [HttpGet("{roomId}")]
+        public IActionResult GetSeatsByRoomId(string roomId)
+        {
+            try
+            {
+                var seats = _seatService.GetSeatsByRoomId(roomId);
+                return Ok(seats);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Có lỗi khi lấy danh sách ghế: {ex.Message}");
+            }
+        }
 
-//        // Endpoint để lấy tất cả các chỗ ngồi theo RoomID
-//        [HttpGet("room/{roomId}")]
-//        public async Task<ActionResult<IEnumerable<SeatResponseDto>>> GetSeatsByRoomId(string roomId)
-//        {
-//            var seats = await _seatService.GetSeatsByRoomId(roomId);
-//            if (seats == null)
-//            {
-//                return NotFound($"No seats found for room with ID {roomId}.");
-//            }
-//            return Ok(seats);
-//        }
+        // Thêm ghế mới
+        [HttpPost]
+        public IActionResult AddSeat([FromBody] AddSeatDto seatDto)
+        {
+            try
+            {
+                _seatService.AddSeat(seatDto);
+                return Ok("Thêm ghế thành công!");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Có lỗi khi thêm ghế: {ex.Message}");
+            }
+        }
 
-//        // Endpoint để giải phóng một chỗ ngồi
-//        [HttpPost("release/{seatId}")]
-//        public async Task<ActionResult> ReleaseSeat(int seatId)
-//        {
-//            var result = await _seatService.ReleaseSeat(seatId);
-//            if (!result)
-//            {
-//                return BadRequest($"Seat with ID {seatId} is already available or does not exist.");
-//            }
-//            return NoContent(); // No Content: Request was successful but there's no data to return
-//        }
-//    }
-//}
+        // Cập nhật thông tin ghế
+        [HttpPut]
+        public IActionResult UpdateSeat([FromBody] UpdateSeatDto seatDto)
+        {
+            try
+            {
+                _seatService.UpdateSeat(seatDto);
+                return Ok("Cập nhật ghế thành công!");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Có lỗi khi cập nhật ghế: {ex.Message}");
+            }
+        }
+
+        // Xóa ghế
+        [HttpDelete("{seatId}")]
+        public IActionResult DeleteSeat(int seatId)
+        {
+            try
+            {
+                _seatService.DeleteSeat(seatId);
+                return Ok("Xóa ghế thành công!");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Có lỗi khi xóa ghế: {ex.Message}");
+            }
+        }
+    }
+}

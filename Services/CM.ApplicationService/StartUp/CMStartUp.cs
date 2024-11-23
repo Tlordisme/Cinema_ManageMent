@@ -1,6 +1,7 @@
 ﻿using System.Text;
 using CloudinaryDotNet;
 using CM.ApplicantService.Auth.Permission.Abstracts;
+using CM.Application.Ticket.Services;
 using CM.ApplicationService.Auth.Common;
 using CM.ApplicationService.AuthModule.Abstracts;
 using CM.ApplicationService.AuthModule.Implements;
@@ -12,8 +13,11 @@ using CM.ApplicationService.RoleModule.Abstracts;
 using CM.ApplicationService.RoleModule.Implements;
 //using CM.ApplicationService.Seat.Abstracts;
 //using CM.ApplicationService.Seat.Implements;
+using CM.ApplicationService.Showtime.Abstracts;
+using CM.ApplicationService.Showtime.Implements;
 using CM.ApplicationService.Theater.Abstracts;
 using CM.ApplicationService.Theater.Implements;
+using CM.ApplicationService.Ticket.Abstracts;
 using CM.ApplicationService.UserModule.Abstracts;
 using CM.ApplicationService.UserModule.Implements;
 using CM.Auth.ApplicantService.Auth.Abstracts;
@@ -41,6 +45,7 @@ namespace CM.ApplicationService.StartUp
             string? assemblyName
         )
         {
+
 
             //AuthDbContext
             builder.Services.AddDbContext<CMDbContext>(
@@ -77,7 +82,12 @@ namespace CM.ApplicationService.StartUp
             builder.Services.AddScoped<ITheaterChainService, TheaterChainService>();
             builder.Services.AddScoped<ITheaterService, TheaterService>();
             builder.Services.AddScoped<IRoomService, RoomService>();
-
+            //Seat
+            //builder.Services.AddScoped<ISeatService, SeatService>();
+            //Showtime
+            builder.Services.AddScoped<IShowtimeService, ShowtimeService>();
+            //Ticket
+            builder.Services.AddScoped<ITicketService, TicketService>();
             //Cloudinary
             var cloudinaryConfig = builder.Configuration.GetSection("Cloudinary");
             var account = new Account(

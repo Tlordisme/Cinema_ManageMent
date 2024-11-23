@@ -21,11 +21,11 @@ namespace CM_API.Controllers
             try
             {
                 var id = _theaterService.CreateTheater(dto);
-                return CreatedAtAction(nameof(GetTheatersByChainId), new { id }, new { id });
+                return Ok(new { Message = "Theater created successfully", TheaterId = id });
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                return BadRequest(new { Message = ex.Message });
             }
         }
 
@@ -34,6 +34,7 @@ namespace CM_API.Controllers
         {
             var theaters = _theaterService.GetTheatersByChainId(chainId);
             return Ok(theaters);
+
         }
     }
 }

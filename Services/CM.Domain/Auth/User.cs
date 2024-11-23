@@ -26,6 +26,10 @@ namespace CM.Domain.Auth
         [Required]
         public string UserName { get; set; }
 
+        [MaxLength(15)]
+        [Required]
+        public string PhoneNumber { get; set; }
+
         [MinLength(8)]
         [Required]
         public string Password { get; set; }

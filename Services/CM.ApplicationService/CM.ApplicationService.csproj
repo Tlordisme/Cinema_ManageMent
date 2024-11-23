@@ -30,7 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Showtime\" />
+    <Folder Include="Seat\Abstracts\" />
   </ItemGroup>
 
 </Project>

@@ -8,6 +8,7 @@ using CM.Domain.Movie;
 using CM.Domain.Seat;
 using CM.Domain.Showtime;
 using CM.Domain.Theater;
+using CM.Domain.Ticket;
 using Microsoft.EntityFrameworkCore;
 
 namespace CM.Infrastructure
@@ -35,10 +36,15 @@ namespace CM.Infrastructure
         public DbSet<CMRoom> Rooms { get; set; }
 
         //Showtime
-        public DbSet<CMShowtime> Showtimes;
+        public DbSet<CMShowtime> Showtimes { get; set; }
 
         //Seat
         public DbSet<CMSeat> Seats { get; set; }
+        public DbSet<CMSeatPrice> SeatPrices { get; set; }
+
+        //Ticket
+        public DbSet<CMTicket> Tickets { get; set; }
+        public DbSet<CMTicketSeat> TicketSeats { get; set; }
 
         public CMDbContext(DbContextOptions<CMDbContext> options)
             : base(options) { }
@@ -47,6 +53,7 @@ namespace CM.Infrastructure
         {
             //Auth
             modelBuilder.Entity<User>().Property(u => u.Gender).HasConversion<string>();
+
             modelBuilder
                 .Entity<UserRole>()
                 .HasOne<User>()
@@ -151,8 +158,36 @@ namespace CM.Infrastructure
                 .WithMany()
                 .HasForeignKey(s => s.RoomID)
                 .OnDelete(DeleteBehavior.Cascade);
+            //Seat
+            modelBuilder.Entity<CMSeat>().Property(u => u.Status).HasConversion<string>();
+            //Seat_Price
+            modelBuilder.Entity<CMSeat>()
+                .HasOne(s => s.Room)
+                .WithMany()
+                .HasForeignKey(s => s.RoomID);
 
-            base.OnModelCreating(modelBuilder);
+            //Tickets
+            modelBuilder
+                .Entity<CMTicketSeat>()
+                .HasOne(ts => ts.Ticket)
+                .WithMany()
+                .HasForeignKey(ts => ts.TicketId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder
+                .Entity<CMTicket>()
+                .HasOne(t => t.User)
+                .WithMany()
+                .HasForeignKey(t => t.UserId);
+
+            // Cấu hình quan hệ giữa CMTicket và CMShowtime
+            modelBuilder
+                .Entity<CMTicket>()
+                .HasOne(t => t.Showtime)
+                .WithMany() 
+                .HasForeignKey(t => t.ShowtimeId);
+
+
         }
     }
 }

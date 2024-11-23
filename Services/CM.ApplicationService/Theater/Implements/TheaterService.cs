@@ -28,7 +28,8 @@ namespace CM.ApplicationService.Theater.Implements
             var theaterChain = _dbContext.TheaterChains.Find(dto.ChainId);
             if (theaterChain == null)
                 throw new Exception("TheaterChain không tồn tại.");
-
+            if (theaterChain.Theaters == null)
+                theaterChain.Theaters = new List<CMTheater>();
             var theater = new CMTheater
             {
                 Id = dto.Id,
@@ -36,6 +37,8 @@ namespace CM.ApplicationService.Theater.Implements
                 Location = dto.Location,
                 ChainId = dto.ChainId
             };
+            theaterChain.Theaters.Add(theater);
+            
 
             _dbContext.Theaters.Add(theater);
             _dbContext.SaveChanges();

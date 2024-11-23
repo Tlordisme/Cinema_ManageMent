@@ -300,15 +300,19 @@ namespace CM_API.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int>("Row")
-                        .HasColumnType("int");
+                    b.Property<string>("Row")
+                        .IsRequired()
+                        .HasMaxLength(1)
+                        .HasColumnType("nvarchar(1)");
 
                     b.Property<string>("SeatType")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
-                    b.Property<int>("Status")
-                        .HasColumnType("int");
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -342,7 +346,7 @@ namespace CM_API.Migrations
 
                     b.HasIndex("RoomID");
 
-                    b.ToTable("CMShowtime");
+                    b.ToTable("Showtimes");
                 });
 
             modelBuilder.Entity("CM.Domain.Theater.CMRoom", b =>
@@ -410,6 +414,65 @@ namespace CM_API.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("TheaterChains");
+                });
+
+            modelBuilder.Entity("CM.Domain.Ticket.CMTicket", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ShowtimeId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("TotalPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ShowtimeId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Tickets");
+                });
+
+            modelBuilder.Entity("CM.Domain.Ticket.CMTicketSeat", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("SeatId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SeatStatus")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TicketId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SeatId");
+
+                    b.HasIndex("TicketId");
+
+                    b.ToTable("TicketSeats");
                 });
 
             modelBuilder.Entity("CM.Domain.Auth.RolePermission", b =>
@@ -539,6 +602,44 @@ namespace CM_API.Migrations
                         .IsRequired();
 
                     b.Navigation("TheaterChain");
+                });
+
+            modelBuilder.Entity("CM.Domain.Ticket.CMTicket", b =>
+                {
+                    b.HasOne("CM.Domain.Showtime.CMShowtime", "Showtime")
+                        .WithMany()
+                        .HasForeignKey("ShowtimeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CM.Domain.Auth.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Showtime");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("CM.Domain.Ticket.CMTicketSeat", b =>
+                {
+                    b.HasOne("CM.Domain.Seat.CMSeat", "Seat")
+                        .WithMany()
+                        .HasForeignKey("SeatId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CM.Domain.Ticket.CMTicket", "Ticket")
+                        .WithMany()
+                        .HasForeignKey("TicketId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Seat");
+
+                    b.Navigation("Ticket");
                 });
 
             modelBuilder.Entity("CM.Domain.Movie.MoCast", b =>

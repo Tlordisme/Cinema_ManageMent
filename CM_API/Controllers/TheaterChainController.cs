@@ -19,7 +19,7 @@ namespace CM_API.Controllers
         public IActionResult CreateTheaterChain([FromBody] TheaterChainDto dto)
         {
             var id = _theaterChainService.CreateTheaterChain(dto);
-            return CreatedAtAction(nameof(GetAllTheaterChains), new { id }, new { id });
+            return Ok(new { Message = "TheaterChain created successfully", TheaterChain = id });
         }
 
         [HttpGet]
