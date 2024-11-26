@@ -12,175 +12,119 @@ using Microsoft.Extensions.Logging;
 
 namespace CM.Application.Ticket.Services
 {
-    public class TicketService : ServiceBase, ITicketService
+    public class TicketService : ServiceBase
     {
         public TicketService(CMDbContext dbContext, ILogger<ServiceBase> logger)
             : base(logger, dbContext) { }
 
-        //public async Task<TicketDto> CreateTicketAsync(CreateTicketDto createTicketDto)
+        public async Task<bool> CheckSeatsAvailability(List<int> seatIds)
+        {
+            var seats = await _dbContext.Seats.Where(s => seatIds.Contains(s.Id)).ToListAsync();
+            return seats.All(s => s.Status == SeatStatus.Available); // Kiểm tra tất cả ghế đều có trạng thái Available
+        }
+
+        // Đặt ghế
+        public async Task<CMTicket> BookSeats(int userId, List<int> seatIds, string showtimeId)
+        {
+            // Kiểm tra xem tất cả ghế có còn trống không
+            if (!await CheckSeatsAvailability(seatIds))
+            {
+                throw new Exception("Một hoặc nhiều ghế không còn trống.");
+            }
+
+            // Tính tổng giá vé
+            decimal totalPrice = 0;
+            var seats = await _dbContext.Seats.Where(s => seatIds.Contains(s.Id)).ToListAsync();
+            foreach (var seat in seats)
+            {
+                // Tính giá vé cho từng ghế dựa trên loại ghế và thời gian
+                var seatPrice = await _dbContext.SeatPrices
+                    .Where(sp => sp.SeatType == seat.SeatType && sp.RoomID == seat.RoomID)
+                    .FirstOrDefaultAsync();
+                if (seatPrice != null)
+                {
+                    totalPrice += seatPrice.Price;
+                }
+            }
+
+            // Tạo vé
+            var ticket = new CMTicket
+            {
+                UserId = userId,
+                ShowtimeId = showtimeId,
+                Status = TicketStatus.Pending,  // Vé đang chờ thanh toán
+                BookingDate = DateTime.Now,
+                TotalPrice = totalPrice
+            };
+
+            _dbContext.Tickets.Add(ticket);
+            await _dbContext.SaveChangesAsync();
+
+            // Tạo các kết nối giữa Ticket và Seat
+            foreach (var seatId in seatIds)
+            {
+                var ticketSeat = new CMTicketSeat
+                {
+                    TicketId = ticket.Id,
+                    SeatId = seatId,
+                    SeatStatus = SeatStatus.Pending,  
+                    
+                };
+
+                _dbContext.TicketSeats.Add(ticketSeat);
+                var seat = await _dbContext.Seats.FindAsync(seatId);
+                seat.Status = SeatStatus.Pending; // Đặt trạng thái ghế thành Pending
+            }
+
+            await _dbContext.SaveChangesAsync();
+
+            // Trả về vé với thông tin đã đặt
+            return ticket;
+        }
+
+        // Cập nhật trạng thái vé thành "Paid" và ghế thành "Booked" sau khi thanh toán
+        public async Task<bool> CompletePayment(int ticketId)
+        {
+            var ticket = await _dbContext.Tickets
+                              .Where(t => t.Id == ticketId)   // Lọc vé theo Id
+                              .FirstOrDefaultAsync();
+            if (ticket == null || ticket.Status != TicketStatus.Pending)
+            {
+                throw new Exception("Vé không tồn tại hoặc đã thanh toán.");
+            }
+            var ticketSeats = await _dbContext.TicketSeats
+                                      .Where(ts => ts.TicketId == ticket.Id)  // Lọc theo TicketId
+                                      .Include(ts => ts.Seat)  // Kết hợp thông tin ghế
+                                      .ToListAsync();
+            // Cập nhật trạng thái vé thành "Paid"
+            ticket.Status = TicketStatus.Paid;
+            foreach (var ticketSeat in ticketSeats)
+            {
+                var seat = await _dbContext.Seats.FindAsync(ticketSeat.SeatId);
+                seat.Status = SeatStatus.Booked;  // Cập nhật ghế thành "Booked"
+            }
+
+            await _dbContext.SaveChangesAsync();
+            return true;
+        }
+
+        // Hủy vé
+        //public async Task<bool> CancelBooking(int ticketId)
         //{
-        //    // Lấy thông tin lịch chiếu
-        //    var showtime = await _dbContext
-        //        .Showtimes.Include(s => s.Room)
-        //        .FirstOrDefaultAsync(s => s.Id == createTicketDto.ShowtimeId);
-        //    if (showtime == null)
-        //        throw new Exception("Showtime not found");
-
-        //    var roomId = showtime.Room.Id;
-
-        //    // Tìm các ghế dựa trên hàng, cột và RoomId
-        //    var seatIds = await _dbContext
-        //        .Seats.Where(s =>
-        //            createTicketDto.Seats.Any(c => c.Row == s.Row && c.Number == s.Number)
-        //        )
-        //        .Select(s => s.Id)
-        //        .ToListAsync();
-        //    var seats = await _dbContext
-        //        .Seats.Where(s => seatIds.Contains(s.Id))
-        //        .ToListAsync();
-
-        //    if (seats.Count != createTicketDto.Seats.Count)
-        //        throw new Exception("Some seats are invalid");
-
-        //    // Kiểm tra trạng thái của các ghế
-        //    var invalidSeats = seats
-        //        .Where(s => s.Status == SeatStatus.Pending || s.Status == SeatStatus.Booked)
-        //        .ToList();
-        //    if (invalidSeats.Any())
+        //    var ticket = await _dbContext.Tickets.Include(t => t.TicketSeats).FirstOrDefaultAsync(t => t.Id == ticketId);
+        //    if (ticket == null || ticket.Status == TicketStatus.Canceled)
         //    {
-        //        throw new Exception(
-        //            $"The following seats are not available: {string.Join(", ", invalidSeats.Select(s => $"{s.Row}{s.Number}"))}"
-        //        );
+        //        throw new Exception("Vé không tồn tại hoặc đã bị hủy.");
         //    }
 
-        //    // Tính tổng giá ghế
-        //    decimal totalPrice = seats.Sum(s => s.Price);
-
-        //    // Tạo vé mới
-        //    var ticket = new CMTicket
+        //    // Cập nhật trạng thái vé
+        //    ticket.Status = TicketStatus.Canceled;
+        //    foreach (var ticketSeat in ticket.TicketSeats)
         //    {
-        //        UserId = createTicketDto.UserId,
-        //        ShowtimeId = createTicketDto.ShowtimeId,
-        //        Status = TicketStatus.Pending,
-        //        CreatedDate = DateTime.Now,
-        //        TotalPrice = totalPrice,
-        //    };
-
-        //    _dbContext.Tickets.Add(ticket);
-        //    await _dbContext.SaveChangesAsync();
-
-        //    // Thêm ghế vào vé và cập nhật trạng thái ghế
-        //    foreach (var seat in seats)
-        //    {
-        //        var ticketSeat = new CMTicketSeat
-        //        {
-        //            TicketId = ticket.Id,
-        //            SeatId = seat.Id,
-        //            SeatStatus = SeatStatus.Pending,
-        //        };
-        //        _dbContext.TicketSeats.Add(ticketSeat);
-
-        //        // Cập nhật trạng thái ghế thành "Pending"
-        //        seat.Status = SeatStatus.Pending;
+        //        var seat = await _dbContext.Seats.FindAsync(ticketSeat.SeatId);
+        //        seat.Status = SeatStatus.Available; // Đặt lại ghế thành Available
         //    }
 
-        //    await _dbContext.SaveChangesAsync();
-
-        //    // Return TicketDto
-        //    return new TicketDto
-        //    {
-        //        Id = ticket.Id,
-        //        UserId = ticket.UserId,
-        //        ShowtimeId = ticket.ShowtimeId,
-        //        Status = ticket.Status,
-        //        CreatedDate = ticket.CreatedDate,
-        //        TotalPrice = ticket.TotalPrice,
-        //        Seats = seats
-        //            .Select(s => new TicketSeatDto
-        //            {
-        //                SeatId = s.Id,
-        //                SeatStatus = SeatStatus.Pending,
-        //            })
-        //            .ToList(),
-        //    };
-        //}
-
-        //public async Task<bool> DeleteTicketAsync(int ticketId)
-        //{
-        //    var ticket = await _dbContext.Tickets.FindAsync(ticketId);
-        //    if (ticket == null)
-        //        return false;
-
-        //    _dbContext.Tickets.Remove(ticket);
-        //    await _dbContext.SaveChangesAsync();
-        //    return true;
-        //}
-
-        //public async Task<TicketDto> GetTicketByIdAsync(int ticketId)
-        //{
-        //    var ticket = await _dbContext
-        //        .Tickets.Include(t => t.User) // Thông tin người mua vé
-        //        .Include(t => t.Showtime) // Thông tin lịch chiếu
-        //        .FirstOrDefaultAsync(t => t.Id == ticketId);
-
-        //    if (ticket == null)
-        //        return null;
-
-        //    // Lấy thông tin các ghế từ CMTicketSeat
-        //    var ticketSeats = await _dbContext
-        //        .TicketSeats.Where(ts => ts.TicketId == ticketId)
-        //        .Include(ts => ts.Seat) // Lấy thông tin ghế
-        //        .ToListAsync();
-
-        //    return new TicketDto
-        //    {
-        //        Id = ticket.Id,
-        //        UserId = ticket.UserId,
-        //        ShowtimeId = ticket.ShowtimeId,
-        //        Status = ticket.Status,
-        //        CreatedDate = ticket.CreatedDate,
-        //        TotalPrice = ticket.TotalPrice,
-        //        Seats = ticketSeats
-        //            .Select(ts => new TicketSeatDto
-        //            {
-        //                SeatId = ts.SeatId,
-        //                SeatStatus = ts.SeatStatus,
-        //            })
-        //            .ToList(),
-        //    };
-        //}
-
-        //public async Task<bool> ProcessPaymentAsync(int ticketId)
-        //{
-        //    var ticket = await _dbContext.Tickets.FirstOrDefaultAsync(t => t.Id == ticketId);
-
-        //    if (ticket == null)
-        //        return false;
-
-        //    // Cập nhật trạng thái vé thành "Paid"
-        //    ticket.Status = TicketStatus.Paid;
-
-        //    // Cập nhật trạng thái ghế thành "Paid"
-        //    var ticketSeats = await _dbContext
-        //        .TicketSeats.Where(ts => ts.TicketId == ticketId)
-        //        .ToListAsync();
-
-        //    foreach (var ticketSeat in ticketSeats)
-        //    {
-        //        ticketSeat.SeatStatus = SeatStatus.Booked;
-        //    }
-
-        //    await _dbContext.SaveChangesAsync();
-        //    return true;
-        //}
-
-        //public async Task<bool> UpdateTicketStatusAsync(UpdateTicketDto updateTicketDto)
-        //{
-        //    var ticket = await _dbContext.Tickets.FindAsync(updateTicketDto.TicketId);
-        //    if (ticket == null)
-        //        return false;
-
-        //    ticket.Status = updateTicketDto.Status;
         //    await _dbContext.SaveChangesAsync();
         //    return true;
         //}

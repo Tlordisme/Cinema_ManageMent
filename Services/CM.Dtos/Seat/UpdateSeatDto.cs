@@ -15,7 +15,6 @@ namespace CM.Dtos.Seat
         public int Y { get; set; }
         public string SeatType { get; set; }
         public SeatStatus Status { get; set; }
-        public bool IsDoubleSeat { get; set; }
         public int? DoubleSeatId { get; set; }
         public string RoomId { get; set; }
     }

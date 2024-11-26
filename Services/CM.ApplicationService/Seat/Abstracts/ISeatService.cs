@@ -11,9 +11,13 @@ namespace CM.ApplicationService.Seat.Abstracts
     public interface ISeatService
     {
         List<SeatDto> GetSeatsByRoomId(string roomId);
+
+        void LinkDoubleSeat(int seatId, int doubleSeatId);
         void AddSeat(AddSeatDto seatDto);
         void UpdateSeat(UpdateSeatDto seatDto);
         void DeleteSeat(int seatId);
-        bool IsDoubleSeatValid(int seatX, int seatY, int? doubleSeatId);
+        //bool IsDoubleSeatValid(int seatX, int seatY, int? doubleSeatId);
+        bool IsDoubleSeatValid(int x, int y, CMSeat doubleSeat);
+        bool IsDoubleSeat(string seatType);
     }
 }

@@ -307,6 +307,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "CM_API.Controllers.SeatController",
+    "Method": "LinkDoubleSeat",
+    "RelativePath": "api/Seat/link-double-seat",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "CM.Dtos.Seat.LinkDoubleSeatDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CM_API.Controllers.SeatPriceController",
     "Method": "AddSeatPrice",
     "RelativePath": "api/SeatPrice",
@@ -340,22 +356,6 @@
   },
   {
     "ContainingType": "CM_API.Controllers.SeatPriceController",
-    "Method": "GetSeatPricesByRoomId",
-    "RelativePath": "api/SeatPrice/{roomId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "roomId",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CM_API.Controllers.SeatPriceController",
     "Method": "DeleteSeatPrice",
     "RelativePath": "api/SeatPrice/{seatPriceId}",
     "HttpMethod": "DELETE",
@@ -373,7 +373,7 @@
   {
     "ContainingType": "CM_API.Controllers.SeatPriceController",
     "Method": "GetSeatPrice",
-    "RelativePath": "api/SeatPrice/{seatPriceId}",
+    "RelativePath": "api/SeatPrice/GetPriceOfType/{seatPriceId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -381,6 +381,22 @@
       {
         "Name": "seatPriceId",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CM_API.Controllers.SeatPriceController",
+    "Method": "GetSeatPricesByRoomId",
+    "RelativePath": "api/SeatPrice/GetPriceOfTypeSeat/{roomId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roomId",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],

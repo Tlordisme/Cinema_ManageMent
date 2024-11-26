@@ -61,7 +61,7 @@ namespace CM_API.Controllers
         }
 
         // Lấy danh sách giá ghế theo phòng
-        [HttpGet("{roomId}")]
+        [HttpGet("GetPriceOfTypeSeat/{roomId}")]
         public IActionResult GetSeatPricesByRoomId(string roomId)
         {
             try
@@ -76,7 +76,7 @@ namespace CM_API.Controllers
         }
 
         // Lấy giá ghế theo ID
-        [HttpGet("{seatPriceId}")]
+        [HttpGet("GetPriceOfType/{seatPriceId}")]
         public IActionResult GetSeatPrice(int seatPriceId)
         {
             try

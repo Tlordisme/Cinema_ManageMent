@@ -26,33 +26,18 @@ namespace CM.ApplicationService.Seat.Implements
         {
             // Kiểm tra xem vị trí X, Y đã có ghế chưa
             var existingSeat = _dbContext.Seats
-                .FirstOrDefault(s => s.X == seatDto.X && s.Y == seatDto.Y && s.RoomID == seatDto.RoomID);
+                .FirstOrDefault(s => s.X == seatDto.X && s.Y == seatDto.Y && s.RoomID == seatDto.RoomID );
             if (existingSeat != null)
             {
-                throw new Exception("Đã có ghế tại vị trí này.");
+                throw new Exception("Đã có ghế tồn tại ở vị trí này.");
             }
-
-            // Nếu ghế đôi, kiểm tra phải có ghế đối diện và chúng phải nằm cạnh nhau theo hàng
-            if (seatDto.IsDoubleSeat)
+            var existingName = _dbContext.Seats
+                    .FirstOrDefault(s => s.Name == seatDto.Name && s.RoomID == seatDto.RoomID);
+            if (existingName != null)
             {
-                if (seatDto.DoubleSeatId == null)
-                {
-                    throw new Exception("Ghế đôi phải có ghế đối diện.");
-                }
-
-                // Lấy ghế đối diện để kiểm tra
-                var doubleSeat = _dbContext.Seats.Find(seatDto.DoubleSeatId);
-                if (doubleSeat == null || doubleSeat.RoomID != seatDto.RoomID)
-                {
-                    throw new Exception("Ghế đối diện phải thuộc cùng phòng.");
-                }
-
-                // Kiểm tra ghế đôi có nằm cạnh nhau trong cùng hàng hay không
-                if (!IsDoubleSeatValid(seatDto.X, seatDto.Y, seatDto.DoubleSeatId))
-                {
-                    throw new Exception("Ghế đôi phải ở cạnh nhau theo hàng.");
-                }
+                throw new Exception("Đã có ghế trùng tên .");
             }
+
 
             // Tạo ghế mới
             var seat = new CMSeat
@@ -62,14 +47,68 @@ namespace CM.ApplicationService.Seat.Implements
                 Y = seatDto.Y,
                 SeatType = seatDto.SeatType,
                 RoomID = seatDto.RoomID,
-                Status = seatDto.Status,
-                IsDoubleSeat = seatDto.IsDoubleSeat,
-                DoubleSeatId = seatDto.DoubleSeatId
+                Status = seatDto.Status
             };
+
+            // Nếu ghế đôi nhưng chưa có DoubleSeatId, cho phép tạo trước
+            if (IsDoubleSeat(seat.SeatType) && seatDto.DoubleSeatId != null)
+            {
+                // Lấy ghế cặp để kiểm tra
+                var doubleSeat = _dbContext.Seats.Find(seatDto.DoubleSeatId);
+                if (doubleSeat == null || doubleSeat.RoomID != seatDto.RoomID)
+                {
+                    throw new Exception("Ghế cặp phải thuộc cùng phòng.");
+                }
+
+                // Kiểm tra ghế đôi có nằm cạnh nhau trong cùng hàng hay không
+                if (!IsDoubleSeatValid(seatDto.X, seatDto.Y, doubleSeat))
+                {
+                    throw new Exception("Ghế đôi phải ở cạnh nhau theo hàng.");
+                }
+
+                seat.DoubleSeatId = doubleSeat.Id;
+                doubleSeat.DoubleSeatId = seat.Id; // Liên kết ngược
+            }
 
             // Thêm ghế vào cơ sở dữ liệu
             _dbContext.Seats.Add(seat);
             _dbContext.SaveChanges();
+        }
+
+        public void LinkDoubleSeat(int seatId, int doubleSeatId)
+        {
+            var seat = _dbContext.Seats.Find( seatId );
+            var doubleSeat = _dbContext.Seats.Find(doubleSeatId);
+            
+
+            if (seat == null || doubleSeat == null)
+            {
+                throw new Exception("Ghế hoặc ghế cặp không tồn tại.");
+            }
+
+            if (seat.RoomID != doubleSeat.RoomID)
+            {
+                throw new Exception("Ghế và ghế cặp phải thuộc cùng phòng.");
+            }
+            if (!(IsDoubleSeat(seat.SeatType) && IsDoubleSeat(doubleSeat.SeatType))) { 
+                throw new Exception("Hai ghế này ko phải ghế đôi");
+            }
+
+            if (!IsDoubleSeatValid(seat.X, seat.Y, doubleSeat))
+            {
+                throw new Exception("Ghế đôi phải ở cạnh nhau theo hàng.");
+            }
+
+            seat.DoubleSeatId = doubleSeatId;   
+            doubleSeat.DoubleSeatId = seatId;
+
+            _dbContext.SaveChanges();
+        }
+
+        public bool IsDoubleSeatValid(int x, int y, CMSeat doubleSeat)
+        {
+            // Kiểm tra logic ghế đôi nằm cạnh nhau
+            return y == doubleSeat.Y && Math.Abs(x - doubleSeat.X) == 1;
         }
 
         public void DeleteSeat(int seatId)
@@ -96,22 +135,16 @@ namespace CM.ApplicationService.Seat.Implements
                                 Y = s.Y,
                                 SeatType = s.SeatType,
                                 Status = s.Status,
-                                IsDoubleSeat = s.IsDoubleSeat,
                                 DoubleSeatId = s.DoubleSeatId
                             })
                             .ToList();
         }
 
-        public bool IsDoubleSeatValid(int seatX, int seatY, int? doubleSeatId)
+        public bool IsDoubleSeat(string seatType)
         {
-            var seat = _dbContext.Seats.FirstOrDefault(s => s.X == seatX && s.Y == seatY);
-            var doubleSeat = _dbContext.Seats.Find(doubleSeatId);
-
-            // Kiểm tra nếu ghế đôi có trong cùng phòng và phải nằm cạnh nhau theo hàng
-            return seat != null && doubleSeat != null &&
-                   seat.RoomID == doubleSeat.RoomID &&
-                   Math.Abs(seat.X - doubleSeat.X) == 1 && seat.Y == doubleSeat.Y;
+            return seatType.Equals("Double", StringComparison.OrdinalIgnoreCase);
         }
+
 
         public void UpdateSeat(UpdateSeatDto seatDto)
         {
@@ -132,38 +165,68 @@ namespace CM.ApplicationService.Seat.Implements
                 }
             }
 
-            // Nếu ghế đôi, kiểm tra phải có ghế đối diện và chúng phải nằm cạnh nhau theo hàng
-            if (seatDto.IsDoubleSeat)
+            // Xử lý ghế đôi dựa trên SeatType
+            if (seat.SeatType == "Double" && seatDto.SeatType != "Double")
+            {
+                // Nếu bỏ trạng thái ghế đôi, xóa liên kết ở ghế cặp
+                if (seat.DoubleSeatId != null)
+                {
+                    var doubleSeat = _dbContext.Seats.Find(seat.DoubleSeatId);
+                    if (doubleSeat != null)
+                    {
+                        doubleSeat.DoubleSeatId = null;
+                    }
+                }
+                seat.DoubleSeatId = null;
+            }
+            else if (seatDto.SeatType == "Double")
             {
                 if (seatDto.DoubleSeatId == null)
                 {
                     throw new Exception("Ghế đôi phải có ghế bên cạnh.");
                 }
 
-                // Lấy ghế đối diện để kiểm tra
-                var doubleSeat = _dbContext.Seats.Find(seatDto.DoubleSeatId);
-                if (doubleSeat == null || doubleSeat.RoomID != seatDto.RoomId)
+                // Lấy ghế cặp mới để kiểm tra
+                var newDoubleSeat = _dbContext.Seats.Find(seatDto.DoubleSeatId);
+                if (newDoubleSeat == null || newDoubleSeat.RoomID != seatDto.RoomId)
                 {
-                    throw new Exception("Ghế đối diện phải thuộc cùng phòng.");
+                    throw new Exception("Ghế cặp phải thuộc cùng phòng.");
                 }
 
-                // Kiểm tra ghế đôi có nằm cạnh nhau trong cùng hàng hay không
-                if (!IsDoubleSeatValid(seatDto.X, seatDto.Y, seatDto.DoubleSeatId))
+                // Kiểm tra ghế đôi có nằm cạnh nhau theo hàng hay không
+                if (!IsDoubleSeatValid(seatDto.X, seatDto.Y, newDoubleSeat))
                 {
                     throw new Exception("Ghế đôi phải ở cạnh nhau theo hàng.");
                 }
+
+                // Cập nhật liên kết với ghế cặp hiện tại và ghế cặp mới
+                if (seat.DoubleSeatId != newDoubleSeat.Id)
+                {
+                    // Xóa liên kết cũ
+                    if (seat.DoubleSeatId != null)
+                    {
+                        var oldDoubleSeat = _dbContext.Seats.Find(seat.DoubleSeatId);
+                        if (oldDoubleSeat != null)
+                        {
+                            oldDoubleSeat.DoubleSeatId = null;
+                        }
+                    }
+
+                    // Thiết lập liên kết mới
+                    seat.DoubleSeatId = newDoubleSeat.Id;
+                    newDoubleSeat.DoubleSeatId = seat.Id;
+                }
             }
 
+            // Cập nhật thông tin ghế
             seat.Name = seatDto.Name;
             seat.X = seatDto.X;
             seat.Y = seatDto.Y;
             seat.SeatType = seatDto.SeatType;
             seat.Status = seatDto.Status;
-            seat.IsDoubleSeat = seatDto.IsDoubleSeat;
-            seat.DoubleSeatId = seatDto.DoubleSeatId;
 
-            // Cập nhật vào cơ sở dữ liệu
             _dbContext.SaveChanges();
         }
+
     }
 }

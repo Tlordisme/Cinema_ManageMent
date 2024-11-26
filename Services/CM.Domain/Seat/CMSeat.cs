@@ -36,7 +36,7 @@ namespace CM.Domain.Seat
         public SeatStatus Status { get; set; }
 
         // Thêm thuộc tính cho ghế đôi
-        public bool IsDoubleSeat { get; set; }  // Đánh dấu ghế đôi
+        //public bool IsDoubleSeat { get; set; }  // Đánh dấu ghế đôi
         public int? DoubleSeatId { get; set; }  // ID của ghế đối diện nếu có
     }
 

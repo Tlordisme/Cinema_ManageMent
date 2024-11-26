@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CM_API.Migrations
 {
     [DbContext(typeof(CMDbContext))]
-    [Migration("20241123184558_Init")]
-    partial class Init
+    [Migration("20241126200141_Second")]
+    partial class Second
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -301,9 +301,6 @@ namespace CM_API.Migrations
                     b.Property<int?>("DoubleSeatId")
                         .HasColumnType("int");
 
-                    b.Property<bool>("IsDoubleSeat")
-                        .HasColumnType("bit");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(4)
@@ -468,7 +465,7 @@ namespace CM_API.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime>("CreatedDate")
+                    b.Property<DateTime>("BookingDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("ShowtimeId")

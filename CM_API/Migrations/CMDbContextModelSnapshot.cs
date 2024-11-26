@@ -298,9 +298,6 @@ namespace CM_API.Migrations
                     b.Property<int?>("DoubleSeatId")
                         .HasColumnType("int");
 
-                    b.Property<bool>("IsDoubleSeat")
-                        .HasColumnType("bit");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(4)
@@ -465,7 +462,7 @@ namespace CM_API.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime>("CreatedDate")
+                    b.Property<DateTime>("BookingDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("ShowtimeId")

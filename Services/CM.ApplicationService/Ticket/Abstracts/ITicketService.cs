@@ -10,10 +10,10 @@ namespace CM.ApplicationService.Ticket.Abstracts
 {
     public interface ITicketService
     {
-        //Task<TicketDto> CreateTicketAsync(CreateTicketDto createTicketDto);
-        //Task<bool> UpdateTicketStatusAsync(UpdateTicketDto updateTicketDto);
-        //Task<TicketDto> GetTicketByIdAsync(int ticketId);
-        //Task<bool> DeleteTicketAsync(int ticketId);
-        //Task<bool> ProcessPaymentAsync(int ticketId);
+        Task<TicketDto> CreateTicketAsync(CreateTicketDto createTicketDto);
+        Task<bool> UpdateTicketStatusAsync(UpdateTicketDto updateTicketDto);
+        Task<TicketDto> GetTicketByIdAsync(int ticketId);
+        Task<bool> DeleteTicketAsync(int ticketId);
+        Task<bool> ProcessPaymentAsync(int ticketId);
     }
 }

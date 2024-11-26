@@ -10,12 +10,12 @@ namespace CM.Domain.Seat
     {
         public int Id { get; set; }
 
-        public string SeatType { get; set; } // Loại ghế (Standard, VIP, ...)
-        public string RoomID { get; set; } // ID của phòng
+        public string SeatType { get; set; }
+        public string RoomID { get; set; } 
 
-        public DateTime StartDate { get; set; } // Ngày bắt đầu áp dụng giá
-        public DateTime EndDate { get; set; } // Ngày kết thúc áp dụng giá
+        public DateTime StartDate { get; set; } 
+        public DateTime EndDate { get; set; } 
 
-        public decimal Price { get; set; } // Giá của ghế
+        public decimal Price { get; set; } 
     }
 }

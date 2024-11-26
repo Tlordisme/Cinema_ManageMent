@@ -63,6 +63,19 @@ namespace CM_API.Controllers
                 return BadRequest($"Có lỗi khi cập nhật ghế: {ex.Message}");
             }
         }
+        [HttpPost("link-double-seat")]
+        public IActionResult LinkDoubleSeat([FromBody] LinkDoubleSeatDto dto)
+        {
+            try
+            {
+                _seatService.LinkDoubleSeat(dto.SeatId, dto.DoubleSeatId);
+                return Ok("Liên kết ghế đôi thành công.");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
 
         // Xóa ghế
         [HttpDelete("{seatId}")]
