@@ -1,5 +1,4 @@
-﻿
-using CM.Dtos.Movie;
+﻿using CM.Dtos.Movie;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1521,6 +1521,7 @@
       "CM.ApplicationService/1.0.0": {
         "dependencies": {
           "BCrypt.Net-Next": "4.0.3",
+          "CM.Domain": "1.0.0",
           "CM.Dtos": "1.0.0",
           "CM.Infrastructure": "1.0.0",
           "CloudinaryDotNet": "1.26.2",
@@ -1535,10 +1536,7 @@
           "dotenv.net": "3.2.1"
         },
         "runtime": {
-          "CM.ApplicationService.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "CM.ApplicationService.dll": {}
         }
       },
       "CM.Domain/1.0.0": {
@@ -1546,10 +1544,7 @@
           "Swashbuckle.AspNetCore.Annotations": "6.9.0"
         },
         "runtime": {
-          "CM.Domain.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "CM.Domain.dll": {}
         }
       },
       "CM.Dtos/1.0.0": {
@@ -1557,10 +1552,7 @@
           "CM.Domain": "1.0.0"
         },
         "runtime": {
-          "CM.Dtos.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "CM.Dtos.dll": {}
         }
       },
       "CM.Infrastructure/1.0.0": {
@@ -1570,10 +1562,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.10"
         },
         "runtime": {
-          "CM.Infrastructure.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "CM.Infrastructure.dll": {}
         }
       },
       "Share.ApplicationService/1.0.0": {
@@ -1581,18 +1570,12 @@
           "Microsoft.Extensions.Logging.Abstractions": "8.0.2"
         },
         "runtime": {
-          "Share.ApplicationService.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Share.ApplicationService.dll": {}
         }
       },
       "Share.Constant/1.0.0": {
         "runtime": {
-          "Share.Constant.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Share.Constant.dll": {}
         }
       }
     }

@@ -19,6 +19,8 @@ using CM.ApplicationService.UserModule.Implements;
 using CM.Auth.ApplicantService.Auth.Abstracts;
 using CM.Auth.ApplicantService.Auth.Implements;
 using CM.Auth.ApplicantService.Permission.Implements;
+using CM.ApplicationService.Food.Abstracts;
+using CM.ApplicationService.Food.Implements;
 using CM.Domain.Auth;
 using CM.Infrastructure;
 
@@ -31,6 +33,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Share.Constant.Database;
+using CM.ApplicationService.Ticket.Abstracts;
+using CM.ApplicationService.Ticket.Implements;
 
 namespace CM.ApplicationService.StartUp
 {
@@ -77,6 +81,11 @@ namespace CM.ApplicationService.StartUp
             builder.Services.AddScoped<ITheaterChainService, TheaterChainService>();
             builder.Services.AddScoped<ITheaterService, TheaterService>();
             builder.Services.AddScoped<IRoomService, RoomService>();
+            //Food
+            builder.Services.AddScoped<IFoodService, FoodService>();
+            builder.Services.AddScoped<IComboService, ComboService>();
+            //Ticket
+            builder.Services.AddScoped<ITicketService, TicketService>();
 
             //Cloudinary
             var cloudinaryConfig = builder.Configuration.GetSection("Cloudinary");
@@ -110,6 +119,10 @@ namespace CM.ApplicationService.StartUp
                         ),
                     };
                 });
+
+            //loggin
+            builder.Services.AddLogging();
+
         }
     }
 }

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CM.Domain.Movie;
+using CM.Domain.Ticket;
 using Swashbuckle.AspNetCore.Annotations;
 
 namespace CM.Domain.Auth
@@ -43,5 +44,7 @@ namespace CM.Domain.Auth
         //public virtual ICollection<MoComment> Comments { get; set; }
 
         //public virtual ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
+
+        public List<CMTicket> Tickets { get; set; } = new List<CMTicket>();
     }
 }

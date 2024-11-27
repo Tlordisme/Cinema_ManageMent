@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CM.Infrastructure
-build_property.ProjectDir = D:\Cinema_Management\Cinema_Management\Services\CM.Infrastructure\
+build_property.ProjectDir = C:\Users\z4khi\Source\Repos\Theater_Management\Services\CM.Infrastructure\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

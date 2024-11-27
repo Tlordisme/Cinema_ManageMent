@@ -1,5 +1,6 @@
 ﻿using CM.Domain.Showtime;
 using CM.Domain.Theater;
+using CM.Domain.Ticket;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -26,6 +27,8 @@ namespace CM.Domain.Seat
         public CMRoom Room { get; set; }
 
         public SeatStatus Status { get; set; }
+
+        public List<CMTicketSeat> TicketSeats { get; set; } = new List<CMTicketSeat>();
     }
     public enum SeatStatus
     {

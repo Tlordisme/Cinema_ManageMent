@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "B3B0SfnL9Q0=",
+  "dgSpecHash": "tKbIAw2gj0VK8YBHjvYtxupL/pPyRgjY3UYEkKBCaTd3Qt2dLSSJfJq8YCoND5raLsInWAf6U/7BX/mknwgnyA==",
   "success": true,
-  "projectFilePath": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\CM.Domain.csproj",
+  "projectFilePath": "C:\\Users\\z4khi\\Source\\Repos\\Theater_Management\\Services\\CM.Domain\\CM.Domain.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\yench\\.nuget\\packages\\microsoft.openapi\\1.6.14\\microsoft.openapi.1.6.14.nupkg.sha512",
-    "C:\\Users\\yench\\.nuget\\packages\\swashbuckle.aspnetcore.annotations\\6.9.0\\swashbuckle.aspnetcore.annotations.6.9.0.nupkg.sha512",
-    "C:\\Users\\yench\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.9.0\\swashbuckle.aspnetcore.swagger.6.9.0.nupkg.sha512",
-    "C:\\Users\\yench\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.9.0\\swashbuckle.aspnetcore.swaggergen.6.9.0.nupkg.sha512"
+    "C:\\Users\\z4khi\\.nuget\\packages\\microsoft.openapi\\1.6.14\\microsoft.openapi.1.6.14.nupkg.sha512",
+    "C:\\Users\\z4khi\\.nuget\\packages\\swashbuckle.aspnetcore.annotations\\6.9.0\\swashbuckle.aspnetcore.annotations.6.9.0.nupkg.sha512",
+    "C:\\Users\\z4khi\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.9.0\\swashbuckle.aspnetcore.swagger.6.9.0.nupkg.sha512",
+    "C:\\Users\\z4khi\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.9.0\\swashbuckle.aspnetcore.swaggergen.6.9.0.nupkg.sha512"
   ],
   "logs": []
 }

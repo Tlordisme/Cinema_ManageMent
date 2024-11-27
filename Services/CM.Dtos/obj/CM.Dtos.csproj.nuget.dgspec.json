@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\CM.Dtos.csproj": {}
+    "C:\\Users\\z4khi\\Source\\Repos\\Theater_Management\\Services\\CM.Dtos\\CM.Dtos.csproj": {}
   },
   "projects": {
-    "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\CM.Domain.csproj": {
+    "C:\\Users\\z4khi\\Source\\Repos\\Theater_Management\\Services\\CM.Domain\\CM.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\CM.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\z4khi\\Source\\Repos\\Theater_Management\\Services\\CM.Domain\\CM.Domain.csproj",
         "projectName": "CM.Domain",
-        "projectPath": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\CM.Domain.csproj",
-        "packagesPath": "C:\\Users\\yench\\.nuget\\packages\\",
-        "outputPath": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\obj\\",
+        "projectPath": "C:\\Users\\z4khi\\Source\\Repos\\Theater_Management\\Services\\CM.Domain\\CM.Domain.csproj",
+        "packagesPath": "C:\\Users\\z4khi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\z4khi\\Source\\Repos\\Theater_Management\\Services\\CM.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\yench\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\z4khi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -67,21 +66,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\CM.Dtos.csproj": {
+    "C:\\Users\\z4khi\\Source\\Repos\\Theater_Management\\Services\\CM.Dtos\\CM.Dtos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\CM.Dtos.csproj",
+        "projectUniqueName": "C:\\Users\\z4khi\\Source\\Repos\\Theater_Management\\Services\\CM.Dtos\\CM.Dtos.csproj",
         "projectName": "CM.Dtos",
-        "projectPath": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\CM.Dtos.csproj",
-        "packagesPath": "C:\\Users\\yench\\.nuget\\packages\\",
-        "outputPath": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\obj\\",
+        "projectPath": "C:\\Users\\z4khi\\Source\\Repos\\Theater_Management\\Services\\CM.Dtos\\CM.Dtos.csproj",
+        "packagesPath": "C:\\Users\\z4khi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\z4khi\\Source\\Repos\\Theater_Management\\Services\\CM.Dtos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\yench\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\z4khi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -89,15 +88,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\CM.Domain.csproj": {
-                "projectPath": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\CM.Domain.csproj"
+              "C:\\Users\\z4khi\\Source\\Repos\\Theater_Management\\Services\\CM.Domain\\CM.Domain.csproj": {
+                "projectPath": "C:\\Users\\z4khi\\Source\\Repos\\Theater_Management\\Services\\CM.Domain\\CM.Domain.csproj"
               }
             }
           }
@@ -132,7 +130,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

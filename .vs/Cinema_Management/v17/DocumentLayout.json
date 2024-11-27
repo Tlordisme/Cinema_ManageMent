@@ -1,334 +1,46 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Cinema_Management\\Cinema_Management\\",
+  "WorkspaceRootPath": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|d:\\cinema_management\\cinema_management\\cm_api\\migrations\\20241117073820_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|solutionrelative:cm_api\\migrations\\20241117073820_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|d:\\cinema_management\\cinema_management\\cm_api\\controllers\\theatercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|solutionrelative:cm_api\\controllers\\theatercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FB0CF74-FB5C-4A8E-9AEC-29929C029F2A}|Services\\CM.Domain\\CM.Domain.csproj|d:\\cinema_management\\cinema_management\\services\\cm.domain\\seat\\cmseat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FB0CF74-FB5C-4A8E-9AEC-29929C029F2A}|Services\\CM.Domain\\CM.Domain.csproj|solutionrelative:services\\cm.domain\\seat\\cmseat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|d:\\cinema_management\\cinema_management\\services\\cm.applicationservice\\startup\\cmstartup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\startup\\cmstartup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{682C7940-0183-41E3-922A-69699503C8B7}|Services\\CM.Infrastructure\\CM.Infrastructure.csproj|d:\\cinema_management\\cinema_management\\services\\cm.infrastructure\\repositories\\ticketrepository\\implements\\ticketrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{682C7940-0183-41E3-922A-69699503C8B7}|Services\\CM.Infrastructure\\CM.Infrastructure.csproj|solutionrelative:services\\cm.infrastructure\\repositories\\ticketrepository\\implements\\ticketrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{682C7940-0183-41E3-922A-69699503C8B7}|Services\\CM.Infrastructure\\CM.Infrastructure.csproj|d:\\cinema_management\\cinema_management\\services\\cm.infrastructure\\cmdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{682C7940-0183-41E3-922A-69699503C8B7}|Services\\CM.Infrastructure\\CM.Infrastructure.csproj|solutionrelative:services\\cm.infrastructure\\cmdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FB0CF74-FB5C-4A8E-9AEC-29929C029F2A}|Services\\CM.Domain\\CM.Domain.csproj|d:\\cinema_management\\cinema_management\\services\\cm.domain\\showtime\\cmshowtime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FB0CF74-FB5C-4A8E-9AEC-29929C029F2A}|Services\\CM.Domain\\CM.Domain.csproj|solutionrelative:services\\cm.domain\\showtime\\cmshowtime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FB0CF74-FB5C-4A8E-9AEC-29929C029F2A}|Services\\CM.Domain\\CM.Domain.csproj|d:\\cinema_management\\cinema_management\\services\\cm.domain\\theater\\cmtheater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FB0CF74-FB5C-4A8E-9AEC-29929C029F2A}|Services\\CM.Domain\\CM.Domain.csproj|solutionrelative:services\\cm.domain\\theater\\cmtheater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|d:\\cinema_management\\cinema_management\\services\\cm.applicationservice\\theater\\abstracts\\iroomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\theater\\abstracts\\iroomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|d:\\cinema_management\\cinema_management\\cm_api\\controllers\\seatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|solutionrelative:cm_api\\controllers\\seatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|d:\\cinema_management\\cinema_management\\services\\cm.applicationservice\\seat\\implements\\seatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\seat\\implements\\seatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|d:\\cinema_management\\cinema_management\\services\\cm.applicationservice\\seat\\abstracts\\iseatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\seat\\abstracts\\iseatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|d:\\cinema_management\\cinema_management\\cm_api\\controllers\\theaterchaincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|solutionrelative:cm_api\\controllers\\theaterchaincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|d:\\cinema_management\\cinema_management\\cm_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|solutionrelative:cm_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|d:\\cinema_management\\cinema_management\\services\\cm.applicationservice\\ticket\\abstracts\\iticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\ticket\\abstracts\\iticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|d:\\cinema_management\\cinema_management\\services\\cm.applicationservice\\ticket\\implements\\ticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|c:\\users\\z4khi\\source\\repos\\theater_management\\services\\cm.applicationservice\\ticket\\implements\\ticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\ticket\\implements\\ticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4BEEE1E5-FE42-45F0-ACB7-D6B193617688}|Services\\CM.Dtos\\CM.Dtos.csproj|d:\\cinema_management\\cinema_management\\services\\cm.dtos\\ticket\\createticketdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BEEE1E5-FE42-45F0-ACB7-D6B193617688}|Services\\CM.Dtos\\CM.Dtos.csproj|solutionrelative:services\\cm.dtos\\ticket\\createticketdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|c:\\users\\z4khi\\source\\repos\\theater_management\\cm_api\\controllers\\ticketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|solutionrelative:cm_api\\controllers\\ticketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4BEEE1E5-FE42-45F0-ACB7-D6B193617688}|Services\\CM.Dtos\\CM.Dtos.csproj|d:\\cinema_management\\cinema_management\\services\\cm.dtos\\ticket\\ticketdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BEEE1E5-FE42-45F0-ACB7-D6B193617688}|Services\\CM.Dtos\\CM.Dtos.csproj|solutionrelative:services\\cm.dtos\\ticket\\ticketdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BEEE1E5-FE42-45F0-ACB7-D6B193617688}|Services\\CM.Dtos\\CM.Dtos.csproj|d:\\cinema_management\\cinema_management\\services\\cm.dtos\\food\\foodcombodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BEEE1E5-FE42-45F0-ACB7-D6B193617688}|Services\\CM.Dtos\\CM.Dtos.csproj|solutionrelative:services\\cm.dtos\\food\\foodcombodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|d:\\cinema_management\\cinema_management\\services\\cm.applicationservice\\food\\implements\\foodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\food\\implements\\foodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|d:\\cinema_management\\cinema_management\\services\\cm.applicationservice\\food\\abstracts\\ifoodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\food\\abstracts\\ifoodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FB0CF74-FB5C-4A8E-9AEC-29929C029F2A}|Services\\CM.Domain\\CM.Domain.csproj|d:\\cinema_management\\cinema_management\\services\\cm.domain\\foodcombo\\cmfoodcombo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FB0CF74-FB5C-4A8E-9AEC-29929C029F2A}|Services\\CM.Domain\\CM.Domain.csproj|solutionrelative:services\\cm.domain\\foodcombo\\cmfoodcombo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FB0CF74-FB5C-4A8E-9AEC-29929C029F2A}|Services\\CM.Domain\\CM.Domain.csproj|d:\\cinema_management\\cinema_management\\services\\cm.domain\\ticket\\cmticketseat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FB0CF74-FB5C-4A8E-9AEC-29929C029F2A}|Services\\CM.Domain\\CM.Domain.csproj|solutionrelative:services\\cm.domain\\ticket\\cmticketseat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FB0CF74-FB5C-4A8E-9AEC-29929C029F2A}|Services\\CM.Domain\\CM.Domain.csproj|d:\\cinema_management\\cinema_management\\services\\cm.domain\\ticket\\cmticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FB0CF74-FB5C-4A8E-9AEC-29929C029F2A}|Services\\CM.Domain\\CM.Domain.csproj|solutionrelative:services\\cm.domain\\ticket\\cmticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{682C7940-0183-41E3-922A-69699503C8B7}|Services\\CM.Infrastructure\\CM.Infrastructure.csproj|d:\\cinema_management\\cinema_management\\services\\cm.infrastructure\\repositories\\ticketrepository\\abstracts\\iticketrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{682C7940-0183-41E3-922A-69699503C8B7}|Services\\CM.Infrastructure\\CM.Infrastructure.csproj|solutionrelative:services\\cm.infrastructure\\repositories\\ticketrepository\\abstracts\\iticketrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|d:\\cinema_management\\cinema_management\\services\\cm.applicationservice\\theater\\abstracts\\itheaterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\theater\\abstracts\\itheaterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|d:\\cinema_management\\cinema_management\\services\\cm.applicationservice\\theater\\abstracts\\itheaterchainservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\theater\\abstracts\\itheaterchainservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|d:\\cinema_management\\cinema_management\\cm_api\\controllers\\roomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|solutionrelative:cm_api\\controllers\\roomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|d:\\cinema_management\\cinema_management\\services\\cm.applicationservice\\theater\\implements\\roomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\theater\\implements\\roomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|d:\\cinema_management\\cinema_management\\services\\cm.applicationservice\\theater\\implements\\theaterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\theater\\implements\\theaterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|d:\\cinema_management\\cinema_management\\services\\cm.applicationservice\\theater\\implements\\theaterchainservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\theater\\implements\\theaterchainservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|d:\\cinema_management\\cinema_management\\services\\cm.applicationservice\\auth\\authmodule\\implements\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\auth\\authmodule\\implements\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FB0CF74-FB5C-4A8E-9AEC-29929C029F2A}|Services\\CM.Domain\\CM.Domain.csproj|d:\\cinema_management\\cinema_management\\services\\cm.domain\\theater\\cmroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FB0CF74-FB5C-4A8E-9AEC-29929C029F2A}|Services\\CM.Domain\\CM.Domain.csproj|solutionrelative:services\\cm.domain\\theater\\cmroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BEEE1E5-FE42-45F0-ACB7-D6B193617688}|Services\\CM.Dtos\\CM.Dtos.csproj|d:\\cinema_management\\cinema_management\\services\\cm.dtos\\theater\\roomdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BEEE1E5-FE42-45F0-ACB7-D6B193617688}|Services\\CM.Dtos\\CM.Dtos.csproj|solutionrelative:services\\cm.dtos\\theater\\roomdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BEEE1E5-FE42-45F0-ACB7-D6B193617688}|Services\\CM.Dtos\\CM.Dtos.csproj|d:\\cinema_management\\cinema_management\\services\\cm.dtos\\theater\\theaterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BEEE1E5-FE42-45F0-ACB7-D6B193617688}|Services\\CM.Dtos\\CM.Dtos.csproj|solutionrelative:services\\cm.dtos\\theater\\theaterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BEEE1E5-FE42-45F0-ACB7-D6B193617688}|Services\\CM.Dtos\\CM.Dtos.csproj|d:\\cinema_management\\cinema_management\\services\\cm.dtos\\theater\\theaterchaindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BEEE1E5-FE42-45F0-ACB7-D6B193617688}|Services\\CM.Dtos\\CM.Dtos.csproj|solutionrelative:services\\cm.dtos\\theater\\theaterchaindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{682C7940-0183-41E3-922A-69699503C8B7}|Services\\CM.Infrastructure\\CM.Infrastructure.csproj|d:\\cinema_management\\cinema_management\\services\\cm.infrastructure\\repositories\\seatrepository\\implements\\seatrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{682C7940-0183-41E3-922A-69699503C8B7}|Services\\CM.Infrastructure\\CM.Infrastructure.csproj|solutionrelative:services\\cm.infrastructure\\repositories\\seatrepository\\implements\\seatrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{682C7940-0183-41E3-922A-69699503C8B7}|Services\\CM.Infrastructure\\CM.Infrastructure.csproj|d:\\cinema_management\\cinema_management\\services\\cm.infrastructure\\repositories\\seatrepository\\abstracts\\iseatrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{682C7940-0183-41E3-922A-69699503C8B7}|Services\\CM.Infrastructure\\CM.Infrastructure.csproj|solutionrelative:services\\cm.infrastructure\\repositories\\seatrepository\\abstracts\\iseatrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BEEE1E5-FE42-45F0-ACB7-D6B193617688}|Services\\CM.Dtos\\CM.Dtos.csproj|d:\\cinema_management\\cinema_management\\services\\cm.dtos\\seat\\seatdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BEEE1E5-FE42-45F0-ACB7-D6B193617688}|Services\\CM.Dtos\\CM.Dtos.csproj|solutionrelative:services\\cm.dtos\\seat\\seatdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|d:\\cinema_management\\cinema_management\\services\\cm.applicationservice\\auth\\authmodule\\implements\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\auth\\authmodule\\implements\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|d:\\cinema_management\\cinema_management\\services\\cm.applicationservice\\auth\\authmodule\\abstracts\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\auth\\authmodule\\abstracts\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|d:\\cinema_management\\cinema_management\\services\\cm.applicationservice\\auth\\authmodule\\abstracts\\ijwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\auth\\authmodule\\abstracts\\ijwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FB0CF74-FB5C-4A8E-9AEC-29929C029F2A}|Services\\CM.Domain\\CM.Domain.csproj|d:\\cinema_management\\cinema_management\\services\\cm.domain\\auth\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FB0CF74-FB5C-4A8E-9AEC-29929C029F2A}|Services\\CM.Domain\\CM.Domain.csproj|solutionrelative:services\\cm.domain\\auth\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{682C7940-0183-41E3-922A-69699503C8B7}|Services\\CM.Infrastructure\\CM.Infrastructure.csproj|d:\\cinema_management\\cinema_management\\services\\cm.infrastructure\\cm.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{682C7940-0183-41E3-922A-69699503C8B7}|Services\\CM.Infrastructure\\CM.Infrastructure.csproj|solutionrelative:services\\cm.infrastructure\\cm.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|d:\\cinema_management\\cinema_management\\cm_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|c:\\users\\z4khi\\source\\repos\\theater_management\\cm_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|solutionrelative:cm_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|d:\\cinema_management\\cinema_management\\cm_api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|solutionrelative:cm_api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{682C7940-0183-41E3-922A-69699503C8B7}|Services\\CM.Infrastructure\\CM.Infrastructure.csproj|c:\\users\\z4khi\\source\\repos\\theater_management\\services\\cm.infrastructure\\cmdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{682C7940-0183-41E3-922A-69699503C8B7}|Services\\CM.Infrastructure\\CM.Infrastructure.csproj|solutionrelative:services\\cm.infrastructure\\cmdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4BEEE1E5-FE42-45F0-ACB7-D6B193617688}|Services\\CM.Dtos\\CM.Dtos.csproj|d:\\cinema_management\\cinema_management\\services\\cm.dtos\\movie\\addcommentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BEEE1E5-FE42-45F0-ACB7-D6B193617688}|Services\\CM.Dtos\\CM.Dtos.csproj|solutionrelative:services\\cm.dtos\\movie\\addcommentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|c:\\users\\z4khi\\source\\repos\\theater_management\\services\\cm.applicationservice\\startup\\cmstartup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\startup\\cmstartup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|d:\\cinema_management\\cinema_management\\cm_api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|solutionrelative:cm_api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|c:\\users\\z4khi\\source\\repos\\theater_management\\services\\cm.applicationservice\\ticket\\abstracts\\iticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\ticket\\abstracts\\iticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1FB0CF74-FB5C-4A8E-9AEC-29929C029F2A}|Services\\CM.Domain\\CM.Domain.csproj|d:\\cinema_management\\cinema_management\\services\\cm.domain\\movie\\momovie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FB0CF74-FB5C-4A8E-9AEC-29929C029F2A}|Services\\CM.Domain\\CM.Domain.csproj|solutionrelative:services\\cm.domain\\movie\\momovie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4BEEE1E5-FE42-45F0-ACB7-D6B193617688}|Services\\CM.Dtos\\CM.Dtos.csproj|c:\\users\\z4khi\\source\\repos\\theater_management\\services\\cm.dtos\\ticket\\ticketdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BEEE1E5-FE42-45F0-ACB7-D6B193617688}|Services\\CM.Dtos\\CM.Dtos.csproj|solutionrelative:services\\cm.dtos\\ticket\\ticketdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1FB0CF74-FB5C-4A8E-9AEC-29929C029F2A}|Services\\CM.Domain\\CM.Domain.csproj|d:\\cinema_management\\cinema_management\\services\\cm.domain\\movie\\mocomment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FB0CF74-FB5C-4A8E-9AEC-29929C029F2A}|Services\\CM.Domain\\CM.Domain.csproj|solutionrelative:services\\cm.domain\\movie\\mocomment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1FB0CF74-FB5C-4A8E-9AEC-29929C029F2A}|Services\\CM.Domain\\CM.Domain.csproj|c:\\users\\z4khi\\source\\repos\\theater_management\\services\\cm.domain\\ticket\\cmticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FB0CF74-FB5C-4A8E-9AEC-29929C029F2A}|Services\\CM.Domain\\CM.Domain.csproj|solutionrelative:services\\cm.domain\\ticket\\cmticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|d:\\cinema_management\\cinema_management\\services\\cm.applicationservice\\movie\\implements\\commentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\movie\\implements\\commentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1FB0CF74-FB5C-4A8E-9AEC-29929C029F2A}|Services\\CM.Domain\\CM.Domain.csproj|c:\\users\\z4khi\\source\\repos\\theater_management\\services\\cm.domain\\ticket\\cmticketseat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FB0CF74-FB5C-4A8E-9AEC-29929C029F2A}|Services\\CM.Domain\\CM.Domain.csproj|solutionrelative:services\\cm.domain\\ticket\\cmticketseat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4BEEE1E5-FE42-45F0-ACB7-D6B193617688}|Services\\CM.Dtos\\CM.Dtos.csproj|d:\\cinema_management\\cinema_management\\services\\cm.dtos\\movie\\commentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BEEE1E5-FE42-45F0-ACB7-D6B193617688}|Services\\CM.Dtos\\CM.Dtos.csproj|solutionrelative:services\\cm.dtos\\movie\\commentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|d:\\cinema_management\\cinema_management\\services\\cm.applicationservice\\movie\\abstracts\\icommentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\movie\\abstracts\\icommentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|d:\\cinema_management\\cinema_management\\cm_api\\controllers\\commentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|solutionrelative:cm_api\\controllers\\commentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|d:\\cinema_management\\cinema_management\\services\\cm.applicationservice\\movie\\implements\\movieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\movie\\implements\\movieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BEEE1E5-FE42-45F0-ACB7-D6B193617688}|Services\\CM.Dtos\\CM.Dtos.csproj|d:\\cinema_management\\cinema_management\\services\\cm.dtos\\movie\\add_updatemoviedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BEEE1E5-FE42-45F0-ACB7-D6B193617688}|Services\\CM.Dtos\\CM.Dtos.csproj|solutionrelative:services\\cm.dtos\\movie\\add_updatemoviedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|d:\\cinema_management\\cinema_management\\cm_api\\controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|solutionrelative:cm_api\\controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|d:\\cinema_management\\cinema_management\\services\\cm.applicationservice\\movie\\abstracts\\imovieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\movie\\abstracts\\imovieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|d:\\cinema_management\\cinema_management\\services\\cm.applicationservice\\cloudinary\\implements\\cloudservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\cloudinary\\implements\\cloudservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BEEE1E5-FE42-45F0-ACB7-D6B193617688}|Services\\CM.Dtos\\CM.Dtos.csproj|d:\\cinema_management\\cinema_management\\services\\cm.dtos\\auth\\auth\\tokendto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BEEE1E5-FE42-45F0-ACB7-D6B193617688}|Services\\CM.Dtos\\CM.Dtos.csproj|solutionrelative:services\\cm.dtos\\auth\\auth\\tokendto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BEEE1E5-FE42-45F0-ACB7-D6B193617688}|Services\\CM.Dtos\\CM.Dtos.csproj|d:\\cinema_management\\cinema_management\\services\\cm.dtos\\auth\\auth\\registeruserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BEEE1E5-FE42-45F0-ACB7-D6B193617688}|Services\\CM.Dtos\\CM.Dtos.csproj|solutionrelative:services\\cm.dtos\\auth\\auth\\registeruserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BEEE1E5-FE42-45F0-ACB7-D6B193617688}|Services\\CM.Dtos\\CM.Dtos.csproj|d:\\cinema_management\\cinema_management\\services\\cm.dtos\\auth\\auth\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BEEE1E5-FE42-45F0-ACB7-D6B193617688}|Services\\CM.Dtos\\CM.Dtos.csproj|solutionrelative:services\\cm.dtos\\auth\\auth\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BEEE1E5-FE42-45F0-ACB7-D6B193617688}|Services\\CM.Dtos\\CM.Dtos.csproj|d:\\cinema_management\\cinema_management\\services\\cm.dtos\\auth\\auth\\loginreponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BEEE1E5-FE42-45F0-ACB7-D6B193617688}|Services\\CM.Dtos\\CM.Dtos.csproj|solutionrelative:services\\cm.dtos\\auth\\auth\\loginreponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|d:\\cinema_management\\cinema_management\\services\\cm.applicationservice\\auth\\common\\validateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\auth\\common\\validateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|d:\\cinema_management\\cinema_management\\services\\cm.applicationservice\\common\\servicebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\common\\servicebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|d:\\cinema_management\\cinema_management\\cm_api\\cm_api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|solutionrelative:cm_api\\cm_api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|d:\\cinema_management\\cinema_management\\cm_api\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|solutionrelative:cm_api\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|d:\\cinema_management\\cinema_management\\services\\cm.applicationservice\\cloudinary\\abstracts\\icloudservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\cloudinary\\abstracts\\icloudservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|d:\\cinema_management\\cinema_management\\services\\cm.applicationservice\\auth\\rolemodule\\abstracts\\iroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\auth\\rolemodule\\abstracts\\iroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|d:\\cinema_management\\cinema_management\\services\\cm.applicationservice\\auth\\rolemodule\\implements\\roleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\auth\\rolemodule\\implements\\roleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|d:\\cinema_management\\cinema_management\\services\\cm.applicationservice\\auth\\usermodule\\implements\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\auth\\usermodule\\implements\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BEEE1E5-FE42-45F0-ACB7-D6B193617688}|Services\\CM.Dtos\\CM.Dtos.csproj|d:\\cinema_management\\cinema_management\\services\\cm.dtos\\auth\\role\\roledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BEEE1E5-FE42-45F0-ACB7-D6B193617688}|Services\\CM.Dtos\\CM.Dtos.csproj|solutionrelative:services\\cm.dtos\\auth\\role\\roledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BEEE1E5-FE42-45F0-ACB7-D6B193617688}|Services\\CM.Dtos\\CM.Dtos.csproj|d:\\cinema_management\\cinema_management\\services\\cm.dtos\\auth\\role\\createroledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BEEE1E5-FE42-45F0-ACB7-D6B193617688}|Services\\CM.Dtos\\CM.Dtos.csproj|solutionrelative:services\\cm.dtos\\auth\\role\\createroledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{748A0BD3-2A82-4AF5-A044-BDBD51152D8A}|Services\\Shared\\Share.Constant\\Share.Constant.csproj|d:\\cinema_management\\cinema_management\\services\\shared\\share.constant\\database\\dbschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{748A0BD3-2A82-4AF5-A044-BDBD51152D8A}|Services\\Shared\\Share.Constant\\Share.Constant.csproj|solutionrelative:services\\shared\\share.constant\\database\\dbschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{748A0BD3-2A82-4AF5-A044-BDBD51152D8A}|Services\\Shared\\Share.Constant\\Share.Constant.csproj|d:\\cinema_management\\cinema_management\\services\\shared\\share.constant\\permission\\permissionkey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{748A0BD3-2A82-4AF5-A044-BDBD51152D8A}|Services\\Shared\\Share.Constant\\Share.Constant.csproj|solutionrelative:services\\shared\\share.constant\\permission\\permissionkey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FB0CF74-FB5C-4A8E-9AEC-29929C029F2A}|Services\\CM.Domain\\CM.Domain.csproj|d:\\cinema_management\\cinema_management\\services\\cm.domain\\movie\\mogenre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FB0CF74-FB5C-4A8E-9AEC-29929C029F2A}|Services\\CM.Domain\\CM.Domain.csproj|solutionrelative:services\\cm.domain\\movie\\mogenre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FB0CF74-FB5C-4A8E-9AEC-29929C029F2A}|Services\\CM.Domain\\CM.Domain.csproj|d:\\cinema_management\\cinema_management\\services\\cm.domain\\movie\\momovie_cast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FB0CF74-FB5C-4A8E-9AEC-29929C029F2A}|Services\\CM.Domain\\CM.Domain.csproj|solutionrelative:services\\cm.domain\\movie\\momovie_cast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|d:\\cinema_management\\cinema_management\\services\\cm.applicationservice\\cm.applicationservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\cm.applicationservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|d:\\cinema_management\\cinema_management\\services\\cm.applicationservice\\auth\\permission\\implements\\permissionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\auth\\permission\\implements\\permissionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|d:\\cinema_management\\cinema_management\\services\\cm.applicationservice\\auth\\permission\\abstracts\\ipermissionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\auth\\permission\\abstracts\\ipermissionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BEEE1E5-FE42-45F0-ACB7-D6B193617688}|Services\\CM.Dtos\\CM.Dtos.csproj|d:\\cinema_management\\cinema_management\\services\\cm.dtos\\image\\imagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BEEE1E5-FE42-45F0-ACB7-D6B193617688}|Services\\CM.Dtos\\CM.Dtos.csproj|solutionrelative:services\\cm.dtos\\image\\imagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FB0CF74-FB5C-4A8E-9AEC-29929C029F2A}|Services\\CM.Domain\\CM.Domain.csproj|d:\\cinema_management\\cinema_management\\services\\cm.domain\\auth\\rolepermission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FB0CF74-FB5C-4A8E-9AEC-29929C029F2A}|Services\\CM.Domain\\CM.Domain.csproj|solutionrelative:services\\cm.domain\\auth\\rolepermission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|c:\\users\\z4khi\\source\\repos\\theater_management\\cm_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|solutionrelative:cm_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -338,8 +50,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 12,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -349,1067 +77,146 @@
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CMSeat.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\Seat\\CMSeat.cs",
-              "RelativeDocumentMoniker": "Services\\CM.Domain\\Seat\\CMSeat.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\Seat\\CMSeat.cs",
-              "RelativeToolTip": "Services\\CM.Domain\\Seat\\CMSeat.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAiwA4AAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T06:19:53.134Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TheaterController.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Controllers\\TheaterController.cs",
-              "RelativeDocumentMoniker": "CM_API\\Controllers\\TheaterController.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Controllers\\TheaterController.cs",
-              "RelativeToolTip": "CM_API\\Controllers\\TheaterController.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAA3wCYAAAABAAAAAAAAAA==",
+              "Title": "TicketController.cs",
+              "DocumentMoniker": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\CM_API\\Controllers\\TicketController.cs",
+              "RelativeDocumentMoniker": "CM_API\\Controllers\\TicketController.cs",
+              "ToolTip": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\CM_API\\Controllers\\TicketController.cs",
+              "RelativeToolTip": "CM_API\\Controllers\\TicketController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABUAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T12:17:04.482Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20241117073820_Init.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Migrations\\20241117073820_Init.cs",
-              "RelativeDocumentMoniker": "CM_API\\Migrations\\20241117073820_Init.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Migrations\\20241117073820_Init.cs",
-              "RelativeToolTip": "CM_API\\Migrations\\20241117073820_Init.cs",
-              "ViewState": "AgIAAKMAAAAAAAAAAAAQwKsAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T20:11:28.706Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CMStartUp.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\StartUp\\CMStartUp.cs",
-              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\StartUp\\CMStartUp.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\StartUp\\CMStartUp.cs",
-              "RelativeToolTip": "Services\\CM.ApplicationService\\StartUp\\CMStartUp.cs",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAAAGwAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:33:35.347Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "SeatController.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Controllers\\SeatController.cs",
-              "RelativeDocumentMoniker": "CM_API\\Controllers\\SeatController.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Controllers\\SeatController.cs",
-              "RelativeToolTip": "CM_API\\Controllers\\SeatController.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAiwDYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T12:34:29.186Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "SeatService.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Seat\\Implements\\SeatService.cs",
-              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\Seat\\Implements\\SeatService.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Seat\\Implements\\SeatService.cs",
-              "RelativeToolTip": "Services\\CM.ApplicationService\\Seat\\Implements\\SeatService.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAiwEIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T11:30:18.89Z",
+              "WhenOpened": "2024-11-27T15:57:19.678Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "IRoomService.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Theater\\Abstracts\\IRoomService.cs",
-              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\Theater\\Abstracts\\IRoomService.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Theater\\Abstracts\\IRoomService.cs",
-              "RelativeToolTip": "Services\\CM.ApplicationService\\Theater\\Abstracts\\IRoomService.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAswAoAAAAVAAAAAAAAAA==",
+              "Title": "CMTicketSeat.cs",
+              "DocumentMoniker": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\Services\\CM.Domain\\Ticket\\CMTicketSeat.cs",
+              "RelativeDocumentMoniker": "Services\\CM.Domain\\Ticket\\CMTicketSeat.cs",
+              "ToolTip": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\Services\\CM.Domain\\Ticket\\CMTicketSeat.cs",
+              "RelativeToolTip": "Services\\CM.Domain\\Ticket\\CMTicketSeat.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAsAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T11:50:59.089Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CMDbContext.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Infrastructure\\CMDbContext.cs",
-              "RelativeDocumentMoniker": "Services\\CM.Infrastructure\\CMDbContext.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Infrastructure\\CMDbContext.cs",
-              "RelativeToolTip": "Services\\CM.Infrastructure\\CMDbContext.cs",
-              "ViewState": "AgIAAIkAAAAAAAAAAAAAAIEAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:37:17.522Z",
+              "WhenOpened": "2024-11-27T15:41:26.878Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "CMTheater.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\Theater\\CMTheater.cs",
-              "RelativeDocumentMoniker": "Services\\CM.Domain\\Theater\\CMTheater.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\Theater\\CMTheater.cs",
-              "RelativeToolTip": "Services\\CM.Domain\\Theater\\CMTheater.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAjwBUAAAAjAAAAAAAAAA==",
+              "Title": "CMTicket.cs",
+              "DocumentMoniker": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\Services\\CM.Domain\\Ticket\\CMTicket.cs",
+              "RelativeDocumentMoniker": "Services\\CM.Domain\\Ticket\\CMTicket.cs",
+              "ToolTip": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\Services\\CM.Domain\\Ticket\\CMTicket.cs",
+              "RelativeToolTip": "Services\\CM.Domain\\Ticket\\CMTicket.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T07:40:48.107Z",
+              "WhenOpened": "2024-11-27T15:38:18.806Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "CMShowtime.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\Showtime\\CMShowtime.cs",
-              "RelativeDocumentMoniker": "Services\\CM.Domain\\Showtime\\CMShowtime.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\Showtime\\CMShowtime.cs",
-              "RelativeToolTip": "Services\\CM.Domain\\Showtime\\CMShowtime.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAIwBsAAAAAAAAAAAAAAA==",
+              "Title": "TicketDto.cs",
+              "DocumentMoniker": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\Services\\CM.Dtos\\Ticket\\TicketDto.cs",
+              "RelativeDocumentMoniker": "Services\\CM.Dtos\\Ticket\\TicketDto.cs",
+              "ToolTip": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\Services\\CM.Dtos\\Ticket\\TicketDto.cs",
+              "RelativeToolTip": "Services\\CM.Dtos\\Ticket\\TicketDto.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T18:09:51.459Z",
+              "WhenOpened": "2024-11-27T15:33:29.908Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TicketService.cs",
+              "DocumentMoniker": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\Services\\CM.ApplicationService\\Ticket\\Implements\\TicketService.cs",
+              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\Ticket\\Implements\\TicketService.cs",
+              "ToolTip": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\Services\\CM.ApplicationService\\Ticket\\Implements\\TicketService.cs",
+              "RelativeToolTip": "Services\\CM.ApplicationService\\Ticket\\Implements\\TicketService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T15:33:08.74Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ITicketService.cs",
+              "DocumentMoniker": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\Services\\CM.ApplicationService\\Ticket\\Abstracts\\ITicketService.cs",
+              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\Ticket\\Abstracts\\ITicketService.cs",
+              "ToolTip": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\Services\\CM.ApplicationService\\Ticket\\Abstracts\\ITicketService.cs",
+              "RelativeToolTip": "Services\\CM.ApplicationService\\Ticket\\Abstracts\\ITicketService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T15:33:07.713Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\CM_API\\Program.cs",
+              "RelativeDocumentMoniker": "CM_API\\Program.cs",
+              "ToolTip": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\CM_API\\Program.cs",
+              "RelativeToolTip": "CM_API\\Program.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwBIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T17:20:32.803Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CMDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\Services\\CM.Infrastructure\\CMDbContext.cs",
+              "RelativeDocumentMoniker": "Services\\CM.Infrastructure\\CMDbContext.cs",
+              "ToolTip": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\Services\\CM.Infrastructure\\CMDbContext.cs",
+              "RelativeToolTip": "Services\\CM.Infrastructure\\CMDbContext.cs",
+              "ViewState": "AQIAALkAAAAAAAAAAAAgwMkAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T15:18:21.277Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "TicketRepository.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Infrastructure\\Repositories\\TicketRepository\\Implements\\TicketRepository.cs",
-              "RelativeDocumentMoniker": "Services\\CM.Infrastructure\\Repositories\\TicketRepository\\Implements\\TicketRepository.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Infrastructure\\Repositories\\TicketRepository\\Implements\\TicketRepository.cs",
-              "RelativeToolTip": "Services\\CM.Infrastructure\\Repositories\\TicketRepository\\Implements\\TicketRepository.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Title": "CMStartUp.cs",
+              "DocumentMoniker": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\Services\\CM.ApplicationService\\StartUp\\CMStartUp.cs",
+              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\StartUp\\CMStartUp.cs",
+              "ToolTip": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\Services\\CM.ApplicationService\\StartUp\\CMStartUp.cs",
+              "RelativeToolTip": "Services\\CM.ApplicationService\\StartUp\\CMStartUp.cs",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAQwFYAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T12:22:57.425Z",
+              "WhenOpened": "2024-11-20T15:16:43.96Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ISeatService.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Seat\\Abstracts\\ISeatService.cs",
-              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\Seat\\Abstracts\\ISeatService.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Seat\\Abstracts\\ISeatService.cs",
-              "RelativeToolTip": "Services\\CM.ApplicationService\\Seat\\Abstracts\\ISeatService.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAIwBEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T11:17:55.818Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Program.cs",
-              "RelativeDocumentMoniker": "CM_API\\Program.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Program.cs",
-              "RelativeToolTip": "CM_API\\Program.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAQwBEAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:35:30.932Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ITicketService.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Ticket\\Abstracts\\ITicketService.cs",
-              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\Ticket\\Abstracts\\ITicketService.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Ticket\\Abstracts\\ITicketService.cs",
-              "RelativeToolTip": "Services\\CM.ApplicationService\\Ticket\\Abstracts\\ITicketService.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAIwAoAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T11:27:32.083Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "TicketService.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Ticket\\Implements\\TicketService.cs",
-              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\Ticket\\Implements\\TicketService.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Ticket\\Implements\\TicketService.cs",
-              "RelativeToolTip": "Services\\CM.ApplicationService\\Ticket\\Implements\\TicketService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T11:27:38.939Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "CreateTicketDto.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\Ticket\\CreateTicketDto.cs",
-              "RelativeDocumentMoniker": "Services\\CM.Dtos\\Ticket\\CreateTicketDto.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\Ticket\\CreateTicketDto.cs",
-              "RelativeToolTip": "Services\\CM.Dtos\\Ticket\\CreateTicketDto.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAADwvwwAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T11:26:35.079Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "TicketDto.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\Ticket\\TicketDto.cs",
-              "RelativeDocumentMoniker": "Services\\CM.Dtos\\Ticket\\TicketDto.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\Ticket\\TicketDto.cs",
-              "RelativeToolTip": "Services\\CM.Dtos\\Ticket\\TicketDto.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAowBYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T11:26:22.569Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "FoodComboDto.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\Food\\FoodComboDto.cs",
-              "RelativeDocumentMoniker": "Services\\CM.Dtos\\Food\\FoodComboDto.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\Food\\FoodComboDto.cs",
-              "RelativeToolTip": "Services\\CM.Dtos\\Food\\FoodComboDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T11:25:24.148Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "TheaterChainController.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Controllers\\TheaterChainController.cs",
-              "RelativeDocumentMoniker": "CM_API\\Controllers\\TheaterChainController.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Controllers\\TheaterChainController.cs",
-              "RelativeToolTip": "CM_API\\Controllers\\TheaterChainController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T12:16:11.368Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "FoodService.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Food\\Implements\\FoodService.cs",
-              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\Food\\Implements\\FoodService.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Food\\Implements\\FoodService.cs",
-              "RelativeToolTip": "Services\\CM.ApplicationService\\Food\\Implements\\FoodService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T11:24:18.307Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "IFoodService.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Food\\Abstracts\\IFoodService.cs",
-              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\Food\\Abstracts\\IFoodService.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Food\\Abstracts\\IFoodService.cs",
-              "RelativeToolTip": "Services\\CM.ApplicationService\\Food\\Abstracts\\IFoodService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T11:24:09.119Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "CMFoodCombo.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\FoodCombo\\CMFoodCombo.cs",
-              "RelativeDocumentMoniker": "Services\\CM.Domain\\FoodCombo\\CMFoodCombo.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\FoodCombo\\CMFoodCombo.cs",
-              "RelativeToolTip": "Services\\CM.Domain\\FoodCombo\\CMFoodCombo.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAIwBUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T06:24:18.01Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "CMTicketSeat.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\Ticket\\CMTicketSeat.cs",
-              "RelativeDocumentMoniker": "Services\\CM.Domain\\Ticket\\CMTicketSeat.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\Ticket\\CMTicketSeat.cs",
-              "RelativeToolTip": "Services\\CM.Domain\\Ticket\\CMTicketSeat.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAwwBIAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T08:16:07.677Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "CMTicket.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\Ticket\\CMTicket.cs",
-              "RelativeDocumentMoniker": "Services\\CM.Domain\\Ticket\\CMTicket.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\Ticket\\CMTicket.cs",
-              "RelativeToolTip": "Services\\CM.Domain\\Ticket\\CMTicket.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAUwDEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T06:22:38.866Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "ITicketRepository.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Infrastructure\\Repositories\\TicketRepository\\Abstracts\\ITicketRepository.cs",
-              "RelativeDocumentMoniker": "Services\\CM.Infrastructure\\Repositories\\TicketRepository\\Abstracts\\ITicketRepository.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Infrastructure\\Repositories\\TicketRepository\\Abstracts\\ITicketRepository.cs",
-              "RelativeToolTip": "Services\\CM.Infrastructure\\Repositories\\TicketRepository\\Abstracts\\ITicketRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T12:21:49.155Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "RoomController.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Controllers\\RoomController.cs",
-              "RelativeDocumentMoniker": "CM_API\\Controllers\\RoomController.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Controllers\\RoomController.cs",
-              "RelativeToolTip": "CM_API\\Controllers\\RoomController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAYwBIAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T12:17:15.204Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "ITheaterService.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Theater\\Abstracts\\ITheaterService.cs",
-              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\Theater\\Abstracts\\ITheaterService.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Theater\\Abstracts\\ITheaterService.cs",
-              "RelativeToolTip": "Services\\CM.ApplicationService\\Theater\\Abstracts\\ITheaterService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T11:51:07.073Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "ITheaterChainService.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Theater\\Abstracts\\ITheaterChainService.cs",
-              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\Theater\\Abstracts\\ITheaterChainService.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Theater\\Abstracts\\ITheaterChainService.cs",
-              "RelativeToolTip": "Services\\CM.ApplicationService\\Theater\\Abstracts\\ITheaterChainService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T11:51:34.301Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "TheaterService.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Theater\\Implements\\TheaterService.cs",
-              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\Theater\\Implements\\TheaterService.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Theater\\Implements\\TheaterService.cs",
-              "RelativeToolTip": "Services\\CM.ApplicationService\\Theater\\Implements\\TheaterService.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T11:51:51.702Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "RoomService.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Theater\\Implements\\RoomService.cs",
-              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\Theater\\Implements\\RoomService.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Theater\\Implements\\RoomService.cs",
-              "RelativeToolTip": "Services\\CM.ApplicationService\\Theater\\Implements\\RoomService.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAYwCYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T11:51:43.49Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "TheaterChainService.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Theater\\Implements\\TheaterChainService.cs",
-              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\Theater\\Implements\\TheaterChainService.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Theater\\Implements\\TheaterChainService.cs",
-              "RelativeToolTip": "Services\\CM.ApplicationService\\Theater\\Implements\\TheaterChainService.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAAABwAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T11:52:00.58Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Auth\\AuthModule\\Implements\\AuthService.cs",
-              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\Auth\\AuthModule\\Implements\\AuthService.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Auth\\AuthModule\\Implements\\AuthService.cs",
-              "RelativeToolTip": "Services\\CM.ApplicationService\\Auth\\AuthModule\\Implements\\AuthService.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAAC0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:29:13.387Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "CMRoom.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\Theater\\CMRoom.cs",
-              "RelativeDocumentMoniker": "Services\\CM.Domain\\Theater\\CMRoom.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\Theater\\CMRoom.cs",
-              "RelativeToolTip": "Services\\CM.Domain\\Theater\\CMRoom.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T07:40:41.361Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "RoomDto.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\Theater\\RoomDto.cs",
-              "RelativeDocumentMoniker": "Services\\CM.Dtos\\Theater\\RoomDto.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\Theater\\RoomDto.cs",
-              "RelativeToolTip": "Services\\CM.Dtos\\Theater\\RoomDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T11:49:03.887Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "TheaterDto.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\Theater\\TheaterDto.cs",
-              "RelativeDocumentMoniker": "Services\\CM.Dtos\\Theater\\TheaterDto.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\Theater\\TheaterDto.cs",
-              "RelativeToolTip": "Services\\CM.Dtos\\Theater\\TheaterDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T11:48:49.997Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "TheaterChainDto.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\Theater\\TheaterChainDto.cs",
-              "RelativeDocumentMoniker": "Services\\CM.Dtos\\Theater\\TheaterChainDto.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\Theater\\TheaterChainDto.cs",
-              "RelativeToolTip": "Services\\CM.Dtos\\Theater\\TheaterChainDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T11:48:25.275Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "SeatRepository.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Infrastructure\\Repositories\\SeatRepository\\Implements\\SeatRepository.cs",
-              "RelativeDocumentMoniker": "Services\\CM.Infrastructure\\Repositories\\SeatRepository\\Implements\\SeatRepository.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Infrastructure\\Repositories\\SeatRepository\\Implements\\SeatRepository.cs",
-              "RelativeToolTip": "Services\\CM.Infrastructure\\Repositories\\SeatRepository\\Implements\\SeatRepository.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAqwCYAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T11:40:11.833Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "ISeatRepository.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Infrastructure\\Repositories\\SeatRepository\\Abstracts\\ISeatRepository.cs",
-              "RelativeDocumentMoniker": "Services\\CM.Infrastructure\\Repositories\\SeatRepository\\Abstracts\\ISeatRepository.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Infrastructure\\Repositories\\SeatRepository\\Abstracts\\ISeatRepository.cs",
-              "RelativeToolTip": "Services\\CM.Infrastructure\\Repositories\\SeatRepository\\Abstracts\\ISeatRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T11:39:42.779Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "SeatDto.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\Seat\\SeatDto.cs",
-              "RelativeDocumentMoniker": "Services\\CM.Dtos\\Seat\\SeatDto.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\Seat\\SeatDto.cs",
-              "RelativeToolTip": "Services\\CM.Dtos\\Seat\\SeatDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T11:25:56.69Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "JwtService.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Auth\\AuthModule\\Implements\\JwtService.cs",
-              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\Auth\\AuthModule\\Implements\\JwtService.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Auth\\AuthModule\\Implements\\JwtService.cs",
-              "RelativeToolTip": "Services\\CM.ApplicationService\\Auth\\AuthModule\\Implements\\JwtService.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAAwEsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:29:36.603Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "IAuthService.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Auth\\AuthModule\\Abstracts\\IAuthService.cs",
-              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\Auth\\AuthModule\\Abstracts\\IAuthService.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Auth\\AuthModule\\Abstracts\\IAuthService.cs",
-              "RelativeToolTip": "Services\\CM.ApplicationService\\Auth\\AuthModule\\Abstracts\\IAuthService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA8AAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:28:25.588Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "IJwtService.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Auth\\AuthModule\\Abstracts\\IJwtService.cs",
-              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\Auth\\AuthModule\\Abstracts\\IJwtService.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Auth\\AuthModule\\Abstracts\\IJwtService.cs",
-              "RelativeToolTip": "Services\\CM.ApplicationService\\Auth\\AuthModule\\Abstracts\\IJwtService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:28:56.39Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\Auth\\User.cs",
-              "RelativeDocumentMoniker": "Services\\CM.Domain\\Auth\\User.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\Auth\\User.cs",
-              "RelativeToolTip": "Services\\CM.Domain\\Auth\\User.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAiwC8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T07:58:44.087Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "CM.Infrastructure.csproj",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Infrastructure\\CM.Infrastructure.csproj",
-              "RelativeDocumentMoniker": "Services\\CM.Infrastructure\\CM.Infrastructure.csproj",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Infrastructure\\CM.Infrastructure.csproj",
-              "RelativeToolTip": "Services\\CM.Infrastructure\\CM.Infrastructure.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-20T07:43:10.684Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 2,
               "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\CM_API\\appsettings.json",
               "RelativeDocumentMoniker": "CM_API\\appsettings.json",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\appsettings.json",
+              "ToolTip": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\CM_API\\appsettings.json",
               "RelativeToolTip": "CM_API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAVAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-18T17:36:29.199Z",
+              "WhenOpened": "2024-11-20T13:55:38.825Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "AddCommentDto.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\Movie\\AddCommentDto.cs",
-              "RelativeDocumentMoniker": "Services\\CM.Dtos\\Movie\\AddCommentDto.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\Movie\\AddCommentDto.cs",
-              "RelativeToolTip": "Services\\CM.Dtos\\Movie\\AddCommentDto.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAzwBIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:26:45.171Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "CommentDto.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\Movie\\CommentDto.cs",
-              "RelativeDocumentMoniker": "Services\\CM.Dtos\\Movie\\CommentDto.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\Movie\\CommentDto.cs",
-              "RelativeToolTip": "Services\\CM.Dtos\\Movie\\CommentDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:26:54.781Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "CM_API\\Controllers\\AuthController.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "CM_API\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAUwBoAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T18:05:03.06Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "CommentService.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Movie\\Implements\\CommentService.cs",
-              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\Movie\\Implements\\CommentService.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Movie\\Implements\\CommentService.cs",
-              "RelativeToolTip": "Services\\CM.ApplicationService\\Movie\\Implements\\CommentService.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAkwGkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:34:16.764Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "MoComment.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\Movie\\MoComment.cs",
-              "RelativeDocumentMoniker": "Services\\CM.Domain\\Movie\\MoComment.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\Movie\\MoComment.cs",
-              "RelativeToolTip": "Services\\CM.Domain\\Movie\\MoComment.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAkwB8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:24:52.446Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "MoMovie.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\Movie\\MoMovie.cs",
-              "RelativeDocumentMoniker": "Services\\CM.Domain\\Movie\\MoMovie.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\Movie\\MoMovie.cs",
-              "RelativeToolTip": "Services\\CM.Domain\\Movie\\MoMovie.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAA7wAwAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:37:48.098Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "CM_API\\Controllers\\UserController.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Controllers\\UserController.cs",
-              "RelativeToolTip": "CM_API\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAqwHUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T18:05:53.951Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "CommentController.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Controllers\\CommentController.cs",
-              "RelativeDocumentMoniker": "CM_API\\Controllers\\CommentController.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Controllers\\CommentController.cs",
-              "RelativeToolTip": "CM_API\\Controllers\\CommentController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwCQAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T18:07:15.184Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "ICommentService.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Movie\\Abstracts\\ICommentService.cs",
-              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\Movie\\Abstracts\\ICommentService.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Movie\\Abstracts\\ICommentService.cs",
-              "RelativeToolTip": "Services\\CM.ApplicationService\\Movie\\Abstracts\\ICommentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAsAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:34:07.464Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "MovieService.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Movie\\Implements\\MovieService.cs",
-              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\Movie\\Implements\\MovieService.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Movie\\Implements\\MovieService.cs",
-              "RelativeToolTip": "Services\\CM.ApplicationService\\Movie\\Implements\\MovieService.cs",
-              "ViewState": "AgIAAGoAAAAAAAAAAAAqwGwAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:39:24.729Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 56,
-              "Title": "MovieController.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Controllers\\MovieController.cs",
-              "RelativeDocumentMoniker": "CM_API\\Controllers\\MovieController.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Controllers\\MovieController.cs",
-              "RelativeToolTip": "CM_API\\Controllers\\MovieController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T18:06:44.646Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 58,
-              "Title": "CloudService.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Cloudinary\\Implements\\CloudService.cs",
-              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\Cloudinary\\Implements\\CloudService.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Cloudinary\\Implements\\CloudService.cs",
-              "RelativeToolTip": "Services\\CM.ApplicationService\\Cloudinary\\Implements\\CloudService.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAqwDcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T18:04:11.895Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
-              "Title": "Add_UpdateMovieDto.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\Movie\\Add_UpdateMovieDto.cs",
-              "RelativeDocumentMoniker": "Services\\CM.Dtos\\Movie\\Add_UpdateMovieDto.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\Movie\\Add_UpdateMovieDto.cs",
-              "RelativeToolTip": "Services\\CM.Dtos\\Movie\\Add_UpdateMovieDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:51:01.877Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 57,
-              "Title": "IMovieService.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Movie\\Abstracts\\IMovieService.cs",
-              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\Movie\\Abstracts\\IMovieService.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Movie\\Abstracts\\IMovieService.cs",
-              "RelativeToolTip": "Services\\CM.ApplicationService\\Movie\\Abstracts\\IMovieService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:39:23.564Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 59,
-              "Title": "TokenDto.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\Auth\\Auth\\TokenDto.cs",
-              "RelativeDocumentMoniker": "Services\\CM.Dtos\\Auth\\Auth\\TokenDto.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\Auth\\Auth\\TokenDto.cs",
-              "RelativeToolTip": "Services\\CM.Dtos\\Auth\\Auth\\TokenDto.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAqwA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T18:00:37.802Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 60,
-              "Title": "RegisterUserDto.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\Auth\\Auth\\RegisterUserDto.cs",
-              "RelativeDocumentMoniker": "Services\\CM.Dtos\\Auth\\Auth\\RegisterUserDto.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\Auth\\Auth\\RegisterUserDto.cs",
-              "RelativeToolTip": "Services\\CM.Dtos\\Auth\\Auth\\RegisterUserDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T18:00:32.168Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 62,
-              "Title": "LoginReponseDto.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\Auth\\Auth\\LoginReponseDto.cs",
-              "RelativeDocumentMoniker": "Services\\CM.Dtos\\Auth\\Auth\\LoginReponseDto.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\Auth\\Auth\\LoginReponseDto.cs",
-              "RelativeToolTip": "Services\\CM.Dtos\\Auth\\Auth\\LoginReponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T18:00:23.487Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 66,
-              "Title": "RoleController.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Controllers\\RoleController.cs",
-              "RelativeDocumentMoniker": "CM_API\\Controllers\\RoleController.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Controllers\\RoleController.cs",
-              "RelativeToolTip": "CM_API\\Controllers\\RoleController.cs",
-              "ViewState": "AgIAAG4AAAAAAAAAAAAuwIsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T18:06:15.071Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 63,
-              "Title": "ValidateService.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Auth\\Common\\ValidateService.cs",
-              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\Auth\\Common\\ValidateService.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Auth\\Common\\ValidateService.cs",
-              "RelativeToolTip": "Services\\CM.ApplicationService\\Auth\\Common\\ValidateService.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwF8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T18:20:58.026Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 61,
-              "Title": "LoginDto.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\Auth\\Auth\\LoginDto.cs",
-              "RelativeDocumentMoniker": "Services\\CM.Dtos\\Auth\\Auth\\LoginDto.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\Auth\\Auth\\LoginDto.cs",
-              "RelativeToolTip": "Services\\CM.Dtos\\Auth\\Auth\\LoginDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T18:00:14.777Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 67,
-              "Title": "ICloudService.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Cloudinary\\Abstracts\\ICloudService.cs",
-              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\Cloudinary\\Abstracts\\ICloudService.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Cloudinary\\Abstracts\\ICloudService.cs",
-              "RelativeToolTip": "Services\\CM.ApplicationService\\Cloudinary\\Abstracts\\ICloudService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T18:04:03.418Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 64,
-              "Title": "ServiceBase.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Common\\ServiceBase.cs",
-              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\Common\\ServiceBase.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Common\\ServiceBase.cs",
-              "RelativeToolTip": "Services\\CM.ApplicationService\\Common\\ServiceBase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:30:22.952Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 65,
-              "Title": "CM_API.csproj",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\CM_API.csproj",
-              "RelativeDocumentMoniker": "CM_API\\CM_API.csproj",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\CM_API.csproj",
-              "RelativeToolTip": "CM_API\\CM_API.csproj",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAABhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-18T17:36:48.468Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 68,
-              "Title": "IRoleService.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Auth\\RoleModule\\Abstracts\\IRoleService.cs",
-              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\Auth\\RoleModule\\Abstracts\\IRoleService.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Auth\\RoleModule\\Abstracts\\IRoleService.cs",
-              "RelativeToolTip": "Services\\CM.ApplicationService\\Auth\\RoleModule\\Abstracts\\IRoleService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T18:02:55.52Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 69,
-              "Title": "RoleService.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Auth\\RoleModule\\Implements\\RoleService.cs",
-              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\Auth\\RoleModule\\Implements\\RoleService.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Auth\\RoleModule\\Implements\\RoleService.cs",
-              "RelativeToolTip": "Services\\CM.ApplicationService\\Auth\\RoleModule\\Implements\\RoleService.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAIwJkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T18:02:40.266Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 70,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Auth\\UserModule\\Implements\\UserService.cs",
-              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\Auth\\UserModule\\Implements\\UserService.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Auth\\UserModule\\Implements\\UserService.cs",
-              "RelativeToolTip": "Services\\CM.ApplicationService\\Auth\\UserModule\\Implements\\UserService.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAqwIQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T18:01:51.112Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 71,
-              "Title": "RoleDto.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\Auth\\Role\\RoleDto.cs",
-              "RelativeDocumentMoniker": "Services\\CM.Dtos\\Auth\\Role\\RoleDto.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\Auth\\Role\\RoleDto.cs",
-              "RelativeToolTip": "Services\\CM.Dtos\\Auth\\Role\\RoleDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:59:33.804Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 72,
-              "Title": "CreateRoleDto.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\Auth\\Role\\CreateRoleDto.cs",
-              "RelativeDocumentMoniker": "Services\\CM.Dtos\\Auth\\Role\\CreateRoleDto.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\Auth\\Role\\CreateRoleDto.cs",
-              "RelativeToolTip": "Services\\CM.Dtos\\Auth\\Role\\CreateRoleDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:59:26.394Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 73,
-              "Title": "DbSchema.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\Shared\\Share.Constant\\Database\\DbSchema.cs",
-              "RelativeDocumentMoniker": "Services\\Shared\\Share.Constant\\Database\\DbSchema.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\Shared\\Share.Constant\\Database\\DbSchema.cs",
-              "RelativeToolTip": "Services\\Shared\\Share.Constant\\Database\\DbSchema.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:57:47.566Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 74,
-              "Title": "PermissionKey.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\Shared\\Share.Constant\\Permission\\PermissionKey.cs",
-              "RelativeDocumentMoniker": "Services\\Shared\\Share.Constant\\Permission\\PermissionKey.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\Shared\\Share.Constant\\Permission\\PermissionKey.cs",
-              "RelativeToolTip": "Services\\Shared\\Share.Constant\\Permission\\PermissionKey.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:56:51.383Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 75,
-              "Title": "MoGenre.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\Movie\\MoGenre.cs",
-              "RelativeDocumentMoniker": "Services\\CM.Domain\\Movie\\MoGenre.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\Movie\\MoGenre.cs",
-              "RelativeToolTip": "Services\\CM.Domain\\Movie\\MoGenre.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:38:42.496Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 76,
-              "Title": "MoMovie_Cast.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\Movie\\MoMovie_Cast.cs",
-              "RelativeDocumentMoniker": "Services\\CM.Domain\\Movie\\MoMovie_Cast.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\Movie\\MoMovie_Cast.cs",
-              "RelativeToolTip": "Services\\CM.Domain\\Movie\\MoMovie_Cast.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:38:28.746Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 77,
-              "Title": "CM.ApplicationService.csproj",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\CM.ApplicationService.csproj",
-              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\CM.ApplicationService.csproj",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\CM.ApplicationService.csproj",
-              "RelativeToolTip": "Services\\CM.ApplicationService\\CM.ApplicationService.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAcwCEAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-18T17:34:52.797Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 78,
-              "Title": "PermissionService.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Auth\\Permission\\Implements\\PermissionService.cs",
-              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\Auth\\Permission\\Implements\\PermissionService.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Auth\\Permission\\Implements\\PermissionService.cs",
-              "RelativeToolTip": "Services\\CM.ApplicationService\\Auth\\Permission\\Implements\\PermissionService.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAswEQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:32:49.193Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 79,
-              "Title": "IPermissionService.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Auth\\Permission\\Abstracts\\IPermissionService.cs",
-              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\Auth\\Permission\\Abstracts\\IPermissionService.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Auth\\Permission\\Abstracts\\IPermissionService.cs",
-              "RelativeToolTip": "Services\\CM.ApplicationService\\Auth\\Permission\\Abstracts\\IPermissionService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:32:39.481Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 80,
-              "Title": "ImageDto.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\Image\\ImageDto.cs",
-              "RelativeDocumentMoniker": "Services\\CM.Dtos\\Image\\ImageDto.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\Image\\ImageDto.cs",
-              "RelativeToolTip": "Services\\CM.Dtos\\Image\\ImageDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:26:03.372Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 81,
-              "Title": "RolePermission.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\Auth\\RolePermission.cs",
-              "RelativeDocumentMoniker": "Services\\CM.Domain\\Auth\\RolePermission.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\Auth\\RolePermission.cs",
-              "RelativeToolTip": "Services\\CM.Domain\\Auth\\RolePermission.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:24:24.437Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             }
           ]
         },

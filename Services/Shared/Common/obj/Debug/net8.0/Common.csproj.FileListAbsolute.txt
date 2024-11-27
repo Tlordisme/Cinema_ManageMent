@@ -1,0 +1,12 @@
+C:\Users\z4khi\Source\Repos\Theater_ManageMent\Services\Shared\Common\bin\Debug\net8.0\Common.deps.json
+C:\Users\z4khi\Source\Repos\Theater_ManageMent\Services\Shared\Common\bin\Debug\net8.0\Common.dll
+C:\Users\z4khi\Source\Repos\Theater_ManageMent\Services\Shared\Common\bin\Debug\net8.0\Common.pdb
+C:\Users\z4khi\Source\Repos\Theater_ManageMent\Services\Shared\Common\obj\Debug\net8.0\Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\z4khi\Source\Repos\Theater_ManageMent\Services\Shared\Common\obj\Debug\net8.0\Common.AssemblyInfoInputs.cache
+C:\Users\z4khi\Source\Repos\Theater_ManageMent\Services\Shared\Common\obj\Debug\net8.0\Common.AssemblyInfo.cs
+C:\Users\z4khi\Source\Repos\Theater_ManageMent\Services\Shared\Common\obj\Debug\net8.0\Common.csproj.CoreCompileInputs.cache
+C:\Users\z4khi\Source\Repos\Theater_ManageMent\Services\Shared\Common\obj\Debug\net8.0\Common.sourcelink.json
+C:\Users\z4khi\Source\Repos\Theater_ManageMent\Services\Shared\Common\obj\Debug\net8.0\Common.dll
+C:\Users\z4khi\Source\Repos\Theater_ManageMent\Services\Shared\Common\obj\Debug\net8.0\refint\Common.dll
+C:\Users\z4khi\Source\Repos\Theater_ManageMent\Services\Shared\Common\obj\Debug\net8.0\Common.pdb
+C:\Users\z4khi\Source\Repos\Theater_ManageMent\Services\Shared\Common\obj\Debug\net8.0\ref\Common.dll
