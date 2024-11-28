@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using CM.ApplicationService.Auth.Common;
 using CM.ApplicationService.AuthModule.Abstracts;
 using CM.ApplicationService.Common;
+using CM.ApplicationService.Email.Abstracts;
 using CM.ApplicationService.RoleModule.Abstracts;
 using CM.Auth.ApplicantService.Auth.Abstracts;
 using CM.Auth.ApplicantService.Auth.Implements;
@@ -30,20 +31,32 @@ namespace CM.ApplicationService.AuthModule.Implements
         private readonly IPasswordHasher<User> _passwordHasher;
         private readonly JwtService _jwtService;
         private readonly ValidateService _validateService;
+        private readonly IEmailService _emailService;
 
         public AuthService(
             CMDbContext dbContext,
             ILogger<AuthService> logger,
             IPasswordHasher<User> passwordHasher,
             ValidateService validateService,
-            JwtService jwtService
+            JwtService jwtService,
+
+            IEmailService emailService
         )
             : base(logger, dbContext)
         {
             _passwordHasher = passwordHasher;
             _jwtService = jwtService;
             _validateService = validateService;
+            _emailService = emailService;
         }
+
+        //
+        private string GenerateActivationToken(User user)
+        {
+            var rawToken = $"{user.Email}:{user.DateOfBirth:yyyyMMddHHmmss}";
+            return Convert.ToBase64String(Encoding.UTF8.GetBytes(rawToken));
+        }
+
 
         public async Task<UserDto> Register(RegisterUserDto registerDto)
         {
@@ -63,10 +76,27 @@ namespace CM.ApplicationService.AuthModule.Implements
                 Gender = registerDto.Gender,
                 DateOfBirth = registerDto.DateOfBirth,
                 Password = _passwordHasher.HashPassword(null, registerDto.Password),
+                IsActive = false
             };
 
             _dbContext.Users.Add(user);
             await _dbContext.SaveChangesAsync();
+
+            // Gửi email xác nhận
+            var token = GenerateActivationToken(user);
+            var activationLink = $"https://yourdomain.com/api/auth/activate?email={user.Email}&token={token}";
+
+            var emailBody = $@"
+            <h1>Chào mừng {user.FullName}!</h1>
+            <p>Nhấn vào liên kết bên dưới để kích hoạt tài khoản:</p>
+            <a href='{activationLink}'>Kích hoạt tài khoản</a>
+            <p>Nếu bạn không thực hiện đăng ký này, vui lòng bỏ qua email này.</p>
+    ";
+
+            await _emailService.SendEmailAsync(user.Email, "Kích hoạt tài khoản", emailBody);
+
+            _logger.LogInformation($"User {user.UserName} registered successfully. Activation email sent.");
+
 
             //Add role mặc định
             var role = await _dbContext.Roles.FirstOrDefaultAsync(r => r.Name == "Standard User");

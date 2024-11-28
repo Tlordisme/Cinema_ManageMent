@@ -1,8 +1,11 @@
 ﻿using CM.ApplicantService.Auth.Permission.Abstracts;
 using CM.ApplicationService.UserModule.Abstracts;
 using CM.Dtos.User;
+using CM.Infrastructure;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System.Text;
 
 namespace CM_API.Controllers
 {
@@ -11,10 +14,14 @@ namespace CM_API.Controllers
         private readonly IUserService _userService;
         private readonly IPermissionService _permissionService;
 
-        public UserController(IUserService userService, IPermissionService permissionService)
+        private readonly CMDbContext _dbContext;
+
+        public UserController(IUserService userService, IPermissionService permissionService, CMDbContext dbContext)
         {
             _userService = userService;
             _permissionService = permissionService;
+
+            _dbContext = dbContext;
         }
 
         [HttpPost("Createusers")]
@@ -113,6 +120,26 @@ namespace CM_API.Controllers
             }
 
             return NotFound();
+        }
+
+        [HttpGet("activate")]
+        public async Task<IActionResult> ActivateAccount(string email, string token)
+        {
+            var user = await _dbContext.Users.FirstOrDefaultAsync(u => u.Email == email);
+            if (user == null || user.IsActive)
+                return BadRequest("Người dùng không tồn tại hoặc đã được kích hoạt.");
+
+            // Kiểm tra token
+            var rawToken = $"{user.Email}:{user.DateOfBirth:yyyyMMddHHmmss}";
+            var expectedToken = Convert.ToBase64String(Encoding.UTF8.GetBytes(rawToken));
+            if (token != expectedToken)
+                return Unauthorized("Token không hợp lệ.");
+
+            // Kích hoạt tài khoản
+            user.IsActive = true;
+            await _dbContext.SaveChangesAsync();
+
+            return Ok("Tài khoản đã được kích hoạt thành công.");
         }
     }
 }

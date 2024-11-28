@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|c:\\users\\z4khi\\source\\repos\\theater_management\\services\\cm.applicationservice\\ticket\\implements\\ticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\ticket\\implements\\ticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|c:\\users\\z4khi\\source\\repos\\theater_management\\cm_api\\controllers\\ticketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|solutionrelative:cm_api\\controllers\\ticketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|c:\\users\\z4khi\\source\\repos\\theater_management\\cm_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|solutionrelative:cm_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{682C7940-0183-41E3-922A-69699503C8B7}|Services\\CM.Infrastructure\\CM.Infrastructure.csproj|c:\\users\\z4khi\\source\\repos\\theater_management\\services\\cm.infrastructure\\cmdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{682C7940-0183-41E3-922A-69699503C8B7}|Services\\CM.Infrastructure\\CM.Infrastructure.csproj|solutionrelative:services\\cm.infrastructure\\cmdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|c:\\users\\z4khi\\source\\repos\\theater_management\\services\\cm.applicationservice\\startup\\cmstartup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\startup\\cmstartup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{682C7940-0183-41E3-922A-69699503C8B7}|Services\\CM.Infrastructure\\CM.Infrastructure.csproj|c:\\users\\z4khi\\source\\repos\\theater_management\\services\\cm.infrastructure\\cmdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{682C7940-0183-41E3-922A-69699503C8B7}|Services\\CM.Infrastructure\\CM.Infrastructure.csproj|solutionrelative:services\\cm.infrastructure\\cmdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|c:\\users\\z4khi\\source\\repos\\theater_management\\cm_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|solutionrelative:cm_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|c:\\users\\z4khi\\source\\repos\\theater_management\\services\\cm.applicationservice\\ticket\\abstracts\\iticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\ticket\\abstracts\\iticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|c:\\users\\z4khi\\source\\repos\\theater_management\\services\\cm.applicationservice\\ticket\\implements\\ticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\ticket\\implements\\ticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4BEEE1E5-FE42-45F0-ACB7-D6B193617688}|Services\\CM.Dtos\\CM.Dtos.csproj|c:\\users\\z4khi\\source\\repos\\theater_management\\services\\cm.dtos\\ticket\\ticketdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -39,8 +39,24 @@
       "RelativeMoniker": "D:0:0:{1FB0CF74-FB5C-4A8E-9AEC-29929C029F2A}|Services\\CM.Domain\\CM.Domain.csproj|solutionrelative:services\\cm.domain\\ticket\\cmticketseat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|c:\\users\\z4khi\\source\\repos\\theater_management\\cm_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|solutionrelative:cm_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|c:\\users\\z4khi\\source\\repos\\theater_management\\cm_api\\controllers\\ticketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|solutionrelative:cm_api\\controllers\\ticketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|c:\\users\\z4khi\\source\\repos\\theater_management\\services\\cm.applicationservice\\email\\abstracts\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\email\\abstracts\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|c:\\users\\z4khi\\source\\repos\\theater_management\\services\\cm.applicationservice\\email\\implements\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\email\\implements\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|c:\\users\\z4khi\\source\\repos\\theater_management\\services\\cm.applicationservice\\auth\\authmodule\\abstracts\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\auth\\authmodule\\abstracts\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|c:\\users\\z4khi\\source\\repos\\theater_management\\services\\cm.applicationservice\\auth\\authmodule\\implements\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|solutionrelative:services\\cm.applicationservice\\auth\\authmodule\\implements\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 22,
           "Children": [
             {
               "$type": "Bookmark",
@@ -82,17 +98,73 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 13,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\Services\\CM.ApplicationService\\Auth\\AuthModule\\Implements\\AuthService.cs",
+              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\Auth\\AuthModule\\Implements\\AuthService.cs",
+              "ToolTip": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\Services\\CM.ApplicationService\\Auth\\AuthModule\\Implements\\AuthService.cs",
+              "RelativeToolTip": "Services\\CM.ApplicationService\\Auth\\AuthModule\\Implements\\AuthService.cs",
+              "ViewState": "AQIAAJAAAAAAAAAAAAAswDoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T08:02:35.845Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\Services\\CM.ApplicationService\\Auth\\AuthModule\\Abstracts\\IAuthService.cs",
+              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\Auth\\AuthModule\\Abstracts\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\Services\\CM.ApplicationService\\Auth\\AuthModule\\Abstracts\\IAuthService.cs",
+              "RelativeToolTip": "Services\\CM.ApplicationService\\Auth\\AuthModule\\Abstracts\\IAuthService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T08:02:26.988Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\Services\\CM.ApplicationService\\Email\\Implements\\EmailService.cs",
+              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\Email\\Implements\\EmailService.cs",
+              "ToolTip": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\Services\\CM.ApplicationService\\Email\\Implements\\EmailService.cs",
+              "RelativeToolTip": "Services\\CM.ApplicationService\\Email\\Implements\\EmailService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T06:39:43.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IEmailService.cs",
+              "DocumentMoniker": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\Services\\CM.ApplicationService\\Email\\Abstracts\\IEmailService.cs",
+              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\Email\\Abstracts\\IEmailService.cs",
+              "ToolTip": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\Services\\CM.ApplicationService\\Email\\Abstracts\\IEmailService.cs",
+              "RelativeToolTip": "Services\\CM.ApplicationService\\Email\\Abstracts\\IEmailService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T06:39:27.099Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "TicketController.cs",
               "DocumentMoniker": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\CM_API\\Controllers\\TicketController.cs",
               "RelativeDocumentMoniker": "CM_API\\Controllers\\TicketController.cs",
               "ToolTip": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\CM_API\\Controllers\\TicketController.cs",
               "RelativeToolTip": "CM_API\\Controllers\\TicketController.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABUAAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-27T15:57:19.678Z",
               "EditorCaption": ""
@@ -138,20 +210,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "TicketService.cs",
               "DocumentMoniker": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\Services\\CM.ApplicationService\\Ticket\\Implements\\TicketService.cs",
               "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\Ticket\\Implements\\TicketService.cs",
               "ToolTip": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\Services\\CM.ApplicationService\\Ticket\\Implements\\TicketService.cs",
               "RelativeToolTip": "Services\\CM.ApplicationService\\Ticket\\Implements\\TicketService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAfAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGQAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-27T15:33:08.74Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "ITicketService.cs",
               "DocumentMoniker": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\Services\\CM.ApplicationService\\Ticket\\Abstracts\\ITicketService.cs",
               "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\Ticket\\Abstracts\\ITicketService.cs",
@@ -164,7 +236,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\CM_API\\Program.cs",
               "RelativeDocumentMoniker": "CM_API\\Program.cs",
@@ -177,33 +249,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "CMDbContext.cs",
               "DocumentMoniker": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\Services\\CM.Infrastructure\\CMDbContext.cs",
               "RelativeDocumentMoniker": "Services\\CM.Infrastructure\\CMDbContext.cs",
               "ToolTip": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\Services\\CM.Infrastructure\\CMDbContext.cs",
               "RelativeToolTip": "Services\\CM.Infrastructure\\CMDbContext.cs",
-              "ViewState": "AQIAALkAAAAAAAAAAAAgwMkAAAAuAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABAAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-20T15:18:21.277Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "CMStartUp.cs",
               "DocumentMoniker": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\Services\\CM.ApplicationService\\StartUp\\CMStartUp.cs",
               "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\StartUp\\CMStartUp.cs",
               "ToolTip": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\Services\\CM.ApplicationService\\StartUp\\CMStartUp.cs",
               "RelativeToolTip": "Services\\CM.ApplicationService\\StartUp\\CMStartUp.cs",
-              "ViewState": "AQIAAEIAAAAAAAAAAAAQwFYAAAAUAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-20T15:16:43.96Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\z4khi\\source\\repos\\Theater_ManageMent\\CM_API\\appsettings.json",
               "RelativeDocumentMoniker": "CM_API\\appsettings.json",
@@ -213,10 +285,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-11-20T13:55:38.825Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             }
           ]
         },

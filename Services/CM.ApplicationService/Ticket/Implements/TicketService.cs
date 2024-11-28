@@ -1,4 +1,5 @@
-﻿using CM.ApplicationService.Ticket.Abstracts;
+﻿using CM.ApplicationService.Email.Abstracts;
+using CM.ApplicationService.Ticket.Abstracts;
 using CM.Domain.Ticket;
 using CM.Infrastructure;
 using Microsoft.EntityFrameworkCore;
@@ -13,10 +14,12 @@ namespace CM.ApplicationService.Ticket.Implements
     public class TicketService : ITicketService
     {
         private readonly CMDbContext _context;
+        private readonly IEmailService _emailService;
 
-        public TicketService(CMDbContext context)
+        public TicketService(CMDbContext context, IEmailService emailService)
         {
             _context = context;
+            _emailService = emailService;
         }
 
         public async Task<CMTicket> CreateTicket(int userId, string showtimeId, List<int> seatIds)
@@ -49,7 +52,9 @@ namespace CM.ApplicationService.Ticket.Implements
         public async Task<bool> PayTicket(int ticketId)
         {
             var ticket = await _context.Tickets.Include(t => t.TicketSeats)
+                                                .ThenInclude(ts => ts.Seat)
                                                 .FirstOrDefaultAsync(t => t.Id == ticketId);
+
             if (ticket == null || ticket.Status != TicketStatus.Pending)
                 return false;
 
@@ -60,6 +65,16 @@ namespace CM.ApplicationService.Ticket.Implements
             }
 
             await _context.SaveChangesAsync();
+
+            // Gửi email xác nhận
+            var emailBody = BuildTicketConfirmationEmail(ticket);
+            var userEmail = (await _context.Users.FindAsync(ticket.UserId))?.Email;
+
+            if (!string.IsNullOrEmpty(userEmail))
+            {
+                await _emailService.SendEmailAsync(userEmail, "Xác nhận vé", emailBody);
+            }
+
             return true;
         }
 
@@ -79,5 +94,27 @@ namespace CM.ApplicationService.Ticket.Implements
             await _context.SaveChangesAsync();
             return true;
         }
+
+        private string BuildTicketConfirmationEmail(CMTicket ticket)
+        {
+            var sb = new StringBuilder();
+            sb.AppendLine("<h1>Xác nhận vé của bạn</h1>");
+            sb.AppendLine("<p>Thông tin vé:</p>");
+            sb.AppendLine($"<p>Mã vé: {ticket.Id}</p>");
+            sb.AppendLine($"<p>Trạng thái: {ticket.Status}</p>");
+            sb.AppendLine($"<p>Thời gian chiếu: {ticket.Showtime.StartTime:dd/MM/yyyy HH:mm}</p>");
+            sb.AppendLine($"<p>Tổng giá: {ticket.TotalPrice:C}</p>");
+            sb.AppendLine("<p>Danh sách ghế:</p>");
+
+            foreach (var ticketSeat in ticket.TicketSeats)
+            {
+                var seat = ticketSeat.Seat;
+                sb.AppendLine($"<p>- Hàng: {seat.Row}, Số: {seat.Number}</p>");
+            }
+
+            sb.AppendLine("<p>Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi!</p>");
+            return sb.ToString();
+        }
     }
+
 }

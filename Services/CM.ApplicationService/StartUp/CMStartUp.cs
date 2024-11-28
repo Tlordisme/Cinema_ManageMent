@@ -35,6 +35,8 @@ using Microsoft.IdentityModel.Tokens;
 using Share.Constant.Database;
 using CM.ApplicationService.Ticket.Abstracts;
 using CM.ApplicationService.Ticket.Implements;
+using CM.ApplicationService.Email.Abstracts;
+using CM.ApplicationService.Email.Implements;
 
 namespace CM.ApplicationService.StartUp
 {
@@ -86,6 +88,9 @@ namespace CM.ApplicationService.StartUp
             builder.Services.AddScoped<IComboService, ComboService>();
             //Ticket
             builder.Services.AddScoped<ITicketService, TicketService>();
+            //Email
+            builder.Services.AddScoped<IEmailService, EmailService>();
+
 
             //Cloudinary
             var cloudinaryConfig = builder.Configuration.GetSection("Cloudinary");

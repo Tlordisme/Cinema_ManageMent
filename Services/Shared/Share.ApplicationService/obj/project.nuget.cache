@@ -1,11 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "qyUOEeQmGt0iaHTsWoXVlfuiuZ9GYxALKYwGr7NzwLZsBjhrBfBv45c8Cs9C/Vxu6MVDVbjxOijDbRWB47X2XQ==",
+  "dgSpecHash": "BERVhMcOq+mlFoppvG6R76QgbvIqHaTaDaX5S3jHf8mFKGaBhLV9ie6U7N68p4HVByQ6kcrHJt3r56UGfUEs9g==",
   "success": true,
   "projectFilePath": "C:\\Users\\z4khi\\Source\\Repos\\Theater_Management\\Services\\Shared\\Share.ApplicationService\\Share.ApplicationService.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\z4khi\\.nuget\\packages\\bouncycastle.cryptography\\2.4.0\\bouncycastle.cryptography.2.4.0.nupkg.sha512",
+    "C:\\Users\\z4khi\\.nuget\\packages\\mailkit\\4.8.0\\mailkit.4.8.0.nupkg.sha512",
     "C:\\Users\\z4khi\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
-    "C:\\Users\\z4khi\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.2\\microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512"
+    "C:\\Users\\z4khi\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.2\\microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\z4khi\\.nuget\\packages\\mimekit\\4.8.0\\mimekit.4.8.0.nupkg.sha512",
+    "C:\\Users\\z4khi\\.nuget\\packages\\system.formats.asn1\\8.0.1\\system.formats.asn1.8.0.1.nupkg.sha512",
+    "C:\\Users\\z4khi\\.nuget\\packages\\system.security.cryptography.pkcs\\8.0.0\\system.security.cryptography.pkcs.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }

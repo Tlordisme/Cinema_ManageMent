@@ -324,3 +324,7 @@ C:\Users\z4khi\Source\Repos\Theater_ManageMent\CM_API\obj\Debug\net8.0\refint\CM
 C:\Users\z4khi\Source\Repos\Theater_ManageMent\CM_API\obj\Debug\net8.0\CM_API.pdb
 C:\Users\z4khi\Source\Repos\Theater_ManageMent\CM_API\obj\Debug\net8.0\CM_API.genruntimeconfig.cache
 C:\Users\z4khi\Source\Repos\Theater_ManageMent\CM_API\obj\Debug\net8.0\ref\CM_API.dll
+C:\Users\z4khi\Source\Repos\Theater_Management\CM_API\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\z4khi\Source\Repos\Theater_Management\CM_API\bin\Debug\net8.0\MailKit.dll
+C:\Users\z4khi\Source\Repos\Theater_Management\CM_API\bin\Debug\net8.0\MimeKit.dll
+C:\Users\z4khi\Source\Repos\Theater_Management\CM_API\bin\Debug\net8.0\System.Formats.Asn1.dll

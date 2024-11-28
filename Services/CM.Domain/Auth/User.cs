@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -45,6 +46,7 @@ namespace CM.Domain.Auth
 
         //public virtual ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
 
+        public bool IsActive { get; set; }
         public List<CMTicket> Tickets { get; set; } = new List<CMTicket>();
     }
 }
