@@ -14,3 +14,5 @@ D:\Cinema_Management\Cinema_Management\Services\CM.Dtos\obj\Debug\net8.0\CM.Dtos
 D:\Cinema_Management\Cinema_Management\Services\CM.Dtos\obj\Debug\net8.0\refint\CM.Dtos.dll
 D:\Cinema_Management\Cinema_Management\Services\CM.Dtos\obj\Debug\net8.0\CM.Dtos.pdb
 D:\Cinema_Management\Cinema_Management\Services\CM.Dtos\obj\Debug\net8.0\ref\CM.Dtos.dll
+D:\Cinema_Management\Cinema_Management\Services\CM.Dtos\bin\Debug\net8.0\Share.ApplicationService.dll
+D:\Cinema_Management\Cinema_Management\Services\CM.Dtos\bin\Debug\net8.0\Share.ApplicationService.pdb

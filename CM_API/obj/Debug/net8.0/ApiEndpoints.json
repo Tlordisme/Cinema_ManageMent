@@ -116,6 +116,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "CM_API.Controllers.PaymentController",
+    "Method": "CreatePaymentUrl",
+    "RelativePath": "api/payment/create-payment-url",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CM.Domain.Payment.VnPayRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CM_API.Controllers.PaymentController",
+    "Method": "VnPayResponse",
+    "RelativePath": "api/payment/PaymentCallbackVnpay",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CM_API.Controllers.RoleController",
     "Method": "AddRoleToUser",
     "RelativePath": "api/Role/AddRoletouser/{userId}",
@@ -537,6 +563,22 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CM_API.Controllers.TicketController",
+    "Method": "BookTicket",
+    "RelativePath": "api/Ticket/book",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CM.Dtos.Ticket.CreateTicketDto",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {

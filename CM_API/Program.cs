@@ -1,3 +1,4 @@
+
 using CM.ApplicationService.StartUp;
 using Microsoft.OpenApi.Models;
 
@@ -16,7 +17,7 @@ namespace CM_API
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.ConfigureService(typeof(Program).Namespace);
-
+            //builder.Services.Configure<ZaloPayConfig>(builder.Configuration.GetSection(ZaloPayConfig.ConfigName));
             
             builder.Services.AddSwaggerGen(options =>
             {
@@ -63,7 +64,7 @@ namespace CM_API
             }
 
             app.UseHttpsRedirection();
-
+            app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
 

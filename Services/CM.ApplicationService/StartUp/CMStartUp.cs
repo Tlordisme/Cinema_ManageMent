@@ -9,6 +9,8 @@ using CM.ApplicationService.Cloudinary.Abstracts;
 using CM.ApplicationService.Cloudinary.Implements;
 using CM.ApplicationService.Movie.Abstracts;
 using CM.ApplicationService.Movie.Implements;
+using CM.ApplicationService.Payment.Abstracts;
+using CM.ApplicationService.Payment.Implements;
 using CM.ApplicationService.RoleModule.Abstracts;
 using CM.ApplicationService.RoleModule.Implements;
 using CM.ApplicationService.Seat.Abstracts;
@@ -88,7 +90,8 @@ namespace CM.ApplicationService.StartUp
             //Showtime
             builder.Services.AddScoped<IShowtimeService, ShowtimeService>();
             //Ticket
-            builder.Services.AddScoped<ITicketService, TicketService>();
+            builder.Services.AddScoped<ITicketService,TicketService>();
+            builder.Services.AddScoped<IPaymentService, PaymentService>();
             //Cloudinary
             var cloudinaryConfig = builder.Configuration.GetSection("Cloudinary");
             var account = new Account(

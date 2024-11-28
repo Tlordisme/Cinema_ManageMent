@@ -11,3 +11,6 @@ D:\Cinema_Management\Cinema_Management\Services\CM.Domain\obj\Debug\net8.0\CM.Do
 D:\Cinema_Management\Cinema_Management\Services\CM.Domain\obj\Debug\net8.0\refint\CM.Domain.dll
 D:\Cinema_Management\Cinema_Management\Services\CM.Domain\obj\Debug\net8.0\CM.Domain.pdb
 D:\Cinema_Management\Cinema_Management\Services\CM.Domain\obj\Debug\net8.0\ref\CM.Domain.dll
+D:\Cinema_Management\Cinema_Management\Services\CM.Domain\bin\Debug\net8.0\Share.ApplicationService.dll
+D:\Cinema_Management\Cinema_Management\Services\CM.Domain\bin\Debug\net8.0\Share.ApplicationService.pdb
+D:\Cinema_Management\Cinema_Management\Services\CM.Domain\obj\Debug\net8.0\CM.Domain.csproj.Up2Date

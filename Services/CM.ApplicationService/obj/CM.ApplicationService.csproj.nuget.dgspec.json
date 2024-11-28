@@ -143,7 +143,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\Cinema_Management\\Cinema_Management\\Services\\Shared\\Share.ApplicationService\\Share.ApplicationService.csproj": {
+                "projectPath": "D:\\Cinema_Management\\Cinema_Management\\Services\\Shared\\Share.ApplicationService\\Share.ApplicationService.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -161,6 +165,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Catel.Core": {
+              "target": "Package",
+              "version": "[6.0.4, )"
+            },
             "Swashbuckle.AspNetCore.Annotations": {
               "target": "Package",
               "version": "[6.9.0, )"

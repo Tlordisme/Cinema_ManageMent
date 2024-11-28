@@ -1,5 +1,6 @@
 ﻿using CM.Domain.Ticket;
 using CM.Dtos.Ticket;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +11,11 @@ namespace CM.ApplicationService.Ticket.Abstracts
 {
     public interface ITicketService
     {
-        Task<TicketDto> CreateTicketAsync(CreateTicketDto createTicketDto);
-        Task<bool> UpdateTicketStatusAsync(UpdateTicketDto updateTicketDto);
-        Task<TicketDto> GetTicketByIdAsync(int ticketId);
-        Task<bool> DeleteTicketAsync(int ticketId);
-        Task<bool> ProcessPaymentAsync(int ticketId);
+         Task<CMTicket> BookTicketAsync(int userId, string showtimeId, List<int> seatIds);
+         Task<TicketDetailsDto> GetTicketDetailsAsync(int ticketId);
+
+        //Task<string> BookTicketAndCreatePaymentUrlAsync(int userId, string showtimeId, List<int> seatIds, HttpContext context);
+
+
     }
 }

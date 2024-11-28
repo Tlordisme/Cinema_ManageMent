@@ -5,11 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CM.Dtos.Ticket
+namespace CM.Dtos.Seat
 {
-    public class TicketSeatDto
+    public class SeatForTicketDto
     {
-        public int SeatId { get; set; }
-        public SeatStatus SeatStatus { get; set; }
+        public string Name { get; set; }
+        public string SeatType { get; set; }
     }
 }
