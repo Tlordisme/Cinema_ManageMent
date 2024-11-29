@@ -122,24 +122,6 @@ namespace CM_API.Controllers
             return NotFound();
         }
 
-        [HttpGet("activate")]
-        public async Task<IActionResult> ActivateAccount(string email, string token)
-        {
-            var user = await _dbContext.Users.FirstOrDefaultAsync(u => u.Email == email);
-            if (user == null || user.IsActive)
-                return BadRequest("Người dùng không tồn tại hoặc đã được kích hoạt.");
-
-            // Kiểm tra token
-            var rawToken = $"{user.Email}:{user.DateOfBirth:yyyyMMddHHmmss}";
-            var expectedToken = Convert.ToBase64String(Encoding.UTF8.GetBytes(rawToken));
-            if (token != expectedToken)
-                return Unauthorized("Token không hợp lệ.");
-
-            // Kích hoạt tài khoản
-            user.IsActive = true;
-            await _dbContext.SaveChangesAsync();
-
-            return Ok("Tài khoản đã được kích hoạt thành công.");
-        }
+        
     }
 }

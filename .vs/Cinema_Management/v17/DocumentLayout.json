@@ -114,8 +114,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Auth\\AuthModule\\Implements\\AuthService.cs",
               "ViewState": "AQIAAJAAAAAAAAAAAAAswDoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T08:02:35.845Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T08:02:35.845Z"
             },
             {
               "$type": "Document",
@@ -127,8 +126,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Auth\\AuthModule\\Abstracts\\IAuthService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T08:02:26.988Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T08:02:26.988Z"
             },
             {
               "$type": "Document",
@@ -140,8 +138,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Email\\Implements\\EmailService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T06:39:43.212Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T06:39:43.212Z"
             },
             {
               "$type": "Document",
@@ -153,8 +150,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Email\\Abstracts\\IEmailService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T06:39:27.099Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T06:39:27.099Z"
             },
             {
               "$type": "Document",
@@ -166,8 +162,7 @@
               "RelativeToolTip": "CM_API\\Controllers\\TicketController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T15:57:19.678Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T15:57:19.678Z"
             },
             {
               "$type": "Document",
@@ -179,8 +174,7 @@
               "RelativeToolTip": "Services\\CM.Domain\\Ticket\\CMTicketSeat.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAAsAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T15:41:26.878Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T15:41:26.878Z"
             },
             {
               "$type": "Document",
@@ -192,8 +186,7 @@
               "RelativeToolTip": "Services\\CM.Domain\\Ticket\\CMTicket.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T15:38:18.806Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T15:38:18.806Z"
             },
             {
               "$type": "Document",
@@ -205,8 +198,7 @@
               "RelativeToolTip": "Services\\CM.Dtos\\Ticket\\TicketDto.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T15:33:29.908Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T15:33:29.908Z"
             },
             {
               "$type": "Document",
@@ -218,8 +210,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Ticket\\Implements\\TicketService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAGQAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T15:33:08.74Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T15:33:08.74Z"
             },
             {
               "$type": "Document",
@@ -231,8 +222,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Ticket\\Abstracts\\ITicketService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T15:33:07.713Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T15:33:07.713Z"
             },
             {
               "$type": "Document",
@@ -244,8 +234,7 @@
               "RelativeToolTip": "CM_API\\Program.cs",
               "ViewState": "AQIAAAUAAAAAAAAAAAAxwBIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T17:20:32.803Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T17:20:32.803Z"
             },
             {
               "$type": "Document",
@@ -257,8 +246,7 @@
               "RelativeToolTip": "Services\\CM.Infrastructure\\CMDbContext.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAABAAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T15:18:21.277Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T15:18:21.277Z"
             },
             {
               "$type": "Document",
@@ -270,8 +258,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\StartUp\\CMStartUp.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T15:16:43.96Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T15:16:43.96Z"
             },
             {
               "$type": "Document",
