@@ -16,7 +16,9 @@ namespace CM.Domain.Payment
         public string TransactionId { get; set; }
         public string Token { get; set; }
         public string VnPayResponseCode { get; set; }
- 
+
+        public string ErrorMessage { get; set; }
+
 
     }
 }

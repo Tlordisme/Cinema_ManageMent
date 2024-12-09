@@ -5,42 +5,62 @@ using System.Linq;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
+using Catel.Reflection;
+using CM.ApplicationService.Common;
+using CM.ApplicationService.Notification.Abstracts;
 using CM.ApplicationService.Payment.Abstracts;
-//using CM.ApplicationService.Payment.ZaloPayment.Config;
-//using CM.ApplicationService.Payment.ZaloPayment.Request;
 using CM.Domain.Payment;
+using CM.Domain.Seat;
+using CM.Domain.Showtime;
+using CM.Domain.Ticket;
+using CM.Dtos.Ticket;
+using CM.Infrastructure;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
 namespace CM.ApplicationService.Payment.Implements
 {
-    public class PaymentService : IPaymentService
+    public class PaymentService : ServiceBase, IPaymentService
     {
         private readonly IConfiguration _config;
-        //private readonly ZaloPayConfig zaloPayConfig;
+        private readonly IEmailService _emailService;
 
-        public PaymentService(IConfiguration config)
+        public PaymentService(
+            CMDbContext dbContext,
+            ILogger<ServiceBase> logger,
+            IConfiguration config,
+            IEmailService emailService
+        )
+            : base(logger, dbContext)
         {
             _config = config;
-            //zaloPayConfig = config.GetSection(ZaloPayConfig.ConfigName).Get<ZaloPayConfig>();
+            _emailService = emailService;
         }
 
-        public string CreatePaymentUrl(HttpContext context, VnPayRequest request)
+        public string CreatePaymentUrl(HttpContext context, int ticketId)
         {
-            var tick = DateTime.Now.Ticks.ToString();
+            var ticket = _dbContext.Tickets.FirstOrDefault(t => t.Id == ticketId);
+            if (ticket.Status != TicketStatus.Pending)
+            {
+                return "Vé không hợp lệ";
+            }
+            var tick = ticket.Id.ToString();
+
             var vnpay = new VnPayLibrary();
             vnpay.AddRequestData("vnp_Version", _config["VnPay:Version"]);
             vnpay.AddRequestData("vnp_Command", _config["VnPay:Command"]);
             vnpay.AddRequestData("vnp_TmnCode", _config["VnPay:TmnCode"]);
-            vnpay.AddRequestData("vnp_Amount", (request.Amount * 100).ToString());
+            vnpay.AddRequestData("vnp_Amount", (ticket.TotalPrice * 100).ToString("0"));
 
-            vnpay.AddRequestData("vnp_CreateDate", request.CreateDate.ToString("yyyyMMddHHmmss"));
+            vnpay.AddRequestData("vnp_CreateDate", ticket.BookingDate.ToString("yyyyMMddHHmmss"));
             vnpay.AddRequestData("vnp_CurrCode", _config["VnPay:CurrCode"]);
             vnpay.AddRequestData("vnp_IpAddr", Utils.GetIpAddress(context));
             vnpay.AddRequestData("vnp_Locale", _config["VnPay:Locale"]);
 
-            vnpay.AddRequestData("vnp_OrderInfo", "Thanh toan don hang:" + request.TicketId);
+            vnpay.AddRequestData("vnp_OrderInfo", $"Thanh toan don hang: {ticket.Id}");
             vnpay.AddRequestData("vnp_OrderType", "other"); //default value: other
             vnpay.AddRequestData("vnp_ReturnUrl", _config["VnPay:PaymentBackUrl"]);
             vnpay.AddRequestData("vnp_TxnRef", tick);
@@ -52,7 +72,7 @@ namespace CM.ApplicationService.Payment.Implements
             return paymentUrl;
         }
 
-        public VnPayResponse PaymentExcute(IQueryCollection collections)
+        public async Task<VnPayResponse> PaymentExcute(IQueryCollection collections)
         {
             var vnpay = new VnPayLibrary();
             foreach (var (key, value) in collections)
@@ -75,53 +95,60 @@ namespace CM.ApplicationService.Payment.Implements
             {
                 return new VnPayResponse { Success = false };
             }
-            return new VnPayResponse
+            var ticketId = vnp_orderId;
+            var ticket = await _dbContext.Tickets.FirstOrDefaultAsync(t => t.Id == ticketId); // Sử dụng FirstOrDefaultAsync
+
+            if (vnp_ResponseCode == "00")
             {
-                Success = true,
-                OrderDescription = vnp_OrderInfo,
-                OrderId = vnp_orderId.ToString(),
-                TransactionId = vnp_TransactionId.ToString(),
-                Token = vnp_SecureHash,
-                VnPayResponseCode = vnp_ResponseCode,
-            };
+                // Cập nhật trạng thái vé và ghế
+                ticket.Status = TicketStatus.Paid;
+                var seats = await _dbContext
+                    .TicketSeats.Where(ts => ts.TicketId == ticketId)
+                    .Select(ts => ts.Seat)
+                    .ToListAsync();
+                foreach (var seat in seats)
+                {
+                    seat.Status = SeatStatus.Booked;
+                }
+
+                await _emailService.SendEmailAsync(ticket.Id); // Gọi phương thức bất đồng bộ
+                await _dbContext.SaveChangesAsync(); // Sử dụng SaveChangesAsync để xử lý bất đồng bộ
+
+                return new VnPayResponse
+                {
+                    Success = true,
+                    OrderDescription = vnp_OrderInfo,
+                    OrderId = vnp_orderId.ToString(),
+                    TransactionId = vnp_TransactionId.ToString(),
+                    Token = vnp_SecureHash,
+                    VnPayResponseCode = vnp_ResponseCode,
+                };
+            }
+            else
+            {
+                // Thanh toán thất bại
+                ticket.Status = TicketStatus.Canceled;
+                var seats = await _dbContext
+                    .TicketSeats.Where(ts => ts.TicketId == ticketId)
+                    .Select(ts => ts.Seat)
+                    .ToListAsync();
+                foreach (var seat in seats)
+                {
+                    seat.Status = SeatStatus.Available;
+                }
+
+                await _dbContext.SaveChangesAsync(); // Sử dụng SaveChangesAsync để xử lý bất đồng bộ
+
+                return new VnPayResponse
+                {
+                    Success = false,
+                    OrderDescription = vnp_OrderInfo,
+                    OrderId = vnp_orderId.ToString(),
+                    TransactionId = vnp_TransactionId.ToString(),
+                    Token = vnp_SecureHash,
+                    VnPayResponseCode = vnp_ResponseCode,
+                };
+            }
         }
-
-
-
-        //public (bool Success, string Result) CreateOrder(long amount, string appTransId, string description)
-        //{
-        //    try
-        //    {
-        //        var appTime = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
-        //        var request = new CreateZaloPayRequest(
-        //            zaloPayConfig.AppId,
-        //            zaloPayConfig.AppUser,
-        //            appTime,
-        //            amount,
-        //            appTransId,
-        //            "zalopayapp",
-        //            description
-        //        );
-
-        //        // Generate signature
-        //        request.MakeSignature(zaloPayConfig.Key1);
-
-        //        var (success, result) = request.GetLink(zaloPayConfig.PaymentUrl);
-
-        //        if (success)
-        //        {
-        //            return (true, result); // Return payment URL
-        //        }
-        //        else
-        //        {
-        //            return (false, $"ZaloPay Error: {result}");
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return (false, $"Error: {ex.Message}");
-        //    }
-
-        //}
     }
 }

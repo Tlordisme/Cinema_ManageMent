@@ -1,4 +1,5 @@
 ﻿using CM.Domain.Payment;
+using CM.Domain.Ticket;
 using CM.Dtos.Payment;
 using Microsoft.AspNetCore.Http;
 using System;
@@ -11,9 +12,9 @@ namespace CM.ApplicationService.Payment.Abstracts
 {
     public interface IPaymentService
     {
-        string CreatePaymentUrl(HttpContext context, VnPayRequest request);
+        string CreatePaymentUrl(HttpContext context, int ticketId);
         //Task<string> CreatePaymentUrl(HttpContext context, VnPayRequest request, int ticketId);
-        VnPayResponse PaymentExcute(IQueryCollection collections);
+        Task<VnPayResponse> PaymentExcute(IQueryCollection collections);
 
         //(bool Success, string Result) CreateOrder(long amount, string appTransId, string description);
     }

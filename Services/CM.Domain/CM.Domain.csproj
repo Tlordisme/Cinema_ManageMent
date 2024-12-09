@@ -14,11 +14,16 @@
 
   <ItemGroup>
     <PackageReference Include="Catel.Core" Version="6.0.4" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.9.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Shared\Share.ApplicationService\Share.ApplicationService.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Notification\" />
   </ItemGroup>
 
 </Project>

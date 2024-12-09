@@ -50,27 +50,27 @@ namespace CM.ApplicationService.Seat.Implements
                 Status = seatDto.Status
             };
 
-            // Nếu ghế đôi nhưng chưa có DoubleSeatId, cho phép tạo trước
+            
             if (IsDoubleSeat(seat.SeatType) && seatDto.DoubleSeatId != null)
             {
-                // Lấy ghế cặp để kiểm tra
+               
                 var doubleSeat = _dbContext.Seats.Find(seatDto.DoubleSeatId);
                 if (doubleSeat == null || doubleSeat.RoomID != seatDto.RoomID)
                 {
                     throw new Exception("Ghế cặp phải thuộc cùng phòng.");
                 }
 
-                // Kiểm tra ghế đôi có nằm cạnh nhau trong cùng hàng hay không
+                
                 if (!IsDoubleSeatValid(seatDto.X, seatDto.Y, doubleSeat))
                 {
                     throw new Exception("Ghế đôi phải ở cạnh nhau theo hàng.");
                 }
 
                 seat.DoubleSeatId = doubleSeat.Id;
-                doubleSeat.DoubleSeatId = seat.Id; // Liên kết ngược
+                doubleSeat.DoubleSeatId = seat.Id; 
             }
 
-            // Thêm ghế vào cơ sở dữ liệu
+            
             _dbContext.Seats.Add(seat);
             _dbContext.SaveChanges();
         }
@@ -193,16 +193,16 @@ namespace CM.ApplicationService.Seat.Implements
                     throw new Exception("Ghế cặp phải thuộc cùng phòng.");
                 }
 
-                // Kiểm tra ghế đôi có nằm cạnh nhau theo hàng hay không
+                
                 if (!IsDoubleSeatValid(seatDto.X, seatDto.Y, newDoubleSeat))
                 {
                     throw new Exception("Ghế đôi phải ở cạnh nhau theo hàng.");
                 }
 
-                // Cập nhật liên kết với ghế cặp hiện tại và ghế cặp mới
+                // Cập nhật liên kết ghế 
                 if (seat.DoubleSeatId != newDoubleSeat.Id)
                 {
-                    // Xóa liên kết cũ
+                    // Xóa liên kết
                     if (seat.DoubleSeatId != null)
                     {
                         var oldDoubleSeat = _dbContext.Seats.Find(seat.DoubleSeatId);
@@ -212,7 +212,7 @@ namespace CM.ApplicationService.Seat.Implements
                         }
                     }
 
-                    // Thiết lập liên kết mới
+                    
                     seat.DoubleSeatId = newDoubleSeat.Id;
                     newDoubleSeat.DoubleSeatId = seat.Id;
                 }

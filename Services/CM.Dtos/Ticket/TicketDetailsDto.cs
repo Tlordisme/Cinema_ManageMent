@@ -11,7 +11,8 @@ namespace CM.Dtos.Ticket
     {
         public int TicketId { get; set; }
         public string UserName { get; set; }
-        public string ShowtimeId { get; set; }
+        public string Email { get; set; }
+        public DateTime Showtime { get; set; }
         public string MovieName { get; set; }
         public string TheaterName { get; set; }
         public string RoomName { get; set; }

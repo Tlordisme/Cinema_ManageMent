@@ -44,6 +44,8 @@ namespace CM.Domain.Auth
         [DataType(DataType.Date)]
         public DateTime DateOfBirth { get; set; }
 
+        //public bool IsActive {  get; set; }
+
         //public virtual ICollection<MoComment> Comments { get; set; }
 
         //public virtual ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();

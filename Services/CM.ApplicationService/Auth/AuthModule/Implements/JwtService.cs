@@ -47,12 +47,6 @@ namespace CM.Auth.ApplicantService.Auth.Implements
             };
 
 
-            // Add each permission as a claim
-            //var permissions = _permissionService.GetPermissions(user.Id);
-            //foreach (var permission in permissions)
-            //{
-            //    claims.Add(new Claim("Permission", permission));
-            //}
 
             var key = new SymmetricSecurityKey(
                 Encoding.UTF8.GetBytes(_configuration["Jwt:SecretKey"])

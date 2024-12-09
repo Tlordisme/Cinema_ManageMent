@@ -63,6 +63,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "CM_API.Controllers.EmailController",
+    "Method": "SendEmail",
+    "RelativePath": "api/Email",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "body",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CM_API.Controllers.MovieController",
     "Method": "AddMovie",
     "RelativePath": "api/Movie",
@@ -124,16 +140,16 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "request",
-        "Type": "CM.Domain.Payment.VnPayRequest",
-        "IsRequired": true
+        "Name": "ticket",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
   },
   {
     "ContainingType": "CM_API.Controllers.PaymentController",
-    "Method": "VnPayResponse",
+    "Method": "VnPayResponseAsync",
     "RelativePath": "api/payment/PaymentCallbackVnpay",
     "HttpMethod": "GET",
     "IsController": true,

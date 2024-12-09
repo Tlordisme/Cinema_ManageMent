@@ -9,6 +9,8 @@ using CM.ApplicationService.Cloudinary.Abstracts;
 using CM.ApplicationService.Cloudinary.Implements;
 using CM.ApplicationService.Movie.Abstracts;
 using CM.ApplicationService.Movie.Implements;
+using CM.ApplicationService.Notification.Abstracts;
+using CM.ApplicationService.Notification.Implements;
 using CM.ApplicationService.Payment.Abstracts;
 using CM.ApplicationService.Payment.Implements;
 using CM.ApplicationService.RoleModule.Abstracts;
@@ -27,8 +29,8 @@ using CM.Auth.ApplicantService.Auth.Implements;
 using CM.Auth.ApplicantService.Permission.Implements;
 using CM.Domain.Auth;
 using CM.Infrastructure;
-
 using dotenv.net;
+using Hangfire;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
@@ -47,8 +49,6 @@ namespace CM.ApplicationService.StartUp
             string? assemblyName
         )
         {
-
-
             //AuthDbContext
             builder.Services.AddDbContext<CMDbContext>(
                 options =>
@@ -64,6 +64,7 @@ namespace CM.ApplicationService.StartUp
                             );
                         }
                     );
+                    options.EnableSensitiveDataLogging();
                 },
                 ServiceLifetime.Scoped
             );
@@ -90,8 +91,9 @@ namespace CM.ApplicationService.StartUp
             //Showtime
             builder.Services.AddScoped<IShowtimeService, ShowtimeService>();
             //Ticket
-            builder.Services.AddScoped<ITicketService,TicketService>();
+            builder.Services.AddScoped<ITicketService, TicketService>();
             builder.Services.AddScoped<IPaymentService, PaymentService>();
+
             //Cloudinary
             var cloudinaryConfig = builder.Configuration.GetSection("Cloudinary");
             var account = new Account(
@@ -104,7 +106,15 @@ namespace CM.ApplicationService.StartUp
             builder.Services.AddScoped<ICommentService, CommentService>();
             builder.Services.AddScoped<ICloudService, CloudService>();
 
+            builder.Services.AddScoped<IEmailService, EmailService>();
 
+            //HangFire
+            builder.Services.AddHangfire(config =>
+                config.UseSqlServerStorage(builder.Configuration.GetConnectionString("Default"))
+            );
+            builder.Services.AddHangfireServer();
+
+           
             // Cấu hình JWT Authentication
 
             builder

@@ -11,9 +11,10 @@ namespace CM.ApplicationService.Ticket.Abstracts
 {
     public interface ITicketService
     {
-         Task<CMTicket> BookTicketAsync(int userId, string showtimeId, List<int> seatIds);
+         Task<CMTicket> BookTicketAsync(int userId, CreateTicketDto request, HttpContext context);
          Task<TicketDetailsDto> GetTicketDetailsAsync(int ticketId);
 
+         Task CancelTicketIfNotPaid(int ticketId);
         //Task<string> BookTicketAndCreatePaymentUrlAsync(int userId, string showtimeId, List<int> seatIds, HttpContext context);
 
 

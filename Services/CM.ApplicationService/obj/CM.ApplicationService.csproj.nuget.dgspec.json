@@ -67,6 +67,14 @@
               "target": "Package",
               "version": "[1.26.2, )"
             },
+            "Hangfire": {
+              "target": "Package",
+              "version": "[1.8.17, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.8.0, )"
+            },
             "Microsoft.AspNetCore.Authentication": {
               "target": "Package",
               "version": "[2.2.0, )"
@@ -78,6 +86,10 @@
             "Microsoft.IdentityModel.Tokens": {
               "target": "Package",
               "version": "[8.1.2, )"
+            },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[4.8.0, )"
             },
             "Portable.BouncyCastle": {
               "target": "Package",
@@ -168,6 +180,10 @@
             "Catel.Core": {
               "target": "Package",
               "version": "[6.0.4, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "Swashbuckle.AspNetCore.Annotations": {
               "target": "Package",

@@ -26,7 +26,7 @@ namespace CM.Domain.Seat
         public int Y { get; set; }
 
         [MaxLength(20)]
-        public string SeatType { get; set; }  // Loại ghế (Standard, VIP, ...)
+        public string SeatType { get; set; } 
 
         [Required]
         public string RoomID { get; set; }
@@ -35,9 +35,8 @@ namespace CM.Domain.Seat
         [Required]
         public SeatStatus Status { get; set; }
 
-        // Thêm thuộc tính cho ghế đôi
-        //public bool IsDoubleSeat { get; set; }  // Đánh dấu ghế đôi
-        public int? DoubleSeatId { get; set; }  // ID của ghế đối diện nếu có
+
+        public int? DoubleSeatId { get; set; }  
     }
 
     public enum SeatStatus
