@@ -2,8 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using CM.ApplicationService.Common;
-using CM.ApplicationService.Payment.Abstracts;
-using CM.ApplicationService.Payment.Implements;
+
 using CM.ApplicationService.Ticket.Abstracts;
 using CM.Domain.Payment;
 using CM.Domain.Seat;
@@ -22,12 +21,10 @@ namespace CM.Application.Ticket.Services
 {
     public class TicketService : ServiceBase, ITicketService
     {
-        private IConfiguration _config;
-        private readonly IPaymentService _paymentService;
-        public TicketService(CMDbContext dbContext, ILogger<ServiceBase> logger, IConfiguration config, IPaymentService paymentService)
+
+       
+        public TicketService(CMDbContext dbContext, ILogger<ServiceBase> logger)
             : base(logger, dbContext) {
-            _config = config;    
-            _paymentService = paymentService;
         }
 
         public async Task<CMTicket> BookTicketAsync(int userId, CreateTicketDto request, HttpContext context)
@@ -100,38 +97,6 @@ namespace CM.Application.Ticket.Services
             return ticket;
         }
 
-        public async Task<TicketDetailsDto> GetTicketDetailsAsync(int ticketId)
-        {
-            var seats = _dbContext.TicketSeats
-                     .Where(ts => ts.TicketId == ticketId)
-                     .Select(ts => ts.Seat) 
-                     .ToList();
-            var ticketDetails = await _dbContext.Tickets
-                .Where(t => t.Id == ticketId && t.Status == TicketStatus.Paid)
-                .Select(t => new TicketDetailsDto
-                {
-                    TicketId = t.Id,
-                    UserName = t.User.FullName, 
-                    Email =  t.User.Email,
-                    Showtime = t.Showtime.StartTime,
-                    MovieName = t.Showtime.Movie.Title,
-                    TheaterName = t.Showtime.Room.Theater.Name,
-                    RoomName = t.Showtime.Room.Name,
-                    BookingDate = t.BookingDate,
-                    Seats = _dbContext.TicketSeats
-                     .Where(ts => ts.TicketId == ticketId)
-                     .Select(ts => new SeatForTicketDto
-                     {
-                         Name = ts.Seat.Name,
-                         SeatType = ts.Seat.SeatType
-                     }).ToList(),
-                    TotalPrice = t.TotalPrice
-                })
-                .FirstOrDefaultAsync();
-
-
-            return ticketDetails;
-        }
 
         public async Task CancelTicketIfNotPaid(int ticketId)
         {

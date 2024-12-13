@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CM.ApplicationService.Common;
 using CM.ApplicationService.Notification.Abstracts;
+using CM.ApplicationService.Ticket.Abstracts;
 using CM.Auth.ApplicantService.Auth.Implements;
 using CM.Auth.ApplicantService.Permission.Implements;
 using CM.Domain.Ticket;
@@ -20,98 +21,31 @@ using MimeKit;
 
 namespace CM.ApplicationService.Notification.Implements
 {
-    public class EmailService : ServiceBase, IEmailService
+    public class EmailService : ServiceBase, INotificationService
     {
         private readonly IConfiguration _config;
-        
+        private readonly ITicketRepository _ticketRepository;
+        private readonly IEmailTemplateService _emailTemplateService;
         public EmailService(
             IConfiguration config,
             CMDbContext dbContext,
-            ILogger<EmailService> logger
+            ILogger<EmailService> logger,
+            ITicketRepository ticketRepository,
+            IEmailTemplateService emailTemplateService
         )
             : base(logger, dbContext)
         {
             _config = config;
+            _ticketRepository = ticketRepository;
+            _emailTemplateService = emailTemplateService;
            
         }
 
-        public async Task SendEmailAsync(int ticketId) // Thay đổi từ async void thành async Task
+        public async Task SendNotification(int ticketId) // Thay đổi từ async void thành async Task
         {
-            // Lấy thông tin chi tiết vé
-            var ticketDetail = await _dbContext.Tickets
-                .Where(t => t.Id == ticketId).FirstOrDefaultAsync();
-            if (ticketDetail == null)
-                throw new Exception("Ticket not found!");
-            var user = await _dbContext.Users.Where(u => u.Id == ticketDetail.UserId).FirstOrDefaultAsync();
-            var showtime = await _dbContext.Showtimes.Where(st => st.Id == ticketDetail.ShowtimeId).FirstOrDefaultAsync();
-            var movie = await _dbContext.Movies.Where(m => m.Id == showtime.MovieID).FirstOrDefaultAsync();
-            var room = await _dbContext.Rooms.Where(r => r.Id == showtime.RoomID).FirstOrDefaultAsync();
-            var theater = await _dbContext.Theaters.Where(r => r.Id == room.TheaterId).FirstOrDefaultAsync();
+            var ticketDetail = await _ticketRepository.GetTicketDetailsAsync(ticketId);
+            var emailBody =  await _emailTemplateService.GenerateEmailContent(ticketDetail);
 
-            var seats = _dbContext.TicketSeats
-                .Where(ts => ts.TicketId == ticketId)
-                .Select(ts => new SeatForTicketDto
-                {
-                    Name = ts.Seat.Name,
-                    SeatType = ts.Seat.SeatType
-                }).ToList();
-
-            // Tạo nội dung email
-            var seatsHtml = string.Join(
-                "",
-                seats.Select(seat =>
-                    $"<tr><td>{seat.Name}</td><td>{seat.SeatType}</td></tr>"
-                )
-            );
-
-            var emailBody =
-                $@"
-        <html>
-            <body>
-                <h2>Booking Confirmation</h2>
-                <p>Dear {user.FullName},</p>
-                <p>Thank you for booking your ticket. Here are the details of your booking:</p>
-                <table border='1' style='border-collapse: collapse; width: 100%; text-align: left;'>
-                    <tr>
-                        <th>Ticket ID</th>
-                        <td>{ticketDetail.Id}</td>
-                    </tr>
-                    <tr>
-                        <th>Movie</th>
-                        <td>{movie.Title}</td>
-                    </tr>
-                    <tr>
-                        <th>Theater</th>
-                        <td>{room.Name}</td>
-                    </tr>
-                    <tr>
-                        <th>Theater</th>
-                        <td>{theater.Location}</td>
-                    </tr>
-                    <tr>
-                        <th>Room</th>
-                        <td>{room.Name}</td>
-                    </tr>
-                    <tr>
-                        <th>Showtime</th>
-                        <td>{showtime.StartTime}</td>
-                    </tr>
-                    <tr>
-                        <th>Booking Date</th>
-                        <td>{ticketDetail.BookingDate:yyyy-MM-dd HH:mm}</td>
-                    </tr>
-                </table>
-                <h3>Seats:</h3>
-                <table border='1' style='border-collapse: collapse; width: 100%; text-align: left;'>
-                    <tr>
-                        <th>Seat Name</th>
-                        <th>Seat Type</th>
-                    </tr>
-                    {seatsHtml}
-                </table>
-                <p>Enjoy your movie!</p>
-            </body>
-        </html>";
 
             // Tạo email
             var message = new MailMessage
@@ -122,12 +56,12 @@ namespace CM.ApplicationService.Notification.Implements
                 IsBodyHtml = true,
             };
 
-            message.To.Add(new MailAddress(ticketDetail.User.Email));
+            message.To.Add(new MailAddress(ticketDetail.Email));
 
             // Gửi email
             var smtpClient = new System.Net.Mail.SmtpClient(_config["Email:Host"])
             {
-                Port = 587,
+                Port = int.Parse(_config["Email:Port"]),
                 Credentials = new NetworkCredential(
                     _config["Email:FromEmail"],
                     _config["Email:Password"]

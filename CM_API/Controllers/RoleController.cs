@@ -47,7 +47,7 @@ namespace CM_API.Controllers
 
         public async Task<IActionResult> GetRoleById(int id)
         {
-            var userId = int.Parse(User.FindFirst("Id")?.Value); // Lấy userId từ JWT claim
+            var userId = int.Parse(User.FindFirst("Id")?.Value); 
 
             // Kiểm tra quyền "ViewRole"
             if (!_permissionService.CheckPermission(userId, "GetRoleById"))
@@ -69,7 +69,7 @@ namespace CM_API.Controllers
         [Authorize]
         public async Task<IActionResult> GetAllRoles()
         {
-            var userId = int.Parse(User.FindFirst("Id")?.Value); // Lấy userId từ JWT claim
+            var userId = int.Parse(User.FindFirst("Id")?.Value); 
 
             // Kiểm tra quyền "ViewAllRoles"
             if (!_permissionService.CheckPermission(userId, "GetAllRoles"))
@@ -125,7 +125,7 @@ namespace CM_API.Controllers
         [Authorize]
         public async Task<IActionResult> AddRoleToUser(int userId, [FromBody] string role)
         {
-            var userIdClaim = int.Parse(User.FindFirst("Id")?.Value); // Lấy userId từ JWT claim
+            var userIdClaim = int.Parse(User.FindFirst("Id")?.Value); 
 
             // Kiểm tra quyền "AssignRoleToUser"
             if (!_permissionService.CheckPermission(userIdClaim, "AddRoleToUser"))

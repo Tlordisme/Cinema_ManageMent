@@ -22,6 +22,7 @@ using CM.ApplicationService.Showtime.Implements;
 using CM.ApplicationService.Theater.Abstracts;
 using CM.ApplicationService.Theater.Implements;
 using CM.ApplicationService.Ticket.Abstracts;
+using CM.ApplicationService.Ticket.Implements;
 using CM.ApplicationService.UserModule.Abstracts;
 using CM.ApplicationService.UserModule.Implements;
 using CM.Auth.ApplicantService.Auth.Abstracts;
@@ -93,7 +94,7 @@ namespace CM.ApplicationService.StartUp
             //Ticket
             builder.Services.AddScoped<ITicketService, TicketService>();
             builder.Services.AddScoped<IPaymentService, PaymentService>();
-
+            builder.Services.AddScoped<ITicketRepository,TicketRepository>();
             //Cloudinary
             var cloudinaryConfig = builder.Configuration.GetSection("Cloudinary");
             var account = new Account(
@@ -105,8 +106,19 @@ namespace CM.ApplicationService.StartUp
 
             builder.Services.AddScoped<ICommentService, CommentService>();
             builder.Services.AddScoped<ICloudService, CloudService>();
+            //Email
+            builder.Services.AddScoped<EmailService>();
+            builder.Services.AddScoped<SmsService>();
 
-            builder.Services.AddScoped<IEmailService, EmailService>();
+            // p gửi cả Email và SMS
+            builder.Services.AddScoped<INotificationService>(provider =>
+            {
+                var emailService = provider.GetRequiredService<EmailService>();
+                var smsService = provider.GetRequiredService<SmsService>();
+
+                return new CombinedNotificationService(emailService, smsService);
+            });
+            builder.Services.AddScoped<IEmailTemplateService, EmailTemplateService>();
 
             //HangFire
             builder.Services.AddHangfire(config =>

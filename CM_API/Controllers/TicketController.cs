@@ -67,5 +67,25 @@ namespace CM_API.Controllers
                 return BadRequest(new { Error = ex.Message });
             }
         }
+
+        //[HttpGet("{ticketId}")]
+        //public async Task<IActionResult> GetTicket(int ticketId)
+        //{
+        //    if (ticketId == null )
+        //        return BadRequest("Invalid request data!");
+
+        //    try
+        //    {
+        //       var ticketDetail = await _ticketService.GetTicketDetailsAsync(ticketId);
+
+        //       return Ok(ticketDetail);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return BadRequest(new { Error = ex.Message });
+        //    }
+        //}
+
+
     }
 }
