@@ -26,18 +26,18 @@ namespace CM.ApplicationService.Payment.Implements
     public class PaymentService : ServiceBase, IPaymentService
     {
         private readonly IConfiguration _config;
-        private readonly IEmailService _emailService;
+        private readonly INotificationService _notificationService;
 
         public PaymentService(
             CMDbContext dbContext,
             ILogger<ServiceBase> logger,
             IConfiguration config,
-            IEmailService emailService
+            INotificationService notificationService
         )
             : base(logger, dbContext)
         {
             _config = config;
-            _emailService = emailService;
+            _notificationService = notificationService;
         }
 
         public string CreatePaymentUrl(HttpContext context, int ticketId)
@@ -96,7 +96,7 @@ namespace CM.ApplicationService.Payment.Implements
                 return new VnPayResponse { Success = false };
             }
             var ticketId = vnp_orderId;
-            var ticket = await _dbContext.Tickets.FirstOrDefaultAsync(t => t.Id == ticketId); // Sử dụng FirstOrDefaultAsync
+            var ticket = await _dbContext.Tickets.FirstOrDefaultAsync(t => t.Id == ticketId); 
 
             if (vnp_ResponseCode == "00")
             {
@@ -111,8 +111,8 @@ namespace CM.ApplicationService.Payment.Implements
                     seat.Status = SeatStatus.Booked;
                 }
 
-                await _emailService.SendEmailAsync(ticket.Id); // Gọi phương thức bất đồng bộ
-                await _dbContext.SaveChangesAsync(); // Sử dụng SaveChangesAsync để xử lý bất đồng bộ
+                await _notificationService.SendNotification(ticket.Id);
+                await _dbContext.SaveChangesAsync(); 
 
                 return new VnPayResponse
                 {
@@ -137,7 +137,7 @@ namespace CM.ApplicationService.Payment.Implements
                     seat.Status = SeatStatus.Available;
                 }
 
-                await _dbContext.SaveChangesAsync(); // Sử dụng SaveChangesAsync để xử lý bất đồng bộ
+                await _dbContext.SaveChangesAsync();
 
                 return new VnPayResponse
                 {

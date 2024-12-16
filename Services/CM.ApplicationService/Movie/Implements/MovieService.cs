@@ -139,5 +139,38 @@ namespace CM.ApplicationService.Movie.Implements
             _dbContext.SaveChanges();
             _logger.LogInformation($"Deleted movie: {movie.Title}");
         }
+
+        public async Task<IEnumerable<MovieDto>> GetAllMovies()
+        {
+            try
+            {
+                var movies = await _dbContext.Movies
+                    .Include(m => m.MovieGenres)
+                        .ThenInclude(mg => mg.Genre)
+                    .Include(m => m.MovieCasts)
+                        .ThenInclude(mc => mc.Cast)
+                    .Select(m => new MovieDto
+                    {
+                        Id = m.Id,
+                        Title = m.Title,
+                        Director = m.Director,
+                        Nation = m.Nation,
+                        Duration = m.Duration.ToString(@"hh\:mm\:ss"),
+                        LimitAge = m.LimitAge,
+                        Description = m.Description,
+                        Genres = m.MovieGenres.Select(g => g.Genre.Name).ToList(),
+                        Casts = m.MovieCasts.Select(c => c.Cast.Name).ToList()
+                    })
+                    .ToListAsync();
+
+                _logger.LogInformation($"Retrieved {movies.Count} movies from the database.");
+                return movies;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error retrieving movies: {ex.Message}", ex);
+                throw;
+            }
+        }
     }
 }

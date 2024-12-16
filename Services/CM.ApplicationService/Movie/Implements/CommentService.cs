@@ -68,7 +68,20 @@ namespace CM.ApplicationService.Movie.Implements
             await _dbContext.Comments.AddAsync(newComment);
             await _dbContext.SaveChangesAsync();
             _logger.LogInformation($"Comment added for movie ID {dto.MovieId} by user {userId}");
-            //throw new NotImplementedException();
+        }
+
+        public async Task DeleteCommentAsync(int commentId)
+        {
+            var comment = await _dbContext.Set<CommentDto>()
+                                         .FirstOrDefaultAsync(c => c.Id == commentId);
+
+            if (comment == null)
+            {
+                throw new Exception("Comment not found.");
+            }
+
+            _dbContext.Set<CommentDto>().Remove(comment);
+            await _dbContext.SaveChangesAsync();
         }
 
         public async Task<IEnumerable<CommentDto>> GetCommentsByMovieId(int movieId)

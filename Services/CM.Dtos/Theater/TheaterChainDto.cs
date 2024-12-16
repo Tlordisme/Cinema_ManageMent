@@ -8,6 +8,7 @@ namespace CM.Dtos.Theater
 {
     public class TheaterChainDto
     {
+        public string Id { get; set; }
         public string Name { get; set; }
     }
 }

@@ -2,12 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CM.Domain.Movie;
-using CM.Domain.Ticket;
 using Swashbuckle.AspNetCore.Annotations;
 
 namespace CM.Domain.Auth
@@ -28,6 +26,10 @@ namespace CM.Domain.Auth
         [Required]
         public string UserName { get; set; }
 
+        [MaxLength(15)]
+        [Required]
+        public string PhoneNumber { get; set; }
+
         [MinLength(8)]
         [Required]
         public string Password { get; set; }
@@ -42,11 +44,10 @@ namespace CM.Domain.Auth
         [DataType(DataType.Date)]
         public DateTime DateOfBirth { get; set; }
 
+        //public bool IsActive {  get; set; }
+
         //public virtual ICollection<MoComment> Comments { get; set; }
 
         //public virtual ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
-
-        public bool IsActive { get; set; }
-        public List<CMTicket> Tickets { get; set; } = new List<CMTicket>();
     }
 }

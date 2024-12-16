@@ -63,6 +63,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "CM_API.Controllers.EmailController",
+    "Method": "SendEmail",
+    "RelativePath": "api/Email",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "body",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CM_API.Controllers.MovieController",
     "Method": "AddMovie",
     "RelativePath": "api/Movie",
@@ -113,6 +129,32 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CM_API.Controllers.PaymentController",
+    "Method": "CreatePaymentUrl",
+    "RelativePath": "api/payment/create-payment-url",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ticket",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CM_API.Controllers.PaymentController",
+    "Method": "VnPayResponseAsync",
+    "RelativePath": "api/payment/PaymentCallbackVnpay",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -211,10 +253,90 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CM_API.Controllers.SeatController",
-    "Method": "BookSeat",
-    "RelativePath": "book/{seatId}",
+    "ContainingType": "CM_API.Controllers.RoomController",
+    "Method": "CreateRoom",
+    "RelativePath": "api/Room",
     "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "CM.Dtos.Theater.RoomDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CM_API.Controllers.RoomController",
+    "Method": "GetRoomsByTheaterId",
+    "RelativePath": "api/Room/{theaterId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "theaterId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CM_API.Controllers.SeatController",
+    "Method": "AddSeat",
+    "RelativePath": "api/Seat",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "seatDto",
+        "Type": "CM.Dtos.Seat.AddSeatDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CM_API.Controllers.SeatController",
+    "Method": "UpdateSeat",
+    "RelativePath": "api/Seat",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "seatDto",
+        "Type": "CM.Dtos.Seat.UpdateSeatDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CM_API.Controllers.SeatController",
+    "Method": "GetSeatsByRoomId",
+    "RelativePath": "api/Seat/{roomId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roomId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CM_API.Controllers.SeatController",
+    "Method": "DeleteSeat",
+    "RelativePath": "api/Seat/{seatId}",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -224,17 +346,256 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CM_API.Controllers.SeatController",
+    "Method": "LinkDoubleSeat",
+    "RelativePath": "api/Seat/link-double-seat",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
       {
-        "Type": "CM.Dtos.Seat.SeatResponseDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
+        "Name": "dto",
+        "Type": "CM.Dtos.Seat.LinkDoubleSeatDto",
+        "IsRequired": true
       }
-    ]
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CM_API.Controllers.SeatPriceController",
+    "Method": "AddSeatPrice",
+    "RelativePath": "api/SeatPrice",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "seatPriceDto",
+        "Type": "CM.Dtos.Seat.AddSeatPriceDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CM_API.Controllers.SeatPriceController",
+    "Method": "UpdateSeatPrice",
+    "RelativePath": "api/SeatPrice",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "seatPriceDto",
+        "Type": "CM.Dtos.Seat.UpdateSeatPriceDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CM_API.Controllers.SeatPriceController",
+    "Method": "DeleteSeatPrice",
+    "RelativePath": "api/SeatPrice/{seatPriceId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "seatPriceId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CM_API.Controllers.SeatPriceController",
+    "Method": "GetSeatPrice",
+    "RelativePath": "api/SeatPrice/GetPriceOfType/{seatPriceId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "seatPriceId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CM_API.Controllers.SeatPriceController",
+    "Method": "GetSeatPricesByRoomId",
+    "RelativePath": "api/SeatPrice/GetPriceOfTypeSeat/{roomId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roomId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CM_API.Controllers.ShowtimeController",
+    "Method": "GetAll",
+    "RelativePath": "api/Showtime",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CM_API.Controllers.ShowtimeController",
+    "Method": "Create",
+    "RelativePath": "api/Showtime",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createShowtimeDto",
+        "Type": "CM.Dtos.Showtime.CreateShowtimeDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CM_API.Controllers.ShowtimeController",
+    "Method": "GetById",
+    "RelativePath": "api/Showtime/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CM_API.Controllers.ShowtimeController",
+    "Method": "Update",
+    "RelativePath": "api/Showtime/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateShowtimeDto",
+        "Type": "CM.Dtos.Showtime.UpdateShowtimeDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CM_API.Controllers.ShowtimeController",
+    "Method": "Delete",
+    "RelativePath": "api/Showtime/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CM_API.Controllers.TheaterController",
+    "Method": "CreateTheater",
+    "RelativePath": "api/Theater",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "CM.Dtos.Theater.TheaterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CM_API.Controllers.TheaterController",
+    "Method": "GetTheatersByChainId",
+    "RelativePath": "api/Theater/{chainId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "chainId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CM_API.Controllers.TheaterChainController",
+    "Method": "CreateTheaterChain",
+    "RelativePath": "api/TheaterChain",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "CM.Dtos.Theater.TheaterChainDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CM_API.Controllers.TheaterChainController",
+    "Method": "GetAllTheaterChains",
+    "RelativePath": "api/TheaterChain",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CM_API.Controllers.TicketController",
+    "Method": "BookTicket",
+    "RelativePath": "api/Ticket/book",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CM.Dtos.Ticket.CreateTicketDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "CM_API.Controllers.UserController",
@@ -293,48 +654,6 @@
       }
     ],
     "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CM_API.Controllers.SeatController",
-    "Method": "ReleaseSeat",
-    "RelativePath": "release/{seatId}",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "seatId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CM_API.Controllers.SeatController",
-    "Method": "GetSeatsByRoomId",
-    "RelativePath": "room/{roomId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "roomId",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[CM.Dtos.Seat.SeatResponseDto, CM.Dtos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
   },
   {
     "ContainingType": "CM_API.Controllers.UserController",

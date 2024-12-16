@@ -26,7 +26,7 @@ namespace CM.ApplicationService.Theater.Implements
         {
             var theaterChain = new CMTheaterChain
             {
-                Id = Guid.NewGuid().ToString(),
+                Id = dto.Id,
                 Name = dto.Name,
             };
 
@@ -39,6 +39,36 @@ namespace CM.ApplicationService.Theater.Implements
         public List<CMTheaterChain> GetAllTheaterChains()
         {
             return _dbContext.TheaterChains.ToList();
+        }
+
+        public void DeleteTheaterChain(string theaterChainId)
+        {
+            // Tìm rạp chiếu theo Id
+            var theaterChain = _dbContext.TheaterChains.Find(theaterChainId);
+
+            if (theaterChain == null)
+                throw new Exception("Theater chain không tồn tại.");
+
+            // Xóa rạp chiếu khỏi database
+            _dbContext.TheaterChains.Remove(theaterChain);
+            _dbContext.SaveChanges();
+        }
+
+        public string UpdateTheaterChain(TheaterChainDto dto)
+        {
+            // Tìm rạp chiếu theo Id
+            var theaterChain = _dbContext.TheaterChains.Find(dto.Id);
+
+            if (theaterChain == null)
+                throw new Exception("Theater chain không tồn tại.");
+
+            // Cập nhật thông tin rạp chiếu
+            theaterChain.Name = dto.Name;
+
+            _dbContext.TheaterChains.Update(theaterChain);
+            _dbContext.SaveChanges();
+
+            return theaterChain.Id;
         }
     }
 }

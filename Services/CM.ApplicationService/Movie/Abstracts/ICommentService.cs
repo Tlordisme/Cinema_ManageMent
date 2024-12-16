@@ -10,6 +10,7 @@ namespace CM.ApplicationService.Movie.Abstracts
     public interface ICommentService
     {
         Task AddCommentAsync(AddCommentDto commentdto, int userId);
+        Task DeleteCommentAsync(int commentId);
         Task<IEnumerable<CommentDto>> GetCommentsByMovieId(int movieId);
     }
 }

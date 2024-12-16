@@ -19,6 +19,7 @@ namespace CM.Dtos.User
         public string FullName { get; set; }
         public GenderType Gender { get; set; }
 
+        public string PhoneNumber { get; set; }
 
         [DataType(DataType.Date)]
         public DateTime DateOfBirth { get; set; }

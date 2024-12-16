@@ -1,5 +1,8 @@
+
 using CM.ApplicationService.StartUp;
+using Hangfire;
 using Microsoft.OpenApi.Models;
+using Serilog;
 
 namespace CM_API
 {
@@ -15,8 +18,8 @@ namespace CM_API
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddHttpContextAccessor();
             builder.ConfigureService(typeof(Program).Namespace);
-
             
             builder.Services.AddSwaggerGen(options =>
             {
@@ -49,11 +52,15 @@ namespace CM_API
                 );
             });
             builder.Services.AddEndpointsApiExplorer();
+
+            //serilog
+            //Log.Logger = new LoggerConfiguration()
+            //    .ReadFrom.Configuration(builder.Configuration)
+            //    .CreateLogger();
+            builder.Host.UseSerilog((context, config) => config.ReadFrom.Configuration(context.Configuration));
+
             var app = builder.Build();
 
-            //
-
-            //
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
@@ -62,14 +69,18 @@ namespace CM_API
                 app.UseSwaggerUI();
             }
 
+            app.UseHangfireDashboard("/hangfire");
             app.UseHttpsRedirection();
-
+            app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllers();
 
-            app.Run();
+            app.UseSerilogRequestLogging();
+
+            app.Run();            
+
         }
     }
 }

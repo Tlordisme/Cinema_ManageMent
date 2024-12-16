@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using CM.ApplicationService.Auth.Common;
 using CM.ApplicationService.AuthModule.Abstracts;
 using CM.ApplicationService.Common;
-using CM.ApplicationService.Email.Abstracts;
+using CM.ApplicationService.Notification.Abstracts;
 using CM.ApplicationService.RoleModule.Abstracts;
 using CM.Auth.ApplicantService.Auth.Abstracts;
 using CM.Auth.ApplicantService.Auth.Implements;
@@ -31,33 +31,30 @@ namespace CM.ApplicationService.AuthModule.Implements
         private readonly IPasswordHasher<User> _passwordHasher;
         private readonly JwtService _jwtService;
         private readonly ValidateService _validateService;
-        private readonly IEmailService _emailService;
+        //private readonly IEmailService _emailService;
 
         public AuthService(
             CMDbContext dbContext,
             ILogger<AuthService> logger,
             IPasswordHasher<User> passwordHasher,
             ValidateService validateService,
-            JwtService jwtService,
-
-            IEmailService emailService
+            JwtService jwtService
+            //IEmailService emailService
         )
             : base(logger, dbContext)
         {
             _passwordHasher = passwordHasher;
             _jwtService = jwtService;
             _validateService = validateService;
-            _emailService = emailService;
-        }
-
-        //
-        private string GenerateActivationToken(User user)
-        {
-            var rawToken = $"{user.Email}:{user.DateOfBirth:yyyyMMddHHmmss}";
-            return Convert.ToBase64String(Encoding.UTF8.GetBytes(rawToken));
+            //_emailService = emailService;
         }
 
 
+        //private string GenerateActivationToken(User user)
+        //{
+        //    var rawToken = $"{user.Email}:{user.DateOfBirth:yyyyMMddHHmmss}";
+        //    return Convert.ToBase64String(Encoding.UTF8.GetBytes(rawToken));
+        //}
         public async Task<UserDto> Register(RegisterUserDto registerDto)
         {
             await _validateService.ValidateEmailAsync(registerDto.Email);
@@ -73,30 +70,31 @@ namespace CM.ApplicationService.AuthModule.Implements
                 Email = registerDto.Email,
                 UserName = registerDto.UserName,
                 FullName = registerDto.FullName,
+                PhoneNumber = registerDto.PhoneNumber,
                 Gender = registerDto.Gender,
                 DateOfBirth = registerDto.DateOfBirth,
                 Password = _passwordHasher.HashPassword(null, registerDto.Password),
-                IsActive = false
+                //IsActive = false
+                
             };
 
             _dbContext.Users.Add(user);
-            await _dbContext.SaveChangesAsync();
+    //        var token = GenerateActivationToken(user);
+    //        var activationLink = $"https://yourdomain.com/api/auth/activate?email={user.Email}&token={token}";
 
-            // Gửi email xác nhận
-            var token = GenerateActivationToken(user);
-            var activationLink = $"https://yourdomain.com/api/auth/activate?email={user.Email}&token={token}";
+    //        var emailBody = $@"
+    //        <h1>Chào mừng {user.FullName}!</h1>
+    //        <p>Nhấn vào liên kết bên dưới để kích hoạt tài khoản:</p>
+    //        <a href='{activationLink}'>Kích hoạt tài khoản</a>
+    //        <p>Nếu bạn không thực hiện đăng ký này, vui lòng bỏ qua email này.</p>
+    //";
 
-            var emailBody = $@"
-            <h1>Chào mừng {user.FullName}!</h1>
-            <p>Nhấn vào liên kết bên dưới để kích hoạt tài khoản:</p>
-            <a href='{activationLink}'>Kích hoạt tài khoản</a>
-            <p>Nếu bạn không thực hiện đăng ký này, vui lòng bỏ qua email này.</p>
-    ";
-
-            await _emailService.SendEmailAsync(user.Email, "Kích hoạt tài khoản", emailBody);
+    //        await _emailService.SendEmailAsync(user.Email, "Kích hoạt tài khoản", emailBody);
 
             _logger.LogInformation($"User {user.UserName} registered successfully. Activation email sent.");
 
+
+            await _dbContext.SaveChangesAsync();
 
             //Add role mặc định
             var role = await _dbContext.Roles.FirstOrDefaultAsync(r => r.Name == "Standard User");
@@ -120,6 +118,7 @@ namespace CM.ApplicationService.AuthModule.Implements
                 Email = user.Email,
                 FullName = user.FullName,
                 Gender = user.Gender,
+                
                 DateOfBirth = user.DateOfBirth,
             };
         }
@@ -160,42 +159,6 @@ namespace CM.ApplicationService.AuthModule.Implements
             };
         }
 
-        //private async Task<string> GenerateJwtTokenAsync(User user)
-        //{
-        //    var claims = new List<Claim>
-        //    {
-        //        new Claim("Id", user.Id.ToString()), // Add user ID claim
-        //        new Claim("Username", user.UserName), // Add username claim
-        //        new Claim("Email", user.Email),
-        //    };
-        //    if (_roleService == null)
-        //    {
-        //        throw new InvalidOperationException("Role service has not been initialized.");
-        //    }
 
-        //    var roles = await _roleService.GetUserRolesAsync(user);
-        //    LogInformation($"Roles for user {user.UserName}: {string.Join(", ", roles)}");
-
-        //    var roleClaims = roles.Select(roleName => new Claim(ClaimTypes.Role, roleName));
-
-        //    claims.AddRange(roleClaims);
-
-        //    var key = new SymmetricSecurityKey(
-        //        Encoding.UTF8.GetBytes(_configuration["Jwt:SecretKey"])
-        //    );
-        //    var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-
-        //    var token = new JwtSecurityToken(
-        //        issuer: _configuration["Jwt:Issuer"],
-        //        audience: _configuration["Jwt:Audience"],
-        //        claims: claims,
-        //        expires: DateTime.Now.AddMinutes(
-        //            Convert.ToDouble(_configuration["Jwt:ExpiryMinutes"])
-        //        ),
-        //        signingCredentials: creds
-        //    );
-
-        //    return new JwtSecurityTokenHandler().WriteToken(token);
-        //}
     }
 }

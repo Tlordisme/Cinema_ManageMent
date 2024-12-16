@@ -1,14 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sflAuMRtjkVmUdh4gRKK4nNbWOuZJaaV3jiHAYmnLd6oE6ErhQj0zytyGgpJw/Is4g00lxRR4S3DsBf5jHyVkA==",
+  "dgSpecHash": "0cwDO6WRqInDPKgLDh5hcK/yQjg4SSbmgvQLaALUwIfWKyXYlikta4qcuU5KM8nTU7pW1grmFsVXVGTK8H2bpg==",
   "success": true,
   "projectFilePath": "C:\\Users\\z4khi\\source\\repos\\Cinema_Management\\Services\\Shared\\Common\\Common.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\z4khi\\.nuget\\packages\\bouncycastle.cryptography\\2.4.0\\bouncycastle.cryptography.2.4.0.nupkg.sha512",
-    "C:\\Users\\z4khi\\.nuget\\packages\\mailkit\\4.8.0\\mailkit.4.8.0.nupkg.sha512",
-    "C:\\Users\\z4khi\\.nuget\\packages\\mimekit\\4.8.0\\mimekit.4.8.0.nupkg.sha512",
-    "C:\\Users\\z4khi\\.nuget\\packages\\system.formats.asn1\\8.0.1\\system.formats.asn1.8.0.1.nupkg.sha512",
-    "C:\\Users\\z4khi\\.nuget\\packages\\system.security.cryptography.pkcs\\8.0.0\\system.security.cryptography.pkcs.8.0.0.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

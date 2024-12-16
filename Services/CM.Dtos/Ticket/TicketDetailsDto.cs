@@ -12,9 +12,10 @@ namespace CM.Dtos.Ticket
         public int TicketId { get; set; }
         public string UserName { get; set; }
         public string Email { get; set; }
-        public DateTime Showtime { get; set; }
+        public DateTime StartTime { get; set; }
         public string MovieName { get; set; }
         public string TheaterName { get; set; }
+        public string Location { get; set; }
         public string RoomName { get; set; }
         public DateTime BookingDate { get; set; }
         public decimal TotalPrice { get; set; }

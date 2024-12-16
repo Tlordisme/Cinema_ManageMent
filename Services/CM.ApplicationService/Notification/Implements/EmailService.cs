@@ -1,43 +1,51 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Net.Mail;
+using System.Text;
 using System.Threading.Tasks;
 using CM.ApplicationService.Common;
 using CM.ApplicationService.Notification.Abstracts;
+using CM.ApplicationService.Ticket.Abstracts;
+using CM.Auth.ApplicantService.Auth.Implements;
+using CM.Auth.ApplicantService.Permission.Implements;
+using CM.Domain.Ticket;
+using CM.Dtos.Seat;
+using CM.Dtos.Ticket;
 using CM.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using MimeKit;
 
 namespace CM.ApplicationService.Notification.Implements
 {
-    public class EmailService : ServiceBase, IEmailService
+    public class EmailService : ServiceBase, INotificationService
     {
         private readonly IConfiguration _config;
-        private readonly IEmailLogicService _emailLogicService;
-
+        private readonly ITicketRepository _ticketRepository;
+        private readonly IEmailTemplateService _emailTemplateService;
         public EmailService(
             IConfiguration config,
             CMDbContext dbContext,
             ILogger<EmailService> logger,
-            IEmailLogicService emailLogicService
+            ITicketRepository ticketRepository,
+            IEmailTemplateService emailTemplateService
         )
             : base(logger, dbContext)
         {
             _config = config;
-            _emailLogicService = emailLogicService;
+            _ticketRepository = ticketRepository;
+            _emailTemplateService = emailTemplateService;
+           
         }
 
-        public async Task SendEmailAsync(int ticketId) // Thay đổi từ async void thành async Task
+        public async Task SendNotification(int ticketId) // Thay đổi từ async void thành async Task
         {
-            // Lấy nội dung email từ EmailLogicService
-            var emailBody = await _emailLogicService.GenerateEmailBodyAsync(ticketId);
+            var ticketDetail = await _ticketRepository.GetTicketDetailsAsync(ticketId);
+            var emailBody =  await _emailTemplateService.GenerateEmailContent(ticketDetail);
 
-            // Lấy thông tin chi tiết vé
-            var ticketDetail = await _dbContext.Tickets
-                .Where(t => t.Id == ticketId).FirstOrDefaultAsync();
-            if (ticketDetail == null)
-                throw new Exception("Ticket not found!");
 
             // Tạo email
             var message = new MailMessage
@@ -48,12 +56,12 @@ namespace CM.ApplicationService.Notification.Implements
                 IsBodyHtml = true,
             };
 
-            message.To.Add(new MailAddress(ticketDetail.User.Email));
+            message.To.Add(new MailAddress(ticketDetail.Email));
 
             // Gửi email
             var smtpClient = new System.Net.Mail.SmtpClient(_config["Email:Host"])
             {
-                Port = 587,
+                Port = int.Parse(_config["Email:Port"]),
                 Credentials = new NetworkCredential(
                     _config["Email:FromEmail"],
                     _config["Email:Password"]
@@ -63,5 +71,9 @@ namespace CM.ApplicationService.Notification.Implements
 
             await smtpClient.SendMailAsync(message);
         }
+
     }
 }
+
+
+

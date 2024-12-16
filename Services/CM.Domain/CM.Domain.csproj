@@ -8,17 +8,22 @@
 
   <ItemGroup>
     <Compile Remove="FoodDrink\**" />
-    <Compile Remove="Payment\**" />
     <EmbeddedResource Remove="FoodDrink\**" />
-    <EmbeddedResource Remove="Payment\**" />
     <None Remove="FoodDrink\**" />
-    <None Remove="Payment\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MailKit" Version="4.8.0" />
-    <PackageReference Include="MimeKit" Version="4.8.0" />
+    <PackageReference Include="Catel.Core" Version="6.0.4" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Shared\Share.ApplicationService\Share.ApplicationService.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Notification\" />
   </ItemGroup>
 
 </Project>

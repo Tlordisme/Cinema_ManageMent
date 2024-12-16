@@ -1,6 +1,5 @@
 ﻿using CM.Domain.Movie;
 using CM.Domain.Theater;
-using CM.Domain.Ticket;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -24,6 +23,5 @@ namespace CM.Domain.Showtime
         public CMRoom Room { get; set; }
         public int MovieID { get; set; }
         public MoMovie Movie { get; set; }
-        public List<CMTicket> Tickets { get; set; } = new List<CMTicket>();
     }
 }

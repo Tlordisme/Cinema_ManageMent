@@ -2,7 +2,6 @@
 using CM.ApplicationService.AuthModule.Abstracts;
 using CM.ApplicationService.RoleModule.Abstracts;
 using CM.ApplicationService.UserModule.Abstracts;
-using CM.ApplicationService.UserModule.Implements;
 using CM.Dtos.Auth.Auth;
 using CM.Dtos.Role;
 using CM.Dtos.User;
@@ -12,63 +11,62 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Text;
 
+
 namespace CM_API.Controllers
 {
     [Route("api/[controller]")]
-
-
     public class AuthController : Controller
     {
-        private readonly CMDbContext _dbContext;
-        public AuthController(IUserService userService, IPermissionService permissionService, CMDbContext dbContext)
-        {
-            _dbContext = dbContext;
-        }
-
         private readonly IAuthService _authService;
-        public AuthController(IAuthService authService)
+        private readonly CMDbContext _dbContext;
+        private readonly ILogger<AuthController> _logger;
+
+        public AuthController(
+            IAuthService authService,
+            CMDbContext dbContext,
+            ILogger<AuthController> logger)
         {
             _authService = authService;
+            _dbContext = dbContext;
+            _logger = logger;
         }
 
         [HttpPost("register")]
         [AllowAnonymous]
         public async Task<IActionResult> Register([FromBody] RegisterUserDto registerDto)
         {
-            if (!ModelState.IsValid)
+            _logger.LogInformation("Start: Registering a new user with email {Email}.", registerDto.Email);
+
+            try
             {
-                return BadRequest(ModelState);
+                var user = await _authService.Register(registerDto);
+                _logger.LogInformation("Registration successful for user with email {Email}.", registerDto.Email);
+                return Ok(new { Message = "Register successful" });
             }
-            var user = await _authService.Register(registerDto);
-            return Ok(new { Message = "Register successful" });
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred during registration for email {Email}.", registerDto.Email);
+                return BadRequest(new { Error = ex.Message });
+            }
         }
 
         [HttpPost("login")]
         [AllowAnonymous]
         public async Task<IActionResult> Login([FromBody] LoginDto loginDto)
         {
-            var loginResponse = await _authService.Login(loginDto);
-            return Ok(new { Message = loginResponse });
-        }
+            _logger.LogInformation("Start: Logging in {Username}.", loginDto.Username);
 
-        [HttpGet("activate")]
-        public async Task<IActionResult> ActivateAccount(string email, string token)
-        {
-            var user = await _dbContext.Users.FirstOrDefaultAsync(u => u.Email == email);
-            if (user == null || user.IsActive)
-                return BadRequest("Người dùng không tồn tại hoặc đã được kích hoạt.");
-
-            // Kiểm tra token
-            var rawToken = $"{user.Email}:{user.DateOfBirth:yyyyMMddHHmmss}";
-            var expectedToken = Convert.ToBase64String(Encoding.UTF8.GetBytes(rawToken));
-            if (token != expectedToken)
-                return Unauthorized("Token không hợp lệ.");
-
-            // Kích hoạt tài khoản
-            user.IsActive = true;
-            await _dbContext.SaveChangesAsync();
-
-            return Ok("Tài khoản đã được kích hoạt thành công.");
+            try
+            {
+                var loginResponse = await _authService.Login(loginDto);
+                _logger.LogInformation("Login successful for {Username}.", loginDto.Username);
+                return Ok(new { Message = loginResponse });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred during login for {Username}.", loginDto.Username);
+                return Unauthorized(new { Error = ex.Message });
+            }
         }
     }
 }

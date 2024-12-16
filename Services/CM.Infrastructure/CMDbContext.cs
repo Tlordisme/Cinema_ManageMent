@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CM.Domain.Auth;
-using CM.Domain.Food;
 using CM.Domain.Movie;
 using CM.Domain.Seat;
 using CM.Domain.Showtime;
@@ -22,9 +21,6 @@ namespace CM.Infrastructure
         public DbSet<UserRole> UserRoles { get; set; }
 
         public DbSet<RolePermission> RolePermissions { get; set; }
-        //Food
-        public DbSet<Food> Foods { get; set; }
-        public DbSet<Combo> Combos { get; set; }
 
         //Movie
         public DbSet<MoMovie> Movies { get; set; }
@@ -40,15 +36,15 @@ namespace CM.Infrastructure
         public DbSet<CMRoom> Rooms { get; set; }
 
         //Showtime
-        public DbSet<CMShowtime> Showtimes;
+        public DbSet<CMShowtime> Showtimes { get; set; }
 
         //Seat
         public DbSet<CMSeat> Seats { get; set; }
+        public DbSet<CMSeatPrice> SeatPrices { get; set; }
 
         //Ticket
         public DbSet<CMTicket> Tickets { get; set; }
         public DbSet<CMTicketSeat> TicketSeats { get; set; }
-
 
         public CMDbContext(DbContextOptions<CMDbContext> options)
             : base(options) { }
@@ -57,6 +53,7 @@ namespace CM.Infrastructure
         {
             //Auth
             modelBuilder.Entity<User>().Property(u => u.Gender).HasConversion<string>();
+
             modelBuilder
                 .Entity<UserRole>()
                 .HasOne<User>()
@@ -77,27 +74,6 @@ namespace CM.Infrastructure
                 .WithMany()
                 .HasForeignKey(e => e.RoleId)
                 .OnDelete(DeleteBehavior.Restrict);
-
-            //Food
-            modelBuilder
-                .Entity<Food>()
-                .HasKey(f => f.Id);
-
-            modelBuilder
-                .Entity<Combo>()
-                .HasKey(c => c.Id);
-
-            modelBuilder
-                .Entity<Combo>()
-                .Property(c => c.Name)
-                .IsRequired()  
-                .HasMaxLength(100);
-
-            modelBuilder
-                .Entity<Combo>()
-                .HasMany(c => c.Foods)  
-                .WithMany(f => f.Combos)  
-                .UsingEntity(j => j.ToTable("ComboFood"));
 
             //Movie
             modelBuilder.Entity<MoMovie_Genre>().HasKey(mg => new { mg.MovieId, mg.GenreId });
@@ -182,31 +158,36 @@ namespace CM.Infrastructure
                 .WithMany()
                 .HasForeignKey(s => s.RoomID)
                 .OnDelete(DeleteBehavior.Cascade);
+            //Seat
+            modelBuilder.Entity<CMSeat>().Property(u => u.Status).HasConversion<string>();
+            //Seat_Price
+            modelBuilder.Entity<CMSeat>()
+                .HasOne(s => s.Room)
+                .WithMany()
+                .HasForeignKey(s => s.RoomID);
+
+            //Tickets
+            modelBuilder
+                .Entity<CMTicketSeat>()
+                .HasOne(ts => ts.Ticket)
+                .WithMany()
+                .HasForeignKey(ts => ts.TicketId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder
+                .Entity<CMTicket>()
+                .HasOne(t => t.User)
+                .WithMany()
+                .HasForeignKey(t => t.UserId);
+
+            // Cấu hình quan hệ giữa CMTicket và CMShowtime
+            modelBuilder
+                .Entity<CMTicket>()
+                .HasOne(t => t.Showtime)
+                .WithMany() 
+                .HasForeignKey(t => t.ShowtimeId);
 
 
-            //Ticket
-            modelBuilder.Entity<CMTicket>()
-            .HasMany(t => t.TicketSeats)
-            .WithOne(ts => ts.Ticket)
-            .HasForeignKey(ts => ts.TicketId)
-            .OnDelete(DeleteBehavior.Cascade);
-
-            modelBuilder.Entity<CMTicketSeat>()
-           .HasOne(ts => ts.Seat)
-           .WithMany()
-           .HasForeignKey(ts => ts.SeatId);
-
-            modelBuilder.Entity<CMTicket>()
-            .HasOne(t => t.Showtime)
-            .WithMany(s => s.Tickets)
-            .HasForeignKey(t => t.ShowtimeId);
-
-            modelBuilder.Entity<CMTicket>()
-           .HasOne(t => t.User)
-           .WithMany(u => u.Tickets)
-           .HasForeignKey(t => t.UserId);
-
-            base.OnModelCreating(modelBuilder);
         }
     }
 }

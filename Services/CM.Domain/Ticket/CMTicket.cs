@@ -1,5 +1,4 @@
 ﻿using CM.Domain.Auth;
-//using CM.Domain.FoodCombo;
 using CM.Domain.Seat;
 using CM.Domain.Showtime;
 using System;
@@ -19,6 +18,7 @@ namespace CM.Domain.Ticket
         public int Id { get; set; }
 
         // Thông tin người mua vé
+        [Required]
         public int UserId { get; set; }
         public User User { get; set; }
 
@@ -28,22 +28,18 @@ namespace CM.Domain.Ticket
 
         // Trạng thái vé: Đang chờ thanh toán, Đã thanh toán, Đã hủy
         public TicketStatus Status { get; set; }
-
-        // Ngày tạo vé
-        public DateTime CreatedDate { get; set; }
+        public DateTime BookingDate { get; set; }
 
         // Tổng giá vé (bao gồm ghế, combo, ...)
         public decimal TotalPrice { get; set; }
 
-        // Danh sách ghế trong vé này
-        public List<CMTicketSeat> TicketSeats { get; set; } = new List<CMTicketSeat>();
 
     }
     public enum TicketStatus
     {
-        Pending,    // Đang chờ thanh toán
-        Paid,       // Đã thanh toán
-        Canceled,   // Đã hủy
-        Used        // Đã sử dụng
+        Pending,   
+        Paid,      
+        Canceled,   
+        Used       
     }
 }

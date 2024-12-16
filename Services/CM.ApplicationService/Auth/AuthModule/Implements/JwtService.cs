@@ -43,16 +43,10 @@ namespace CM.Auth.ApplicantService.Auth.Implements
             {
                 new Claim("Id", user.Id.ToString()), // Add user ID claim
                 new Claim("Username", user.UserName), // Add username claim
-                new Claim("Email", user.Email),
+                new Claim("Email", user.Email)
             };
 
 
-            // Add each permission as a claim
-            //var permissions = _permissionService.GetPermissions(user.Id);
-            //foreach (var permission in permissions)
-            //{
-            //    claims.Add(new Claim("Permission", permission));
-            //}
 
             var key = new SymmetricSecurityKey(
                 Encoding.UTF8.GetBytes(_configuration["Jwt:SecretKey"])

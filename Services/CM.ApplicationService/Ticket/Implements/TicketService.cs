@@ -1,120 +1,107 @@
-﻿using CM.ApplicationService.Email.Abstracts;
-using CM.ApplicationService.Ticket.Abstracts;
-using CM.Domain.Ticket;
-using CM.Infrastructure;
+﻿using CM.ApplicationService.Ticket.Abstracts;
+using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using CM.Domain.Seat;
+using CM.Domain.Ticket;
+using CM.Dtos.Ticket;
+using CM.Infrastructure;
+using Microsoft.AspNetCore.Http;
+using CM.ApplicationService.Common;
 
-namespace CM.ApplicationService.Ticket.Implements
+namespace CM.Application.Ticket.Services
 {
     public class TicketService : ITicketService
     {
-        private readonly CMDbContext _context;
-        private readonly IEmailService _emailService;
+        private readonly ITicketRepository _ticketRepository;
+        private readonly CMDbContext _dbContext;
 
-        public TicketService(CMDbContext context, IEmailService emailService)
+        public TicketService(CMDbContext dbContext, ILogger<ServiceBase> logger, ITicketRepository ticketRepository)
         {
-            _context = context;
-            _emailService = emailService;
+            _dbContext = dbContext;
+            _ticketRepository = ticketRepository;
         }
 
-        public async Task<CMTicket> CreateTicket(int userId, string showtimeId, List<int> seatIds)
+        public async Task<CMTicket> BookTicketAsync(int userId, CreateTicketDto request, HttpContext context)
         {
-            var showtime = await _context.Showtimes.FirstOrDefaultAsync(s => s.Id == showtimeId);
-            if (showtime == null) throw new Exception("Showtime not found");
+            var showtime = await _dbContext.Showtimes
+                .Include(s => s.Room)
+                .FirstOrDefaultAsync(s => s.Id == request.ShowtimeId);
 
-            var seats = await _context.Seats.Where(s => seatIds.Contains(s.Id)).ToListAsync();
-            if (seats.Count != seatIds.Count) throw new Exception("Some seats not found");
+            if (showtime == null)
+                throw new Exception("Showtime not found!");
+
+            var seats = await _dbContext.Seats
+                .Where(s => request.seatIds.Contains(s.Id) && s.RoomID == showtime.RoomID && s.Status == SeatStatus.Available)
+                .ToListAsync();
+
+            if (seats.Count != request.seatIds.Count)
+                throw new Exception("Invalid seat selection");
+
+            var seatType = seats.Select(s => s.SeatType).Distinct().ToList();
+            if (seatType.Count > 1)
+                throw new Exception("Cannot book different seat types in one ticket");
+
+            var seatPrice = await _dbContext.SeatPrices
+                .Where(sp => sp.SeatType == seatType.First() && sp.RoomID == showtime.RoomID)
+                .OrderBy(sp => sp.Price)
+                .FirstOrDefaultAsync();
+
+            if (seatPrice == null)
+                throw new Exception("Seat price not found");
+
+            decimal totalPrice = seatPrice.Price * seats.Count;
 
             var ticket = new CMTicket
             {
                 UserId = userId,
-                ShowtimeId = showtimeId,
+                ShowtimeId = request.ShowtimeId,
                 Status = TicketStatus.Pending,
-                CreatedDate = DateTime.Now,
-                TotalPrice = seats.Sum(s => s.Price),
-                TicketSeats = seats.Select(s => new CMTicketSeat
-                {
-                    SeatId = s.Id,
-                    SeatStatus = SeatStatus.Pending
-                }).ToList()
+                BookingDate = DateTime.Now,
+                TotalPrice = totalPrice
             };
 
-            _context.Tickets.Add(ticket);
-            await _context.SaveChangesAsync();
+            _dbContext.Tickets.Add(ticket);
+            await _dbContext.SaveChangesAsync();
+
+            foreach (var seat in seats)
+            {
+                seat.Status = SeatStatus.Pending;
+                var ticketSeat = new CMTicketSeat
+                {
+                    TicketId = ticket.Id,
+                    SeatId = seat.Id,
+                    SeatStatus = SeatStatus.Pending
+                };
+                _dbContext.TicketSeats.Add(ticketSeat);
+            }
+
+            await _dbContext.SaveChangesAsync();
+
             return ticket;
         }
 
-        public async Task<bool> PayTicket(int ticketId)
+        public async Task<bool> DeleteTicket(int ticketId)
         {
-            var ticket = await _context.Tickets.Include(t => t.TicketSeats)
-                                                .ThenInclude(ts => ts.Seat)
-                                                .FirstOrDefaultAsync(t => t.Id == ticketId);
-
-            if (ticket == null || ticket.Status != TicketStatus.Pending)
-                return false;
-
-            ticket.Status = TicketStatus.Paid;
-            foreach (var seat in ticket.TicketSeats)
-            {
-                seat.SeatStatus = SeatStatus.Paid;
-            }
-
-            await _context.SaveChangesAsync();
-
-            // Gửi email xác nhận
-            var emailBody = BuildTicketConfirmationEmail(ticket);
-            var userEmail = (await _context.Users.FindAsync(ticket.UserId))?.Email;
-
-            if (!string.IsNullOrEmpty(userEmail))
-            {
-                await _emailService.SendEmailAsync(userEmail, "Xác nhận vé", emailBody);
-            }
-
-            return true;
+            return await _ticketRepository.DeleteTicket(ticketId);
         }
 
-        public async Task<bool> CancelTicket(int ticketId)
+        public async Task<List<TicketDetailsDto>> GetAllTickets()
         {
-            var ticket = await _context.Tickets.Include(t => t.TicketSeats)
-                                                .FirstOrDefaultAsync(t => t.Id == ticketId);
-            if (ticket == null || ticket.Status == TicketStatus.Canceled)
-                return false;
-
-            ticket.Status = TicketStatus.Canceled;
-            foreach (var seat in ticket.TicketSeats)
-            {
-                seat.SeatStatus = SeatStatus.Pending; // Revert seat status
-            }
-
-            await _context.SaveChangesAsync();
-            return true;
+            return await _ticketRepository.GetAllTickets();
         }
 
-        private string BuildTicketConfirmationEmail(CMTicket ticket)
+        public async Task<List<TicketDetailsDto>> GetTicketsByUserId(int userId)
         {
-            var sb = new StringBuilder();
-            sb.AppendLine("<h1>Xác nhận vé của bạn</h1>");
-            sb.AppendLine("<p>Thông tin vé:</p>");
-            sb.AppendLine($"<p>Mã vé: {ticket.Id}</p>");
-            sb.AppendLine($"<p>Trạng thái: {ticket.Status}</p>");
-            sb.AppendLine($"<p>Thời gian chiếu: {ticket.Showtime.StartTime:dd/MM/yyyy HH:mm}</p>");
-            sb.AppendLine($"<p>Tổng giá: {ticket.TotalPrice:C}</p>");
-            sb.AppendLine("<p>Danh sách ghế:</p>");
-
-            foreach (var ticketSeat in ticket.TicketSeats)
-            {
-                var seat = ticketSeat.Seat;
-                sb.AppendLine($"<p>- Hàng: {seat.Row}, Số: {seat.Number}</p>");
-            }
-
-            sb.AppendLine("<p>Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi!</p>");
-            return sb.ToString();
+            return await _ticketRepository.GetTicketsByUserId(userId);
+        }
+        public async Task<TicketDetailsDto> GetTicketDetailsAsync(int ticketId)
+        {
+            // Lấy chi tiết vé từ repository hoặc DB context
+            var ticketDetails = await _ticketRepository.GetTicketDetailsAsync(ticketId);
+            return ticketDetails;
         }
     }
-
 }

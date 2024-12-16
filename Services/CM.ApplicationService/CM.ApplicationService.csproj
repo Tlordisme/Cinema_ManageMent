@@ -12,9 +12,11 @@
 
   <ItemGroup>
     <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="Hangfire" Version="1.8.17" />
+    <PackageReference Include="MailKit" Version="4.8.0" />
+    <PackageReference Include="MimeKit" Version="4.8.0" />
     <PackageReference Include="CloudinaryDotNet" Version="1.26.2" />
     <PackageReference Include="dotenv.net" Version="3.2.1" />
-    <PackageReference Include="MailKit" Version="4.8.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.10" />
     <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.1.2" />
@@ -25,7 +27,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CM.Domain\CM.Domain.csproj" />
     <ProjectReference Include="..\CM.Dtos\CM.Dtos.csproj" />
     <ProjectReference Include="..\CM.Infrastructure\CM.Infrastructure.csproj" />
     <ProjectReference Include="..\Shared\Share.ApplicationService\Share.ApplicationService.csproj" />
@@ -33,7 +34,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Showtime\" />
+    <Folder Include="Payment\ZaloPayment\" />
   </ItemGroup>
 
 </Project>
