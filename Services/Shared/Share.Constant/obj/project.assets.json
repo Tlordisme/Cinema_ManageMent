@@ -279,11 +279,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\z4khi\\Source\\Repos\\Theater_Management\\Services\\Shared\\Share.Constant\\Share.Constant.csproj",
+      "projectUniqueName": "C:\\Users\\z4khi\\source\\repos\\Cinema_Management\\Services\\Shared\\Share.Constant\\Share.Constant.csproj",
       "projectName": "Share.Constant",
-      "projectPath": "C:\\Users\\z4khi\\Source\\Repos\\Theater_Management\\Services\\Shared\\Share.Constant\\Share.Constant.csproj",
+      "projectPath": "C:\\Users\\z4khi\\source\\repos\\Cinema_Management\\Services\\Shared\\Share.Constant\\Share.Constant.csproj",
       "packagesPath": "C:\\Users\\z4khi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\z4khi\\Source\\Repos\\Theater_Management\\Services\\Shared\\Share.Constant\\obj\\",
+      "outputPath": "C:\\Users\\z4khi\\source\\repos\\Cinema_Management\\Services\\Shared\\Share.Constant\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\z4khi\\AppData\\Roaming\\NuGet\\NuGet.Config",

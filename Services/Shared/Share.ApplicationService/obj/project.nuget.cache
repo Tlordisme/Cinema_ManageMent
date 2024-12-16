@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BERVhMcOq+mlFoppvG6R76QgbvIqHaTaDaX5S3jHf8mFKGaBhLV9ie6U7N68p4HVByQ6kcrHJt3r56UGfUEs9g==",
+  "dgSpecHash": "nNuU/HwUqR8u5zn5tQVk6NBmqq3jWsu9wl2GSQ3/JtLQDHHGBfMmYltSq9mNz3afqXABLUpkHprQt6Op3g2JZw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\z4khi\\Source\\Repos\\Theater_Management\\Services\\Shared\\Share.ApplicationService\\Share.ApplicationService.csproj",
+  "projectFilePath": "C:\\Users\\z4khi\\source\\repos\\Cinema_Management\\Services\\Shared\\Share.ApplicationService\\Share.ApplicationService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\z4khi\\.nuget\\packages\\bouncycastle.cryptography\\2.4.0\\bouncycastle.cryptography.2.4.0.nupkg.sha512",
     "C:\\Users\\z4khi\\.nuget\\packages\\mailkit\\4.8.0\\mailkit.4.8.0.nupkg.sha512",

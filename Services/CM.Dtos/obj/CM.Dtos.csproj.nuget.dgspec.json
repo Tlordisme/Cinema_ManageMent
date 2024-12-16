@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\z4khi\\Source\\Repos\\Theater_Management\\Services\\CM.Dtos\\CM.Dtos.csproj": {}
+    "C:\\Users\\z4khi\\source\\repos\\Cinema_Management\\Services\\CM.Dtos\\CM.Dtos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\z4khi\\Source\\Repos\\Theater_Management\\Services\\CM.Domain\\CM.Domain.csproj": {
+    "C:\\Users\\z4khi\\source\\repos\\Cinema_Management\\Services\\CM.Domain\\CM.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\z4khi\\Source\\Repos\\Theater_Management\\Services\\CM.Domain\\CM.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\z4khi\\source\\repos\\Cinema_Management\\Services\\CM.Domain\\CM.Domain.csproj",
         "projectName": "CM.Domain",
-        "projectPath": "C:\\Users\\z4khi\\Source\\Repos\\Theater_Management\\Services\\CM.Domain\\CM.Domain.csproj",
+        "projectPath": "C:\\Users\\z4khi\\source\\repos\\Cinema_Management\\Services\\CM.Domain\\CM.Domain.csproj",
         "packagesPath": "C:\\Users\\z4khi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\z4khi\\Source\\Repos\\Theater_Management\\Services\\CM.Domain\\obj\\",
+        "outputPath": "C:\\Users\\z4khi\\source\\repos\\Cinema_Management\\Services\\CM.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\z4khi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -78,14 +78,14 @@
         }
       }
     },
-    "C:\\Users\\z4khi\\Source\\Repos\\Theater_Management\\Services\\CM.Dtos\\CM.Dtos.csproj": {
+    "C:\\Users\\z4khi\\source\\repos\\Cinema_Management\\Services\\CM.Dtos\\CM.Dtos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\z4khi\\Source\\Repos\\Theater_Management\\Services\\CM.Dtos\\CM.Dtos.csproj",
+        "projectUniqueName": "C:\\Users\\z4khi\\source\\repos\\Cinema_Management\\Services\\CM.Dtos\\CM.Dtos.csproj",
         "projectName": "CM.Dtos",
-        "projectPath": "C:\\Users\\z4khi\\Source\\Repos\\Theater_Management\\Services\\CM.Dtos\\CM.Dtos.csproj",
+        "projectPath": "C:\\Users\\z4khi\\source\\repos\\Cinema_Management\\Services\\CM.Dtos\\CM.Dtos.csproj",
         "packagesPath": "C:\\Users\\z4khi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\z4khi\\Source\\Repos\\Theater_Management\\Services\\CM.Dtos\\obj\\",
+        "outputPath": "C:\\Users\\z4khi\\source\\repos\\Cinema_Management\\Services\\CM.Dtos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\z4khi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -102,8 +102,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\z4khi\\Source\\Repos\\Theater_Management\\Services\\CM.Domain\\CM.Domain.csproj": {
-                "projectPath": "C:\\Users\\z4khi\\Source\\Repos\\Theater_Management\\Services\\CM.Domain\\CM.Domain.csproj"
+              "C:\\Users\\z4khi\\source\\repos\\Cinema_Management\\Services\\CM.Domain\\CM.Domain.csproj": {
+                "projectPath": "C:\\Users\\z4khi\\source\\repos\\Cinema_Management\\Services\\CM.Domain\\CM.Domain.csproj"
               }
             }
           }

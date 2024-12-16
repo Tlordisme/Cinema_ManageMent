@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\z4khi\\Source\\Repos\\Theater_Management\\Services\\Shared\\Common\\Common.csproj": {}
+    "C:\\Users\\z4khi\\source\\repos\\Cinema_Management\\Services\\Shared\\Common\\Common.csproj": {}
   },
   "projects": {
-    "C:\\Users\\z4khi\\Source\\Repos\\Theater_Management\\Services\\Shared\\Common\\Common.csproj": {
+    "C:\\Users\\z4khi\\source\\repos\\Cinema_Management\\Services\\Shared\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\z4khi\\Source\\Repos\\Theater_Management\\Services\\Shared\\Common\\Common.csproj",
+        "projectUniqueName": "C:\\Users\\z4khi\\source\\repos\\Cinema_Management\\Services\\Shared\\Common\\Common.csproj",
         "projectName": "Common",
-        "projectPath": "C:\\Users\\z4khi\\Source\\Repos\\Theater_Management\\Services\\Shared\\Common\\Common.csproj",
+        "projectPath": "C:\\Users\\z4khi\\source\\repos\\Cinema_Management\\Services\\Shared\\Common\\Common.csproj",
         "packagesPath": "C:\\Users\\z4khi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\z4khi\\Source\\Repos\\Theater_Management\\Services\\Shared\\Common\\obj\\",
+        "outputPath": "C:\\Users\\z4khi\\source\\repos\\Cinema_Management\\Services\\Shared\\Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\z4khi\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6vyuRBAdVpe8+uY5b5WSENzVeujDne5xHZRn8tqtVdODVEek23yLTRRZ2LkHRQUtLpi2Zu9mNEe56gtKII0NdA==",
+  "dgSpecHash": "LjhU6CCV7ThDzGpb0hjNP2ZxtJAZc1kwkaYU5u+K3V1wG0k4TaJnajmq3Y/qA0PG57E4LrepjkbzIokhmp6MHQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\z4khi\\Source\\Repos\\Theater_Management\\Services\\CM.ApplicationService\\CM.ApplicationService.csproj",
+  "projectFilePath": "C:\\Users\\z4khi\\source\\repos\\Cinema_Management\\Services\\CM.ApplicationService\\CM.ApplicationService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\z4khi\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\z4khi\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
