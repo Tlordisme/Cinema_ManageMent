@@ -1,4 +1,5 @@
 ﻿using System.Text;
+using Catel.Services;
 using CloudinaryDotNet;
 using CM.ApplicantService.Auth.Permission.Abstracts;
 using CM.Application.Ticket.Services;
@@ -13,6 +14,8 @@ using CM.ApplicationService.Notification.Abstracts;
 using CM.ApplicationService.Notification.Implements;
 using CM.ApplicationService.Payment.Abstracts;
 using CM.ApplicationService.Payment.Implements;
+using CM.ApplicationService.Revenue.Abstracts;
+using CM.ApplicationService.Revenue.Implements;
 using CM.ApplicationService.RoleModule.Abstracts;
 using CM.ApplicationService.RoleModule.Implements;
 using CM.ApplicationService.Seat.Abstracts;
@@ -95,6 +98,8 @@ namespace CM.ApplicationService.StartUp
             builder.Services.AddScoped<ITicketService, TicketService>();
             builder.Services.AddScoped<IPaymentService, PaymentService>();
             builder.Services.AddScoped<ITicketRepository,TicketRepository>();
+            //revenue
+            builder.Services.AddScoped<IRevenueService, RevenueService>();
             //Cloudinary
             var cloudinaryConfig = builder.Configuration.GetSection("Cloudinary");
             var account = new Account(
