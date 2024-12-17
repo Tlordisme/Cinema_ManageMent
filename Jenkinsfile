@@ -15,11 +15,15 @@ pipeline {
         stage('Build Docker Images') {
             steps {
                 script {
-                    // Build cm_sql image (SQL Server)
-                    sh 'docker-compose -f docker-compose.yml build'
+                    // Build image cho cm_sql
+                    sh 'docker build -t cm_sql ./cm_sql'  // Thay ./cm_sql bằng đường dẫn đến thư mục chứa Dockerfile của cm_sql
+                    
+                    // Build image cho cm_api
+                    sh 'docker build -t cm_api ./cm_api'  // Thay ./cm_api bằng đường dẫn đến thư mục chứa Dockerfile của cm_api
                 }
             }
         }
+
 
         stage('Deploy Containers') {
             steps {
