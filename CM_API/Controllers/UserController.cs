@@ -103,9 +103,9 @@ public class UserController : Controller
         var userId = int.Parse(User.FindFirst("Id")?.Value);
 
         // Kiểm tra quyền "ViewUsers"
-        if (!_permissionService.CheckPermission(userId, "ViewUsers"))
+        if (!_permissionService.CheckPermission(userId, "ViewAllUsers"))
         {
-            return Unauthorized("You do not have permission to view users.");
+            return Unauthorized("You do not have permission to view all users.");
         }
 
         var users = await _userService.GetAllUsers();
