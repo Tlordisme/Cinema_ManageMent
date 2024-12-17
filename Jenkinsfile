@@ -1,44 +1,60 @@
 pipeline {
-    agent  any
+    agent any
+
+    environment {
+        DOCKER_REGISTRY = "docker.io"  // Địa chỉ Docker registry (nếu có)
+    }
+
     stages {
-        stage('Test Docker') {
-            steps {
-                script {
-                    sh 'docker --version'
-                }
-            }
-        }
         stage('Clone Repository') {
-    steps {
-        script {
-            try {
-                echo "Cloning the repository..."
-                git branch: 'main', url: 'https://github.com/Tlordisme/Cinema_ManageMent.git'
-            } catch (Exception e) {
-                echo "Failed to clone repository: ${e.message}"
-                currentBuild.result = 'FAILURE'
-                error "Stopping pipeline because the repository could not be cloned."
+            steps {
+                git 'https://github.com/Tlordisme/Cinema_ManageMent.git'  // Địa chỉ repo của bạn
             }
         }
-    }
-}
 
-        stage('Build Docker Image') {
+        stage('Build Docker Images') {
             steps {
                 script {
-                    try {
-                        echo "Building Docker image..."
-                        sh "docker build -t demo:v1 ." 
-                    } catch (Exception e) {
-                        echo "Failed to build Docker image: ${e.message}"
-                        currentBuild.result = 'FAILURE'
-                        error "Stopping pipeline because the Docker image build failed."
-                    }
+                    // Build cm_sql image (SQL Server)
+                    docker.build('cm_sql', 'docker-compose.yml#cm_sql')
+
+                    // Build cm_api image (API)
+                    docker.build('cm_api', 'docker-compose.yml#cm_api')
                 }
             }
         }
 
-        
+        stage('Deploy Containers') {
+            steps {
+                script {
+                    // Start up Docker Compose to deploy the services
+                    sh 'docker-compose -f docker-compose.yml up -d'
+                }
+            }
+        }
+
+        stage('Run Tests') {
+            steps {
+                script {
+                    // Đây là nơi bạn có thể thêm các bước kiểm tra (nếu có)
+                    echo "Running tests..."
+                }
+            }
+        }
+
+        stage('Clean up') {
+            steps {
+                script {
+                    // Dừng và xóa các container sau khi hoàn tất
+                    sh 'docker-compose -f docker-compose.yml down'
+                }
+            }
+        }
     }
-   
+
+    post {
+        always {
+            cleanWs()  // Dọn dẹp workspace sau khi pipeline hoàn thành
+        }
+    }
 }
