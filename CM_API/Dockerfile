@@ -7,6 +7,7 @@ EXPOSE 8080
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
+RUN dotnet tool install --global dotnet-ef
 COPY ["CM_API/CM_API.csproj", "CM_API/"]
 COPY ["Services/CM.ApplicationService/CM.ApplicationService.csproj", "Services/CM.ApplicationService/"]
 COPY ["Services/CM.Dtos/CM.Dtos.csproj", "Services/CM.Dtos/"]
