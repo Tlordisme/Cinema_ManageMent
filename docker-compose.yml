@@ -8,8 +8,7 @@ services:
       - 50000:50000
     container_name: jenkins
     volumes:
-      - /jenkins:/var/jenkins_home
-      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/run/docker.sock:/var/run/docker.sock  # Chia sẻ Docker socket với container Jenkins
       - /usr/local/bin/docker:/usr/local/bin/docker
     networks:
       - cm_network
