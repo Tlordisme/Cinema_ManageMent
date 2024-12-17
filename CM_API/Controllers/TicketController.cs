@@ -128,4 +128,46 @@ public class TicketController : ControllerBase
 
         return Unauthorized("You do not have permission to view tickets.");
     }
+
+    [HttpPost("CreateTicketWithFood")]
+    public async Task<IActionResult> CreateTicketWithFood([FromBody] TicketFoodDto request)
+    {
+        if (request == null)
+        {
+            return BadRequest("Invalid request.");
+        }
+
+        var currentUserId = int.Parse(User.FindFirst("Id")?.Value);
+
+        // Kiểm tra quyền 
+        if (!_permissionService.CheckPermission(currentUserId, "TicketFood"))
+        {
+            return Unauthorized("You do not have permission to add food to ticket.");
+        }
+
+        try
+        {
+            // Lấy thông tin vé đã được tạo (được truyền qua ticketId hoặc thông qua request)
+            var ticket = await _ticketService.GetTicketDetailsAsync(request.TicketId);
+
+            if (ticket == null)
+            {
+                return NotFound("Ticket not found.");
+            }
+
+            if (request.FoodItems != null && request.FoodItems.Any())
+            {
+                var ticketWithFood = await _ticketService.CreateTicketWithFood(ticket.TicketId, request.FoodItems);
+
+                return Ok(ticketWithFood); 
+            }
+
+            return Ok(ticket);
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, $"Internal server error: {ex.Message}");
+        }
+    }
+
 }

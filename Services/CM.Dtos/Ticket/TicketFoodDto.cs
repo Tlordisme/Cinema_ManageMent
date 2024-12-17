@@ -7,10 +7,9 @@ using System.Threading.Tasks;
 
 namespace CM.Dtos.Ticket
 {
-    public class CreateTicketDto
+    public class TicketFoodDto
     {
-        //public int UserId { get; set; }
-        public string ShowtimeId { get; set; }
-        public List<int> seatIds { get; set; }
+        public List<FoodItemDto> FoodItems { get; set; }
+        public int TicketId { get; set; }
     }
 }

@@ -94,5 +94,6 @@ namespace Share.Constant.Permission
         public const string DeleteTicketPermission = "DeleteTicket";
         public const string ViewAllTickets = "ViewAllTickets";
         public const string ViewUserTickets = "ViewUserTickets";
+        public const string TicketFood = "TicketFood";
     }
 }

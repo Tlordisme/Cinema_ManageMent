@@ -1,4 +1,5 @@
 ﻿using CM.Domain.Ticket;
+using CM.Dtos.Food;
 using CM.Dtos.Ticket;
 using Microsoft.AspNetCore.Http;
 using System;
@@ -18,5 +19,6 @@ namespace CM.ApplicationService.Ticket.Abstracts
         Task<List<TicketDetailsDto>> GetAllTickets();
         Task<List<TicketDetailsDto>> GetTicketsByUserId(int userId);
         Task<TicketDetailsDto> GetTicketDetailsAsync(int ticketId);
+        Task<TicketDto> CreateTicketWithFood(int ticketId, List<FoodItemDto> foodItems);
     }
 }
