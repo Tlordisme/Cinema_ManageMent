@@ -43,8 +43,15 @@ namespace CM_API.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> Login([FromBody] LoginDto loginDto)
         {
-            var loginResponse = await _authService.Login(loginDto);
-            return Ok(new { Message = loginResponse });
+            try
+            {
+                var loginResponse = await _authService.Login(loginDto);
+                return Ok(new { Message = loginResponse });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
     }

@@ -5,7 +5,6 @@ D:\Cinema_Management\Cinema_Management\Services\Shared\Share.Constant\obj\Debug\
 D:\Cinema_Management\Cinema_Management\Services\Shared\Share.Constant\obj\Debug\net8.0\Share.Constant.AssemblyInfoInputs.cache
 D:\Cinema_Management\Cinema_Management\Services\Shared\Share.Constant\obj\Debug\net8.0\Share.Constant.AssemblyInfo.cs
 D:\Cinema_Management\Cinema_Management\Services\Shared\Share.Constant\obj\Debug\net8.0\Share.Constant.csproj.CoreCompileInputs.cache
-D:\Cinema_Management\Cinema_Management\Services\Shared\Share.Constant\obj\Debug\net8.0\Share.Constant.sourcelink.json
 D:\Cinema_Management\Cinema_Management\Services\Shared\Share.Constant\obj\Debug\net8.0\Share.Constant.dll
 D:\Cinema_Management\Cinema_Management\Services\Shared\Share.Constant\obj\Debug\net8.0\refint\Share.Constant.dll
 D:\Cinema_Management\Cinema_Management\Services\Shared\Share.Constant\obj\Debug\net8.0\Share.Constant.pdb

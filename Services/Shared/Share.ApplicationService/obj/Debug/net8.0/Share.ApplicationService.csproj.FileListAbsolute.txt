@@ -6,7 +6,6 @@ D:\Cinema_Management\Cinema_Management\Services\Shared\Share.ApplicationService\
 D:\Cinema_Management\Cinema_Management\Services\Shared\Share.ApplicationService\obj\Debug\net8.0\Share.ApplicationService.AssemblyInfoInputs.cache
 D:\Cinema_Management\Cinema_Management\Services\Shared\Share.ApplicationService\obj\Debug\net8.0\Share.ApplicationService.AssemblyInfo.cs
 D:\Cinema_Management\Cinema_Management\Services\Shared\Share.ApplicationService\obj\Debug\net8.0\Share.ApplicationService.csproj.CoreCompileInputs.cache
-D:\Cinema_Management\Cinema_Management\Services\Shared\Share.ApplicationService\obj\Debug\net8.0\Share.ApplicationService.sourcelink.json
 D:\Cinema_Management\Cinema_Management\Services\Shared\Share.ApplicationService\obj\Debug\net8.0\Share.ApplicationService.dll
 D:\Cinema_Management\Cinema_Management\Services\Shared\Share.ApplicationService\obj\Debug\net8.0\refint\Share.ApplicationService.dll
 D:\Cinema_Management\Cinema_Management\Services\Shared\Share.ApplicationService\obj\Debug\net8.0\Share.ApplicationService.pdb

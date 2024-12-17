@@ -8,7 +8,6 @@ D:\Cinema_Management\Cinema_Management\Services\CM.Dtos\obj\Debug\net8.0\CM.Dtos
 D:\Cinema_Management\Cinema_Management\Services\CM.Dtos\obj\Debug\net8.0\CM.Dtos.AssemblyInfoInputs.cache
 D:\Cinema_Management\Cinema_Management\Services\CM.Dtos\obj\Debug\net8.0\CM.Dtos.AssemblyInfo.cs
 D:\Cinema_Management\Cinema_Management\Services\CM.Dtos\obj\Debug\net8.0\CM.Dtos.csproj.CoreCompileInputs.cache
-D:\Cinema_Management\Cinema_Management\Services\CM.Dtos\obj\Debug\net8.0\CM.Dtos.sourcelink.json
 D:\Cinema_Management\Cinema_Management\Services\CM.Dtos\obj\Debug\net8.0\CM.Dtos.csproj.Up2Date
 D:\Cinema_Management\Cinema_Management\Services\CM.Dtos\obj\Debug\net8.0\CM.Dtos.dll
 D:\Cinema_Management\Cinema_Management\Services\CM.Dtos\obj\Debug\net8.0\refint\CM.Dtos.dll

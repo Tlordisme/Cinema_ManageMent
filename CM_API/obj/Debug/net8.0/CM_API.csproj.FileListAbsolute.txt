@@ -5,7 +5,6 @@ D:\Cinema_Management\Cinema_Management\CM_API\obj\Debug\net8.0\CM_API.AssemblyIn
 D:\Cinema_Management\Cinema_Management\CM_API\obj\Debug\net8.0\CM_API.csproj.CoreCompileInputs.cache
 D:\Cinema_Management\Cinema_Management\CM_API\obj\Debug\net8.0\CM_API.MvcApplicationPartsAssemblyInfo.cs
 D:\Cinema_Management\Cinema_Management\CM_API\obj\Debug\net8.0\CM_API.MvcApplicationPartsAssemblyInfo.cache
-D:\Cinema_Management\Cinema_Management\CM_API\obj\Debug\net8.0\CM_API.sourcelink.json
 D:\Cinema_Management\Cinema_Management\CM_API\bin\Debug\net8.0\appsettings.Development.json
 D:\Cinema_Management\Cinema_Management\CM_API\bin\Debug\net8.0\appsettings.json
 D:\Cinema_Management\Cinema_Management\CM_API\bin\Debug\net8.0\CM_API.exe

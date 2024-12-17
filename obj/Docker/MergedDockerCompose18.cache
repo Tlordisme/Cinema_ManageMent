@@ -1,0 +1,69 @@
+name: dockercompose15704118133983523265
+services:
+  cm_api:
+    build:
+      context: D:\Cinema_Management\Cinema_Management
+      dockerfile: Dockerfile
+    depends_on:
+      sqlserver:
+        condition: service_started
+        required: true
+    environment:
+      ASPNETCORE_ENVIROMENT: Development
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "8080"
+      ASPNETCORE_HTTPS_PORTS: "8081"
+      DB_HOST: sqlserver
+      DB_NAME: NewDbCinema
+      DB_PASSWORD: Password12345!
+      DB_USER: sa
+    networks:
+      productnetwork: null
+    ports:
+      - mode: ingress
+        target: 8080
+        published: "8080"
+        protocol: tcp
+      - mode: ingress
+        target: 8080
+        protocol: tcp
+      - mode: ingress
+        target: 8081
+        protocol: tcp
+    restart: on-failure
+    volumes:
+      - type: bind
+        source: C:\Users\yench\AppData\Roaming/Microsoft/UserSecrets
+        target: /home/app/.microsoft/usersecrets
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\yench\AppData\Roaming/ASP.NET/Https
+        target: /home/app/.aspnet/https
+        read_only: true
+        bind:
+          create_host_path: true
+  sqlserver:
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: Password12345!
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    networks:
+      productnetwork: null
+    ports:
+      - mode: ingress
+        target: 1433
+        published: "1433"
+        protocol: tcp
+    volumes:
+      - type: volume
+        source: sqlvolume
+        target: /var/opt/mssql
+        volume: {}
+networks:
+  productnetwork:
+    name: dockercompose15704118133983523265_productnetwork
+volumes:
+  sqlvolume:
+    name: dockercompose15704118133983523265_sqlvolume

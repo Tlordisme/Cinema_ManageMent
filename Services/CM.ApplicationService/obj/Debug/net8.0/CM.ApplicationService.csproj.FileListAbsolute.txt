@@ -16,7 +16,6 @@ D:\Cinema_Management\Cinema_Management\Services\CM.ApplicationService\obj\Debug\
 D:\Cinema_Management\Cinema_Management\Services\CM.ApplicationService\obj\Debug\net8.0\CM.ApplicationService.AssemblyInfoInputs.cache
 D:\Cinema_Management\Cinema_Management\Services\CM.ApplicationService\obj\Debug\net8.0\CM.ApplicationService.AssemblyInfo.cs
 D:\Cinema_Management\Cinema_Management\Services\CM.ApplicationService\obj\Debug\net8.0\CM.ApplicationService.csproj.CoreCompileInputs.cache
-D:\Cinema_Management\Cinema_Management\Services\CM.ApplicationService\obj\Debug\net8.0\CM.ApplicationService.sourcelink.json
 D:\Cinema_Management\Cinema_Management\Services\CM.ApplicationService\obj\Debug\net8.0\CM.Appli.FA2CC01E.Up2Date
 D:\Cinema_Management\Cinema_Management\Services\CM.ApplicationService\obj\Debug\net8.0\CM.ApplicationService.dll
 D:\Cinema_Management\Cinema_Management\Services\CM.ApplicationService\obj\Debug\net8.0\refint\CM.ApplicationService.dll

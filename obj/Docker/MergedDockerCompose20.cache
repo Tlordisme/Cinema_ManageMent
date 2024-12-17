@@ -1,0 +1,43 @@
+name: dockercompose15704118133983523265
+services:
+  cm_api:
+    build:
+      context: D:\Cinema_Management\Cinema_Management
+      dockerfile: Dockerfile
+    depends_on:
+      sqlserver:
+        condition: service_started
+        required: true
+    environment:
+      ConnectionStrings__Default: Server=db;Database=MyDb;User Id=sa;Password=Password12345!;
+    networks:
+      productnetwork: null
+    ports:
+      - mode: ingress
+        target: 8080
+        published: "8080"
+        protocol: tcp
+    restart: on-failure
+  sqlserver:
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: Password12345!
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    networks:
+      productnetwork: null
+    ports:
+      - mode: ingress
+        target: 1433
+        published: "1433"
+        protocol: tcp
+    volumes:
+      - type: volume
+        source: sqlvolume
+        target: /var/opt/mssql
+        volume: {}
+networks:
+  productnetwork:
+    name: dockercompose15704118133983523265_productnetwork
+volumes:
+  sqlvolume:
+    name: dockercompose15704118133983523265_sqlvolume

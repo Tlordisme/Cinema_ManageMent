@@ -120,13 +120,13 @@ namespace CM.ApplicationService.StartUp
             });
             builder.Services.AddScoped<IEmailTemplateService, EmailTemplateService>();
 
-            //HangFire
+            ////HangFire
             builder.Services.AddHangfire(config =>
                 config.UseSqlServerStorage(builder.Configuration.GetConnectionString("Default"))
             );
             builder.Services.AddHangfireServer();
 
-           
+
             // Cấu hình JWT Authentication
 
             builder

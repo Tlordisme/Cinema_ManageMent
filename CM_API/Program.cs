@@ -1,6 +1,8 @@
 
 using CM.ApplicationService.StartUp;
+using CM.Infrastructure;
 using Hangfire;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
 namespace CM_API
@@ -53,7 +55,7 @@ namespace CM_API
 
             var app = builder.Build();
 
-
+         
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
