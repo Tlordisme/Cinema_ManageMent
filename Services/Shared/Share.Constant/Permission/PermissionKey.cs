@@ -20,11 +20,25 @@ namespace Share.Constant.Permission
         public const string AddComment = "AddComment";
         public const string DeleteComment = "DeleteComment";
 
+        //food
+        public const string AddFood = "AddFood";
+        public const string UpdateFood = "UpdateFood";
+        public const string DeleteFood = "DeleteFood";
+        public const string ViewFood = "ViewFood";
+        public const string GetAllFoods = "GetAllFoods";
+
         //movie
         public const string AddMovie = "AddMovie";
         public const string UpdateMovie = "UpdateMovie";
         public const string DeleteMovie = "DeleteMovie";
         public const string ViewMovies = "ViewMovies";
+
+        //payment
+        public const string CreatePayment = "CreatePayment";
+        public const string ViewPayment = "ViewPayment";
+
+        //revenue
+        public const string ViewRevenue = "ViewRevenue";
 
         //Role
         public const string GetAllRoles = "GetAllRoles";

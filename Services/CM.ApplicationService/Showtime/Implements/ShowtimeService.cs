@@ -20,16 +20,16 @@ namespace CM.ApplicationService.Showtime.Implements
 
         public async Task<ShowtimeDto> CreateShowtimeAsync(CreateShowtimeDto createShowtimeDto)
         {
+            _logger.LogInformation($"User is creating a new showtime.");
+
             var room = await _dbContext.Rooms.FindAsync(createShowtimeDto.RoomId);
             if (room == null)
                 throw new Exception("Room not found");
 
-            // Kiểm tra phim có tồn tại không
             var movie = await _dbContext.Movies.FindAsync(createShowtimeDto.MovieId);
             if (movie == null)
                 throw new Exception("Movie not found");
 
-            // Tạo lịch chiếu mới
             var showtime = new CMShowtime
             {
                 StartTime = createShowtimeDto.StartTime,
@@ -40,6 +40,8 @@ namespace CM.ApplicationService.Showtime.Implements
 
             _dbContext.Showtimes.Add(showtime);
             await _dbContext.SaveChangesAsync();
+
+            _logger.LogInformation($"Showtime with ID {showtime.Id} created successfully.");
 
             return new ShowtimeDto
             {
@@ -53,17 +55,23 @@ namespace CM.ApplicationService.Showtime.Implements
 
         public async Task<bool> DeleteShowtimeAsync(string showtimeId)
         {
+            _logger.LogInformation($"User is attempting to delete showtime with ID {showtimeId}.");
+
             var showtime = await _dbContext.Showtimes.FindAsync(showtimeId);
             if (showtime == null)
                 return false;
 
             _dbContext.Showtimes.Remove(showtime);
             await _dbContext.SaveChangesAsync();
+
+            _logger.LogInformation($"Showtime with ID {showtimeId} deleted successfully.");
             return true;
         }
 
         public async Task<List<ShowtimeDto>> GetAllShowtimesAsync()
         {
+            _logger.LogInformation($"User is viewing all showtimes.");
+
             var showtimes = await _dbContext
                 .Showtimes
                 .Include(s => s.Room)
@@ -84,6 +92,8 @@ namespace CM.ApplicationService.Showtime.Implements
 
         public async Task<ShowtimeDto> GetShowtimeByIdAsync(string showtimeId)
         {
+            _logger.LogInformation($"User is viewing showtime with ID {showtimeId}.");
+
             var showtime = await _dbContext
                 .Showtimes
                 .Include(s => s.Room)
@@ -104,13 +114,15 @@ namespace CM.ApplicationService.Showtime.Implements
                 MovieTitle = showtime.Movie.Title,
             };
         }
+
         public async Task<bool> UpdateShowtimeAsync(UpdateShowtimeDto updateShowtimeDto)
         {
+            _logger.LogInformation($"User is updating showtime with ID {updateShowtimeDto.Id}.");
+
             var showtime = await _dbContext.Showtimes.FindAsync(updateShowtimeDto.Id);
             if (showtime == null)
                 throw new Exception("Showtime not found");
 
-            // Kiểm tra phòng và phim có tồn tại không
             var room = await _dbContext.Rooms.FindAsync(updateShowtimeDto.RoomId);
             if (room == null)
                 throw new Exception("Room not found");
@@ -119,13 +131,14 @@ namespace CM.ApplicationService.Showtime.Implements
             if (movie == null)
                 throw new Exception("Movie not found");
 
-            // Cập nhật thông tin lịch chiếu
             showtime.StartTime = updateShowtimeDto.StartTime;
             showtime.EndTime = updateShowtimeDto.EndTime;
             showtime.RoomID = updateShowtimeDto.RoomId;
             showtime.MovieID = updateShowtimeDto.MovieId;
 
             await _dbContext.SaveChangesAsync();
+
+            _logger.LogInformation($"Showtime with ID {updateShowtimeDto.Id} updated successfully.");
             return true;
         }
     }

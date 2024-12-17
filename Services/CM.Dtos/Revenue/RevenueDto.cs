@@ -8,7 +8,7 @@ namespace CM.Dtos.Revenue
 {
     public class RevenueDto
     {
-        public string Date { get; set; }
+        public DateTime Date { get; set; }
         public decimal TotalRevenue { get; set; }
     }
 }

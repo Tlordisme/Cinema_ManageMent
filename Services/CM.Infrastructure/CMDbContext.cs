@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CM.Domain.Auth;
+using CM.Domain.Food;
 using CM.Domain.Movie;
 using CM.Domain.Seat;
 using CM.Domain.Showtime;
@@ -21,6 +22,9 @@ namespace CM.Infrastructure
         public DbSet<UserRole> UserRoles { get; set; }
 
         public DbSet<RolePermission> RolePermissions { get; set; }
+
+        //Food
+        public DbSet<FoFood> Foods { get; set; }
 
         //Movie
         public DbSet<MoMovie> Movies { get; set; }

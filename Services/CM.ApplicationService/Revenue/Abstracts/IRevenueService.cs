@@ -9,7 +9,8 @@ namespace CM.ApplicationService.Revenue.Abstracts
 {
     public interface IRevenueService
     {
-        Task<List<RevenueDto>> GetRevenueByDateAsync();
-        Task<List<MovieRevenueDto>> GetRevenueByMovieAsync();
+        Task<IEnumerable<dynamic>> GetRevenueByDateAsync(string date);
+
+        Task<IEnumerable<dynamic>> GetRevenueByMovieAsync(int? movieId);
     }
 }

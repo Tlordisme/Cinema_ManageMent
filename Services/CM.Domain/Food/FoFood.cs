@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace CM.Domain.Food
 {
-    public class Food
+    public class FoFood
     {
         public string Id { get; set; }
         public string Name { get; set; }
-        public decimal Price { get; set; }
         public string Description { get; set; }
-
-        public List<Combo> Combos { get; set; } = new List<Combo>();
+        public decimal Price { get; set; }
     }
 }

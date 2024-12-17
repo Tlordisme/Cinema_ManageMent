@@ -1,74 +1,82 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CM.ApplicationService.Auth.Common;
-using CM.ApplicationService.AuthModule.Implements;
-using CM.ApplicationService.Common;
+﻿using CM.ApplicationService.Common;
 using CM.ApplicationService.Theater.Abstracts;
-using CM.Auth.ApplicantService.Auth.Implements;
-using CM.Domain.Auth;
 using CM.Domain.Theater;
 using CM.Dtos.Theater;
 using CM.Infrastructure;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
 
-namespace CM.ApplicationService.Theater.Implements
+public class TheaterChainService : ServiceBase, ITheaterChainService
 {
-    public class TheaterChainService : ServiceBase, ITheaterChainService
+    private readonly ILogger<TheaterChainService> _logger;
+
+    public TheaterChainService(CMDbContext dbContext, ILogger<TheaterChainService> logger)
+        : base(logger, dbContext)
     {
-        public TheaterChainService(CMDbContext dbContext, ILogger<ServiceBase> logger)
-            : base(logger, dbContext) { }
+        _logger = logger;
+    }
 
-        public string CreateTheaterChain(TheaterChainDto dto)
+    public string CreateTheaterChain(TheaterChainDto dto)
+    {
+        _logger.LogInformation("Creating a new theater chain with ID: {TheaterChainId}, Name: {Name}.", dto.Id, dto.Name);
+
+        var theaterChain = new CMTheaterChain
         {
-            var theaterChain = new CMTheaterChain
-            {
-                Id = dto.Id,
-                Name = dto.Name,
-            };
+            Id = dto.Id,
+            Name = dto.Name,
+        };
 
-            _dbContext.TheaterChains.Add(theaterChain);
-            _dbContext.SaveChanges();
+        _dbContext.TheaterChains.Add(theaterChain);
+        _dbContext.SaveChanges();
 
-            return theaterChain.Id;
+        _logger.LogInformation("Theater chain created successfully with ID {TheaterChainId}.", theaterChain.Id);
+        return theaterChain.Id;
+    }
+
+    public List<CMTheaterChain> GetAllTheaterChains()
+    {
+        _logger.LogInformation("Retrieving all theater chains.");
+
+        var theaterChains = _dbContext.TheaterChains.ToList();
+
+        _logger.LogInformation("Retrieved {TheaterChainCount} theater chains.", theaterChains.Count);
+        return theaterChains;
+    }
+
+    public void DeleteTheaterChain(string theaterChainId)
+    {
+        _logger.LogInformation("Attempting to delete theater chain with ID: {TheaterChainId}.", theaterChainId);
+
+        var theaterChain = _dbContext.TheaterChains.Find(theaterChainId);
+
+        if (theaterChain == null)
+        {
+            _logger.LogWarning("Theater chain with ID {TheaterChainId} does not exist.", theaterChainId);
+            throw new Exception("Theater chain không tồn tại.");
         }
 
-        public List<CMTheaterChain> GetAllTheaterChains()
+        _dbContext.TheaterChains.Remove(theaterChain);
+        _dbContext.SaveChanges();
+
+        _logger.LogInformation("Theater chain with ID {TheaterChainId} deleted successfully.", theaterChainId);
+    }
+
+    public string UpdateTheaterChain(TheaterChainDto dto)
+    {
+        _logger.LogInformation("Attempting to update theater chain with ID: {TheaterChainId}.", dto.Id);
+
+        var theaterChain = _dbContext.TheaterChains.Find(dto.Id);
+
+        if (theaterChain == null)
         {
-            return _dbContext.TheaterChains.ToList();
+            _logger.LogWarning("Theater chain with ID {TheaterChainId} does not exist.", dto.Id);
+            throw new Exception("Theater chain không tồn tại.");
         }
 
-        public void DeleteTheaterChain(string theaterChainId)
-        {
-            // Tìm rạp chiếu theo Id
-            var theaterChain = _dbContext.TheaterChains.Find(theaterChainId);
+        theaterChain.Name = dto.Name;
+        _dbContext.TheaterChains.Update(theaterChain);
+        _dbContext.SaveChanges();
 
-            if (theaterChain == null)
-                throw new Exception("Theater chain không tồn tại.");
-
-            // Xóa rạp chiếu khỏi database
-            _dbContext.TheaterChains.Remove(theaterChain);
-            _dbContext.SaveChanges();
-        }
-
-        public string UpdateTheaterChain(TheaterChainDto dto)
-        {
-            // Tìm rạp chiếu theo Id
-            var theaterChain = _dbContext.TheaterChains.Find(dto.Id);
-
-            if (theaterChain == null)
-                throw new Exception("Theater chain không tồn tại.");
-
-            // Cập nhật thông tin rạp chiếu
-            theaterChain.Name = dto.Name;
-
-            _dbContext.TheaterChains.Update(theaterChain);
-            _dbContext.SaveChanges();
-
-            return theaterChain.Id;
-        }
+        _logger.LogInformation("Theater chain with ID {TheaterChainId} updated successfully.", dto.Id);
+        return theaterChain.Id;
     }
 }
