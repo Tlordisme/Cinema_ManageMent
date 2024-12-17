@@ -16,10 +16,7 @@ pipeline {
             steps {
                 script {
                     // Build cm_sql image (SQL Server)
-                    docker.build('cm_sql', 'docker-compose.yml#cm_sql')
-
-                    // Build cm_api image (API)
-                    docker.build('cm_api', 'docker-compose.yml#cm_api')
+                    sh 'docker-compose -f docker-compose.yml build'
                 }
             }
         }
