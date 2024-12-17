@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Cinema_Management\\Cinema_Management\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|d:\\cinema_management\\cinema_management\\cm_api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|solutionrelative:cm_api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:2:0:{BED6BA63-F7F8-4B82-8D89-7A77643877B8}|docker-compose.dcproj|d:\\cinema_management\\cinema_management\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:2:0:{BED6BA63-F7F8-4B82-8D89-7A77643877B8}|docker-compose.dcproj|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
@@ -12,10 +16,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Sdks\\Microsoft.Docker.Sdk\\build\\Microsoft.VisualStudio.Docker.Compose.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|d:\\cinema_management\\cinema_management\\cm_api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|solutionrelative:cm_api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|d:\\cinema_management\\cinema_management\\services\\cm.applicationservice\\ticket\\implements\\ticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -544,33 +544,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "CM_API\\Controllers\\AuthController.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "CM_API\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAQwDQAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T02:36:11.482Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "docker-compose.yml",
               "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\docker-compose.yml",
               "RelativeDocumentMoniker": "docker-compose.yml",
               "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\docker-compose.yml",
               "RelativeToolTip": "docker-compose.yml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAYwBcAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
               "WhenOpened": "2024-12-16T14:32:55.662Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Dockerfile",
+              "RelativeDocumentMoniker": "CM_API\\Dockerfile",
+              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Dockerfile",
+              "RelativeToolTip": "CM_API\\Dockerfile",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAwBYAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-16T14:03:24.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Microsoft.VisualStudio.Docker.Compose.targets",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Sdks\\Microsoft.Docker.Sdk\\build\\Microsoft.VisualStudio.Docker.Compose.targets",
               "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Sdks\\Microsoft.Docker.Sdk\\build\\Microsoft.VisualStudio.Docker.Compose.targets",
@@ -594,7 +594,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "docker-compose.override.yml",
               "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\docker-compose.override.yml",
               "RelativeDocumentMoniker": "docker-compose.override.yml",
@@ -620,6 +620,19 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "CM_API\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "CM_API\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwDQAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T02:36:11.482Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
               "Title": "TicketService.cs",
               "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Ticket\\Implements\\TicketService.cs",
@@ -629,19 +642,6 @@
               "ViewState": "AgIAAE0AAAAAAAAAAADwv1cAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-20T11:27:38.939Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Dockerfile",
-              "RelativeDocumentMoniker": "CM_API\\Dockerfile",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Dockerfile",
-              "RelativeToolTip": "CM_API\\Dockerfile",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-12-16T14:03:24.723Z",
               "EditorCaption": ""
             },
             {
@@ -2263,6 +2263,10 @@
             {
               "$type": "Bookmark",
               "Name": "ST:9:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:13:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
             }
           ]
         }
