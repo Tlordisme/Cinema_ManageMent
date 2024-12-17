@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "D:\\Cinema_Management\\Cinema_Management\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|d:\\cinema_management\\cinema_management\\cm_api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|solutionrelative:cm_api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BED6BA63-F7F8-4B82-8D89-7A77643877B8}|docker-compose.dcproj|d:\\cinema_management\\cinema_management\\.dockerignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{BED6BA63-F7F8-4B82-8D89-7A77643877B8}|docker-compose.dcproj|solutionrelative:.dockerignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
       "AbsoluteMoniker": "D:2:0:{BED6BA63-F7F8-4B82-8D89-7A77643877B8}|docker-compose.dcproj|d:\\cinema_management\\cinema_management\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:2:0:{BED6BA63-F7F8-4B82-8D89-7A77643877B8}|docker-compose.dcproj|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
@@ -19,7 +11,19 @@
       "RelativeMoniker": "D:0:0:{BED6BA63-F7F8-4B82-8D89-7A77643877B8}|docker-compose.dcproj|solutionrelative:docker-compose.override.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|d:\\cinema_management\\cinema_management\\cm_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|solutionrelative:cm_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Sdks\\Microsoft.Docker.Sdk\\build\\Microsoft.VisualStudio.Docker.Compose.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|d:\\cinema_management\\cinema_management\\cm_api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|solutionrelative:cm_api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BED6BA63-F7F8-4B82-8D89-7A77643877B8}|docker-compose.dcproj|d:\\cinema_management\\cinema_management\\.dockerignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{BED6BA63-F7F8-4B82-8D89-7A77643877B8}|docker-compose.dcproj|solutionrelative:.dockerignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DED7C7B6-E90E-48C7-A593-95CC02F12F96}|Services\\CM.ApplicationService\\CM.ApplicationService.csproj|d:\\cinema_management\\cinema_management\\services\\cm.applicationservice\\ticket\\implements\\ticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -36,10 +40,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|d:\\cinema_management\\cinema_management\\cm_api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|solutionrelative:cm_api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|d:\\cinema_management\\cinema_management\\cm_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{91D46C44-0F7B-4597-AC4E-E9E87FA991A9}|CM_API\\CM_API.csproj|solutionrelative:cm_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BED6BA63-F7F8-4B82-8D89-7A77643877B8}|docker-compose.dcproj|d:\\cinema_management\\cinema_management\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -536,7 +536,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -548,70 +548,44 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": ".dockerignore",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\.dockerignore",
-              "RelativeDocumentMoniker": ".dockerignore",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\.dockerignore",
-              "RelativeToolTip": ".dockerignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-12-17T16:13:24.019Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "docker-compose.yml",
               "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\docker-compose.yml",
               "RelativeDocumentMoniker": "docker-compose.yml",
               "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\docker-compose.yml",
               "RelativeToolTip": "docker-compose.yml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAoAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
               "WhenOpened": "2024-12-16T14:32:55.662Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Dockerfile",
               "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Dockerfile",
               "RelativeDocumentMoniker": "CM_API\\Dockerfile",
               "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Dockerfile",
               "RelativeToolTip": "CM_API\\Dockerfile",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAgwCAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2024-12-16T14:03:24.723Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Microsoft.VisualStudio.Docker.Compose.targets",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Sdks\\Microsoft.Docker.Sdk\\build\\Microsoft.VisualStudio.Docker.Compose.targets",
               "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Sdks\\Microsoft.Docker.Sdk\\build\\Microsoft.VisualStudio.Docker.Compose.targets",
-              "ViewState": "AgIAAJoBAAAAAAAAAAAAAK0BAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAJ8BAAAAAAAAAAApwK0BAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
               "WhenOpened": "2024-12-16T16:30:10.914Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "CMDbContext.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Infrastructure\\CMDbContext.cs",
-              "RelativeDocumentMoniker": "Services\\CM.Infrastructure\\CMDbContext.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Infrastructure\\CMDbContext.cs",
-              "RelativeToolTip": "Services\\CM.Infrastructure\\CMDbContext.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAALMAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:37:17.522Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "docker-compose.override.yml",
               "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\docker-compose.override.yml",
               "RelativeDocumentMoniker": "docker-compose.override.yml",
@@ -624,7 +598,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "CMStartUp.cs",
               "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\StartUp\\CMStartUp.cs",
               "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\StartUp\\CMStartUp.cs",
@@ -632,51 +606,11 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\StartUp\\CMStartUp.cs",
               "ViewState": "AgIAAHIAAAAAAAAAAADwv34AAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T15:35:53.328Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-09T15:35:53.328Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "CM_API\\Controllers\\AuthController.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "CM_API\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAQwDQAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T02:36:11.482Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TicketService.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Ticket\\Implements\\TicketService.cs",
-              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\Ticket\\Implements\\TicketService.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Ticket\\Implements\\TicketService.cs",
-              "RelativeToolTip": "Services\\CM.ApplicationService\\Ticket\\Implements\\TicketService.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAADwv1cAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T11:27:38.939Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Program.cs",
-              "RelativeDocumentMoniker": "CM_API\\Program.cs",
-              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Program.cs",
-              "RelativeToolTip": "CM_API\\Program.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAnwEEAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T09:50:58.645Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 2,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\appsettings.json",
               "RelativeDocumentMoniker": "CM_API\\appsettings.json",
@@ -689,6 +623,67 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CMDbContext.cs",
+              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Infrastructure\\CMDbContext.cs",
+              "RelativeDocumentMoniker": "Services\\CM.Infrastructure\\CMDbContext.cs",
+              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Infrastructure\\CMDbContext.cs",
+              "RelativeToolTip": "Services\\CM.Infrastructure\\CMDbContext.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAALMAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T17:37:17.522Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": ".dockerignore",
+              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\.dockerignore",
+              "RelativeDocumentMoniker": ".dockerignore",
+              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\.dockerignore",
+              "RelativeToolTip": ".dockerignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-17T16:13:24.019Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "CM_API\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "CM_API\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwDQAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T02:36:11.482Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TicketService.cs",
+              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Ticket\\Implements\\TicketService.cs",
+              "RelativeDocumentMoniker": "Services\\CM.ApplicationService\\Ticket\\Implements\\TicketService.cs",
+              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\Ticket\\Implements\\TicketService.cs",
+              "RelativeToolTip": "Services\\CM.ApplicationService\\Ticket\\Implements\\TicketService.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAADwv1cAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T11:27:38.939Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Program.cs",
+              "RelativeDocumentMoniker": "CM_API\\Program.cs",
+              "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Program.cs",
+              "RelativeToolTip": "CM_API\\Program.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAnwEEAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T09:50:58.645Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 10,
               "Title": "launchSettings.json",
               "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\launchSettings.json",
@@ -697,12 +692,11 @@
               "RelativeToolTip": "launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-16T15:06:43.303Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T15:06:43.303Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "launchSettings.json",
               "DocumentMoniker": "D:\\Cinema_Management\\Cinema_Management\\CM_API\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "CM_API\\Properties\\launchSettings.json",
@@ -710,8 +704,7 @@
               "RelativeToolTip": "CM_API\\Properties\\launchSettings.json",
               "ViewState": "AgIAAC0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-15T07:29:37.499Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-15T07:29:37.499Z"
             },
             {
               "$type": "Document",
@@ -723,8 +716,7 @@
               "RelativeToolTip": "CM_API\\CM_API.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2024-12-15T09:57:20.79Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-15T09:57:20.79Z"
             },
             {
               "$type": "Document",
@@ -748,7 +740,8 @@
               "RelativeToolTip": "docker-compose.dcproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-12-16T14:04:03.108Z"
+              "WhenOpened": "2024-12-16T14:04:03.108Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -760,7 +753,8 @@
               "RelativeToolTip": "CM_API\\CM_API.csproj",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-12-16T09:07:33.672Z"
+              "WhenOpened": "2024-12-16T09:07:33.672Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -772,8 +766,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\.filenesting.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-16T09:32:35.764Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T09:32:35.764Z"
             },
             {
               "$type": "Document",
@@ -785,8 +778,7 @@
               "RelativeToolTip": "CM_API\\Controllers\\EmailController.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAqwBkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T20:12:20.286Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-13T20:12:20.286Z"
             },
             {
               "$type": "Document",
@@ -798,8 +790,7 @@
               "RelativeToolTip": "CM_API\\Controllers\\RoleController.cs",
               "ViewState": "AgIAAIUAAAAAAAAAAIBZwIsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T18:06:15.071Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T18:06:15.071Z"
             },
             {
               "$type": "Document",
@@ -820,7 +811,8 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\CM.ApplicationService.csproj",
               "ViewState": "AgIAAA4AAAAAAAAAAAAAAA4AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-18T17:34:52.797Z"
+              "WhenOpened": "2024-11-18T17:34:52.797Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -832,8 +824,7 @@
               "RelativeToolTip": "CM_API\\Controllers\\CommentController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T18:07:10.93Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-13T18:07:10.93Z"
             },
             {
               "$type": "Document",
@@ -845,8 +836,7 @@
               "RelativeToolTip": "CM_API\\Controllers\\UserController.cs",
               "ViewState": "AgIAADIAAAAAAAAAAAAgwAsAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T18:05:53.951Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T18:05:53.951Z"
             },
             {
               "$type": "Document",
@@ -858,8 +848,7 @@
               "RelativeToolTip": "Services\\Shared\\Share.Constant\\Database\\DbSchema.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:57:47.566Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T17:57:47.566Z"
             },
             {
               "$type": "Document",
@@ -871,7 +860,8 @@
               "RelativeToolTip": "Services\\Shared\\Share.Constant\\Share.Constant.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-12-15T08:13:28.273Z"
+              "WhenOpened": "2024-12-15T08:13:28.273Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -883,8 +873,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Auth\\Permission\\Implements\\PermissionService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:32:49.193Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T17:32:49.193Z"
             },
             {
               "$type": "Document",
@@ -896,8 +885,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Common\\ServiceBase.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:30:22.952Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T17:30:22.952Z"
             },
             {
               "$type": "Document",
@@ -908,7 +896,8 @@
               "ToolTip": "D:\\Cinema_Management\\Cinema_Management\\Services\\Shared\\Share.Constant\\Share.Constant.csproj",
               "RelativeToolTip": "Services\\Shared\\Share.Constant\\Share.Constant.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-12-15T08:17:56.658Z"
+              "WhenOpened": "2024-12-15T08:17:56.658Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -920,7 +909,8 @@
               "RelativeToolTip": "Services\\Shared\\Share.ApplicationService\\Share.ApplicationService.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-12-15T08:23:35.399Z"
+              "WhenOpened": "2024-12-15T08:23:35.399Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -932,8 +922,7 @@
               "RelativeToolTip": "Services\\Shared\\Share.ApplicationService\\BaseService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T08:28:51.648Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-15T08:28:51.648Z"
             },
             {
               "$type": "Document",
@@ -945,8 +934,7 @@
               "RelativeToolTip": "CM_API\\Controllers\\RoomController.cs",
               "ViewState": "AgIAAB4AAAAAAAAAAAAYwAcAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T12:17:15.204Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T12:17:15.204Z"
             },
             {
               "$type": "Document",
@@ -958,7 +946,8 @@
               "RelativeToolTip": "Services\\CM.Domain\\CM.Domain.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-27T11:21:51.557Z"
+              "WhenOpened": "2024-11-27T11:21:51.557Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -970,8 +959,7 @@
               "RelativeToolTip": "Services\\Shared\\Share.Constant\\Permission\\PermissionKey.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAuwBoAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:56:51.383Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T17:56:51.383Z"
             },
             {
               "$type": "Document",
@@ -983,8 +971,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Payment\\Implements\\PaymentService.cs",
               "ViewState": "AgIAAEcAAAAAAAAAAAAowDIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T19:18:23.39Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T19:18:23.39Z"
             },
             {
               "$type": "Document",
@@ -996,8 +983,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Ticket\\Implements\\TicketRepository.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAowBYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T16:46:42.974Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T16:46:42.974Z"
             },
             {
               "$type": "Document",
@@ -1009,8 +995,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Notification\\Implements\\NotificationDecorator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T17:38:38.668Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-13T17:38:38.668Z"
             },
             {
               "$type": "Document",
@@ -1022,8 +1007,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Notification\\Implements\\CombinedNotificationService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T17:44:56.676Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-13T17:44:56.676Z"
             },
             {
               "$type": "Document",
@@ -1035,8 +1019,7 @@
               "RelativeToolTip": "Services\\CM.Dtos\\Auth\\Auth\\LoginDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T18:00:14.777Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T18:00:14.777Z"
             },
             {
               "$type": "Document",
@@ -1048,8 +1031,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Notification\\Abstracts\\INotificationService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T17:32:57.012Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-13T17:32:57.012Z"
             },
             {
               "$type": "Document",
@@ -1061,8 +1043,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Notification\\Abstracts\\IEmailTemplateService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAsAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T09:14:47.991Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T09:14:47.991Z"
             },
             {
               "$type": "Document",
@@ -1074,8 +1055,7 @@
               "RelativeToolTip": "CM_API\\Controllers\\PaymentController.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAIAwwCQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T15:49:40.122Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-09T15:49:40.122Z"
             },
             {
               "$type": "Document",
@@ -1087,8 +1067,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Notification\\Abstracts\\IEmailService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T15:42:24.431Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-09T15:42:24.431Z"
             },
             {
               "$type": "Document",
@@ -1100,8 +1079,7 @@
               "RelativeToolTip": "CM_API\\Controllers\\SeatPriceController.cs",
               "ViewState": "AgIAADcAAAAAAAAAAAAkwD8AAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T18:16:59.075Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T18:16:59.075Z"
             },
             {
               "$type": "Document",
@@ -1113,8 +1091,7 @@
               "RelativeToolTip": "CM_API\\Controllers\\ShowtimeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T21:44:59.264Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T21:44:59.264Z"
             },
             {
               "$type": "Document",
@@ -1126,8 +1103,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Notification\\Implements\\EmailTemplateService.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAQwA4AAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T09:14:58.132Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T09:14:58.132Z"
             },
             {
               "$type": "Document",
@@ -1139,8 +1115,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Seat\\Implements\\SeatPriceService.cs",
               "ViewState": "AgIAADsAAAAAAAAAAAAgwE4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T18:12:31.91Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T18:12:31.91Z"
             },
             {
               "$type": "Document",
@@ -1152,8 +1127,7 @@
               "RelativeToolTip": "Services\\CM.Domain\\Ticket\\CMTicket.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T19:11:12.841Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-07T19:11:12.841Z"
             },
             {
               "$type": "Document",
@@ -1165,8 +1139,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Ticket\\Abstracts\\ITicketRepository.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAqwAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T16:46:55.628Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T16:46:55.628Z"
             },
             {
               "$type": "Document",
@@ -1178,8 +1151,7 @@
               "RelativeToolTip": "CM_API\\Controllers\\TicketController.cs",
               "ViewState": "AgIAAD0AAAAAAAAAAAAWwFYAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T08:58:02.265Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T08:58:02.265Z"
             },
             {
               "$type": "Document",
@@ -1191,8 +1163,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Ticket\\Abstracts\\ITicketService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T16:46:58.247Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T16:46:58.247Z"
             },
             {
               "$type": "Document",
@@ -1204,8 +1175,7 @@
               "RelativeToolTip": "Services\\CM.Dtos\\Ticket\\TicketDetailsDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAIBZwA4AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T09:16:36.997Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T09:16:36.997Z"
             },
             {
               "$type": "Document",
@@ -1217,8 +1187,7 @@
               "RelativeToolTip": "Services\\CM.Domain\\Ticket\\CMTicketSeat.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAIBZwAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T19:58:49.654Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T19:58:49.654Z"
             },
             {
               "$type": "Document",
@@ -1230,8 +1199,7 @@
               "RelativeToolTip": "CM_API\\Controllers\\SeatController.cs",
               "ViewState": "AgIAADQAAAAAAAAAAAAQwEEAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T12:34:29.186Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T12:34:29.186Z"
             },
             {
               "$type": "Document",
@@ -1243,8 +1211,7 @@
               "RelativeToolTip": "Services\\CM.Domain\\Payment\\ZaloPay\\CreateZaloPayRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T11:05:46.193Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-30T11:05:46.193Z"
             },
             {
               "$type": "Document",
@@ -1256,8 +1223,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Payment\\Abstracts\\IPaymentService.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAkwBAAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T15:46:30.568Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-09T15:46:30.568Z"
             },
             {
               "$type": "Document",
@@ -1269,8 +1235,7 @@
               "RelativeToolTip": "Services\\CM.Domain\\Showtime\\CMShowtime.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAApwBYAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T18:09:51.459Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T18:09:51.459Z"
             },
             {
               "$type": "Document",
@@ -1282,8 +1247,7 @@
               "RelativeToolTip": "Services\\CM.Dtos\\Payment\\PaymentRequestDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T19:13:40.97Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T19:13:40.97Z"
             },
             {
               "$type": "Document",
@@ -1295,8 +1259,7 @@
               "RelativeToolTip": "Services\\CM.Domain\\Payment\\ZaloPay\\CreateZaloPayResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T11:20:02.704Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-30T11:20:02.704Z"
             },
             {
               "$type": "Document",
@@ -1308,8 +1271,7 @@
               "RelativeToolTip": "Services\\CM.Domain\\Payment\\ZaloPay\\ZaloPayConfig.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T11:21:33.959Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-30T11:21:33.959Z"
             },
             {
               "$type": "Document",
@@ -1321,8 +1283,7 @@
               "RelativeToolTip": "Services\\Shared\\Share.ApplicationService\\HashHelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAIBZwBoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T06:59:42.572Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T06:59:42.572Z"
             },
             {
               "$type": "Document",
@@ -1334,8 +1295,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Seat\\Implements\\SeatService.cs",
               "ViewState": "AgIAAFMAAAAAAAAAAAAgwMMAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T11:30:18.89Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T11:30:18.89Z"
             },
             {
               "$type": "Document",
@@ -1347,8 +1307,7 @@
               "RelativeToolTip": "Services\\CM.Domain\\Auth\\User.cs",
               "ViewState": "AgIAACMAAAAAAAAAAAAcwC4AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T07:58:44.087Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T07:58:44.087Z"
             },
             {
               "$type": "Document",
@@ -1360,8 +1319,7 @@
               "RelativeToolTip": "Services\\CM.Domain\\Seat\\CMSeatPrice.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAIwAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T15:13:52.45Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T15:13:52.45Z"
             },
             {
               "$type": "Document",
@@ -1373,8 +1331,7 @@
               "RelativeToolTip": "Services\\CM.Domain\\Payment\\VnPayLibrary.cs",
               "ViewState": "AgIAAEoAAAAAAAAAAADgv3wAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T19:41:17.315Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T19:41:17.315Z"
             },
             {
               "$type": "Document",
@@ -1386,8 +1343,7 @@
               "RelativeToolTip": "Services\\CM.Domain\\Seat\\CMSeat.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAIBpwBwAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T06:19:53.134Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T06:19:53.134Z"
             },
             {
               "$type": "Document",
@@ -1399,8 +1355,7 @@
               "RelativeToolTip": "Services\\CM.Domain\\Payment\\VnPayRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T19:51:24.399Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T19:51:24.399Z"
             },
             {
               "$type": "Document",
@@ -1412,8 +1367,7 @@
               "RelativeToolTip": "Services\\CM.Domain\\Payment\\VnPayResponse.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAqwBMAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T19:34:58.664Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T19:34:58.664Z"
             },
             {
               "$type": "Document",
@@ -1425,8 +1379,7 @@
               "RelativeToolTip": "Services\\CM.Domain\\Auth\\RolePermission.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:24:24.437Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T17:24:24.437Z"
             },
             {
               "$type": "Document",
@@ -1438,8 +1391,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Auth\\AuthModule\\Abstracts\\IAuthService.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAmwA8AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:28:25.588Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T17:28:25.588Z"
             },
             {
               "$type": "Document",
@@ -1451,8 +1403,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Food\\Implements\\FoodService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T11:24:18.307Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T11:24:18.307Z"
             },
             {
               "$type": "Document",
@@ -1464,8 +1415,7 @@
               "RelativeToolTip": "Services\\CM.Dtos\\Seat\\SeatForTicketDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T18:02:49.387Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T18:02:49.387Z"
             },
             {
               "$type": "Document",
@@ -1477,8 +1427,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Theater\\Implements\\TheaterChainService.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAuwBYAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T11:52:00.58Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T11:52:00.58Z"
             },
             {
               "$type": "Document",
@@ -1490,8 +1439,7 @@
               "RelativeToolTip": "Services\\CM.Dtos\\Seat\\SeatDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAACBjwBMAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T11:25:56.69Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T11:25:56.69Z"
             },
             {
               "$type": "Document",
@@ -1503,8 +1451,7 @@
               "RelativeToolTip": "Services\\CM.Dtos\\Seat\\UpdateSeatDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAIBJwBAAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T16:50:21.222Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T16:50:21.222Z"
             },
             {
               "$type": "Document",
@@ -1516,8 +1463,7 @@
               "RelativeToolTip": "Services\\CM.Dtos\\Seat\\LinkDoubleSeatDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T17:54:33.148Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T17:54:33.148Z"
             },
             {
               "$type": "Document",
@@ -1529,8 +1475,7 @@
               "RelativeToolTip": "Services\\CM.Domain\\Theater\\CMTheaterChain.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T18:14:20.921Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T18:14:20.921Z"
             },
             {
               "$type": "Document",
@@ -1542,8 +1487,7 @@
               "RelativeToolTip": "Services\\CM.Dtos\\Seat\\UpdateSeatPriceDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T18:10:45.163Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T18:10:45.163Z"
             },
             {
               "$type": "Document",
@@ -1555,8 +1499,7 @@
               "RelativeToolTip": "Services\\CM.Domain\\Theater\\CMTheater.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAUwBUAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T07:40:48.107Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T07:40:48.107Z"
             },
             {
               "$type": "Document",
@@ -1568,8 +1511,7 @@
               "RelativeToolTip": "Services\\CM.Domain\\Theater\\CMRoom.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAIBZwAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T07:40:41.361Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T07:40:41.361Z"
             },
             {
               "$type": "Document",
@@ -1581,8 +1523,7 @@
               "RelativeToolTip": "Services\\CM.Domain\\Movie\\MoComment.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAgwB8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:24:52.446Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T17:24:52.446Z"
             },
             {
               "$type": "Document",
@@ -1594,8 +1535,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Showtime\\Implements\\ShowtimeService.cs",
               "ViewState": "AgIAAEwAAAAAAAAAAAAiwEcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T21:37:21.702Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T21:37:21.702Z"
             },
             {
               "$type": "Document",
@@ -1607,8 +1547,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Showtime\\Abstracts\\IShowtimeService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T21:37:12.776Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T21:37:12.776Z"
             },
             {
               "$type": "Document",
@@ -1620,8 +1559,7 @@
               "RelativeToolTip": "Services\\CM.Dtos\\Movie\\Add_UpdateMovieDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:51:01.877Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T17:51:01.877Z"
             },
             {
               "$type": "Document",
@@ -1633,8 +1571,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Movie\\Implements\\MovieService.cs",
               "ViewState": "AgIAAEwAAAAAAAAAAAAqwGwAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:39:24.729Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T17:39:24.729Z"
             },
             {
               "$type": "Document",
@@ -1646,8 +1583,7 @@
               "RelativeToolTip": "Services\\CM.Dtos\\Seat\\SeatPriceDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T16:31:31.772Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T16:31:31.772Z"
             },
             {
               "$type": "Document",
@@ -1659,8 +1595,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Seat\\Abstracts\\ISeatPriceService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T18:11:58.687Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T18:11:58.687Z"
             },
             {
               "$type": "Document",
@@ -1672,8 +1607,7 @@
               "RelativeToolTip": "Services\\CM.Dtos\\Seat\\AddSeatPriceDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T18:09:58.936Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T18:09:58.936Z"
             },
             {
               "$type": "Document",
@@ -1685,8 +1619,7 @@
               "RelativeToolTip": "Services\\CM.Dtos\\Seat\\AddSeatDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T16:50:00.523Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T16:50:00.523Z"
             },
             {
               "$type": "Document",
@@ -1698,8 +1631,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Seat\\Abstracts\\ISeatService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwBQAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T16:41:23.884Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T16:41:23.884Z"
             },
             {
               "$type": "Document",
@@ -1711,8 +1643,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Auth\\UserModule\\Implements\\UserService.cs",
               "ViewState": "AgIAADIAAAAAAAAAAAD4vzoAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T18:01:51.112Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T18:01:51.112Z"
             },
             {
               "$type": "Document",
@@ -1724,8 +1655,7 @@
               "RelativeToolTip": "Services\\CM.Dtos\\Auth\\Auth\\RegisterUserDto.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAwwBMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T18:00:32.168Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T18:00:32.168Z"
             },
             {
               "$type": "Document",
@@ -1737,8 +1667,7 @@
               "RelativeToolTip": "Services\\CM.Dtos\\Auth\\User\\UpdateUserDto.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAMwBUAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T18:54:44.538Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T18:54:44.538Z"
             },
             {
               "$type": "Document",
@@ -1750,8 +1679,7 @@
               "RelativeToolTip": "Services\\CM.Dtos\\Auth\\User\\CreateUserDto.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAApwBIAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T18:53:53.907Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T18:53:53.907Z"
             },
             {
               "$type": "Document",
@@ -1763,8 +1691,7 @@
               "RelativeToolTip": "Services\\CM.Infrastructure\\Repositories\\SeatRepository\\Abstracts\\ISeatRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwA8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T11:39:42.779Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T11:39:42.779Z"
             },
             {
               "$type": "Document",
@@ -1776,8 +1703,7 @@
               "RelativeToolTip": "Services\\CM.Infrastructure\\Repositories\\SeatRepository\\Implements\\SeatRepository.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAcwBoAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T11:40:11.833Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T11:40:11.833Z"
             },
             {
               "$type": "Document",
@@ -1789,8 +1715,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Cloudinary\\Implements\\CloudService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAOBvwDcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T18:04:11.895Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T18:04:11.895Z"
             },
             {
               "$type": "Document",
@@ -1802,8 +1727,7 @@
               "RelativeToolTip": "Services\\CM.Dtos\\Showtime\\CreateShowTimeDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T21:38:13.159Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T21:38:13.159Z"
             },
             {
               "$type": "Document",
@@ -1815,8 +1739,7 @@
               "RelativeToolTip": "CM_API\\Controllers\\TheaterController.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAuwCQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T12:17:04.482Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T12:17:04.482Z"
             },
             {
               "$type": "Document",
@@ -1828,8 +1751,7 @@
               "RelativeToolTip": "Services\\CM.Dtos\\Showtime\\ShowtimeDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T21:37:42.84Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T21:37:42.84Z"
             },
             {
               "$type": "Document",
@@ -1841,8 +1763,7 @@
               "RelativeToolTip": "Services\\CM.Domain\\Movie\\MoMovie.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAADgvxQAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:37:48.098Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T17:37:48.098Z"
             },
             {
               "$type": "Document",
@@ -1854,8 +1775,7 @@
               "RelativeToolTip": "Services\\CM.Dtos\\Showtime\\UpdateShowTimeDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T21:38:22.177Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T21:38:22.177Z"
             },
             {
               "$type": "Document",
@@ -1867,8 +1787,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Auth\\UserModule\\Abstracts\\IUserService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T19:08:31.706Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T19:08:31.706Z"
             },
             {
               "$type": "Document",
@@ -1880,8 +1799,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Auth\\RoleModule\\Implements\\RoleService.cs",
               "ViewState": "AgIAAHwAAAAAAAAAAAAuwIwAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T18:02:40.266Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T18:02:40.266Z"
             },
             {
               "$type": "Document",
@@ -1893,8 +1811,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Theater\\Abstracts\\ITheaterService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwA4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T11:51:07.073Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T11:51:07.073Z"
             },
             {
               "$type": "Document",
@@ -1906,8 +1823,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Theater\\Abstracts\\ITheaterChainService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwA0AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T11:51:34.301Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T11:51:34.301Z"
             },
             {
               "$type": "Document",
@@ -1919,8 +1835,7 @@
               "RelativeToolTip": "CM_API\\Controllers\\TheaterChainController.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAcwBsAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T12:16:11.368Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T12:16:11.368Z"
             },
             {
               "$type": "Document",
@@ -1932,8 +1847,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Theater\\Implements\\RoomService.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAYwBkAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T11:51:43.49Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T11:51:43.49Z"
             },
             {
               "$type": "Document",
@@ -1945,8 +1859,7 @@
               "RelativeToolTip": "Services\\CM.Dtos\\Theater\\TheaterChainDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T11:48:25.275Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T11:48:25.275Z"
             },
             {
               "$type": "Document",
@@ -1958,8 +1871,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Theater\\Implements\\TheaterService.cs",
               "ViewState": "AgIAABoAAAAAAAAAAAAmwB8AAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T11:51:51.702Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T11:51:51.702Z"
             },
             {
               "$type": "Document",
@@ -1971,8 +1883,7 @@
               "RelativeToolTip": "Services\\CM.Dtos\\Theater\\RoomDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T11:49:03.887Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T11:49:03.887Z"
             },
             {
               "$type": "Document",
@@ -1984,8 +1895,7 @@
               "RelativeToolTip": "Services\\CM.Dtos\\Theater\\TheaterDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T11:48:49.997Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T11:48:49.997Z"
             },
             {
               "$type": "Document",
@@ -1997,8 +1907,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Food\\Abstracts\\IFoodService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T11:24:09.119Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T11:24:09.119Z"
             },
             {
               "$type": "Document",
@@ -2010,8 +1919,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Theater\\Abstracts\\IRoomService.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAswA4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T11:50:59.089Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T11:50:59.089Z"
             },
             {
               "$type": "Document",
@@ -2023,8 +1931,7 @@
               "RelativeToolTip": "Services\\CM.Infrastructure\\Repositories\\TicketRepository\\Implements\\TicketRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAABBwAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T12:22:57.425Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T12:22:57.425Z"
             },
             {
               "$type": "Document",
@@ -2036,8 +1943,7 @@
               "RelativeToolTip": "Services\\CM.Dtos\\Food\\FoodComboDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T11:25:24.148Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T11:25:24.148Z"
             },
             {
               "$type": "Document",
@@ -2049,8 +1955,7 @@
               "RelativeToolTip": "Services\\CM.Domain\\FoodCombo\\CMFoodCombo.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAIwBUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T06:24:18.01Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T06:24:18.01Z"
             },
             {
               "$type": "Document",
@@ -2062,8 +1967,7 @@
               "RelativeToolTip": "Services\\CM.Infrastructure\\Repositories\\TicketRepository\\Abstracts\\ITicketRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T12:21:49.155Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T12:21:49.155Z"
             },
             {
               "$type": "Document",
@@ -2075,8 +1979,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Auth\\AuthModule\\Abstracts\\IJwtService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:28:56.39Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T17:28:56.39Z"
             },
             {
               "$type": "Document",
@@ -2088,8 +1991,7 @@
               "RelativeToolTip": "Services\\CM.Dtos\\Movie\\CommentDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:26:54.781Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T17:26:54.781Z"
             },
             {
               "$type": "Document",
@@ -2101,8 +2003,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Movie\\Abstracts\\ICommentService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAsAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:34:07.464Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T17:34:07.464Z"
             },
             {
               "$type": "Document",
@@ -2114,8 +2015,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Movie\\Abstracts\\IMovieService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:39:23.564Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T17:39:23.564Z"
             },
             {
               "$type": "Document",
@@ -2127,8 +2027,7 @@
               "RelativeToolTip": "Services\\CM.Dtos\\Auth\\Auth\\TokenDto.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAqwA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T18:00:37.802Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T18:00:37.802Z"
             },
             {
               "$type": "Document",
@@ -2140,8 +2039,7 @@
               "RelativeToolTip": "Services\\CM.Dtos\\Auth\\Auth\\LoginReponseDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T18:00:23.487Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T18:00:23.487Z"
             },
             {
               "$type": "Document",
@@ -2153,8 +2051,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Cloudinary\\Abstracts\\ICloudService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T18:04:03.418Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T18:04:03.418Z"
             },
             {
               "$type": "Document",
@@ -2166,8 +2063,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Auth\\RoleModule\\Abstracts\\IRoleService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T18:02:55.52Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T18:02:55.52Z"
             },
             {
               "$type": "Document",
@@ -2179,8 +2075,7 @@
               "RelativeToolTip": "Services\\CM.Dtos\\Auth\\Role\\RoleDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:59:33.804Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T17:59:33.804Z"
             },
             {
               "$type": "Document",
@@ -2192,8 +2087,7 @@
               "RelativeToolTip": "Services\\CM.Dtos\\Auth\\Role\\CreateRoleDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:59:26.394Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T17:59:26.394Z"
             },
             {
               "$type": "Document",
@@ -2205,8 +2099,7 @@
               "RelativeToolTip": "Services\\CM.Domain\\Movie\\MoGenre.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:38:42.496Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T17:38:42.496Z"
             },
             {
               "$type": "Document",
@@ -2218,8 +2111,7 @@
               "RelativeToolTip": "Services\\CM.Domain\\Movie\\MoMovie_Cast.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:38:28.746Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T17:38:28.746Z"
             },
             {
               "$type": "Document",
@@ -2231,8 +2123,7 @@
               "RelativeToolTip": "Services\\CM.ApplicationService\\Auth\\Permission\\Abstracts\\IPermissionService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:32:39.481Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T17:32:39.481Z"
             },
             {
               "$type": "Document",
@@ -2244,8 +2135,7 @@
               "RelativeToolTip": "Services\\CM.Dtos\\Image\\ImageDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:26:03.372Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T17:26:03.372Z"
             }
           ]
         },
@@ -2272,6 +2162,10 @@
             {
               "$type": "Bookmark",
               "Name": "ST:9:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
             }
           ]
         }

@@ -21,3 +21,4 @@ D:\Cinema_Management\Cinema_Management\Services\CM.ApplicationService\obj\Debug\
 D:\Cinema_Management\Cinema_Management\Services\CM.ApplicationService\obj\Debug\net8.0\refint\CM.ApplicationService.dll
 D:\Cinema_Management\Cinema_Management\Services\CM.ApplicationService\obj\Debug\net8.0\CM.ApplicationService.pdb
 D:\Cinema_Management\Cinema_Management\Services\CM.ApplicationService\obj\Debug\net8.0\ref\CM.ApplicationService.dll
+D:\Cinema_Management\Cinema_Management\Services\CM.ApplicationService\obj\Debug\net8.0\CM.ApplicationService.sourcelink.json

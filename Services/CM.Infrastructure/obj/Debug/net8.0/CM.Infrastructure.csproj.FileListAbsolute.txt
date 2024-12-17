@@ -17,3 +17,4 @@ D:\Cinema_Management\Cinema_Management\Services\CM.Infrastructure\obj\Debug\net8
 D:\Cinema_Management\Cinema_Management\Services\CM.Infrastructure\obj\Debug\net8.0\ref\CM.Infrastructure.dll
 D:\Cinema_Management\Cinema_Management\Services\CM.Infrastructure\bin\Debug\net8.0\Share.ApplicationService.dll
 D:\Cinema_Management\Cinema_Management\Services\CM.Infrastructure\bin\Debug\net8.0\Share.ApplicationService.pdb
+D:\Cinema_Management\Cinema_Management\Services\CM.Infrastructure\obj\Debug\net8.0\CM.Infrastructure.sourcelink.json

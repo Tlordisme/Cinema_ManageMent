@@ -13,3 +13,4 @@ D:\Cinema_Management\Cinema_Management\Services\CM.Domain\obj\Debug\net8.0\ref\C
 D:\Cinema_Management\Cinema_Management\Services\CM.Domain\bin\Debug\net8.0\Share.ApplicationService.dll
 D:\Cinema_Management\Cinema_Management\Services\CM.Domain\bin\Debug\net8.0\Share.ApplicationService.pdb
 D:\Cinema_Management\Cinema_Management\Services\CM.Domain\obj\Debug\net8.0\CM.Domain.csproj.Up2Date
+D:\Cinema_Management\Cinema_Management\Services\CM.Domain\obj\Debug\net8.0\CM.Domain.sourcelink.json

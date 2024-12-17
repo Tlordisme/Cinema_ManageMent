@@ -10,3 +10,4 @@ D:\Cinema_Management\Cinema_Management\Services\Shared\Share.ApplicationService\
 D:\Cinema_Management\Cinema_Management\Services\Shared\Share.ApplicationService\obj\Debug\net8.0\refint\Share.ApplicationService.dll
 D:\Cinema_Management\Cinema_Management\Services\Shared\Share.ApplicationService\obj\Debug\net8.0\Share.ApplicationService.pdb
 D:\Cinema_Management\Cinema_Management\Services\Shared\Share.ApplicationService\obj\Debug\net8.0\ref\Share.ApplicationService.dll
+D:\Cinema_Management\Cinema_Management\Services\Shared\Share.ApplicationService\obj\Debug\net8.0\Share.ApplicationService.sourcelink.json

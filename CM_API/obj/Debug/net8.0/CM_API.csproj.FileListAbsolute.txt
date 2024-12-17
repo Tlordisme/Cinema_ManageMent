@@ -176,3 +176,4 @@ D:\Cinema_Management\Cinema_Management\CM_API\bin\Debug\net8.0\sv\Hangfire.Core.
 D:\Cinema_Management\Cinema_Management\CM_API\bin\Debug\net8.0\tr-TR\Hangfire.Core.resources.dll
 D:\Cinema_Management\Cinema_Management\CM_API\bin\Debug\net8.0\zh-TW\Hangfire.Core.resources.dll
 D:\Cinema_Management\Cinema_Management\CM_API\bin\Debug\net8.0\zh\Hangfire.Core.resources.dll
+D:\Cinema_Management\Cinema_Management\CM_API\obj\Debug\net8.0\CM_API.sourcelink.json
