@@ -2,59 +2,39 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_REGISTRY = "docker.io"  // Địa chỉ Docker registry (nếu có)
+        DOCKER_COMPOSE_PATH = 'docker-compose.yml'
     }
 
     stages {
-        stage('Clone Repository') {
+        stage('Checkout Code') {
             steps {
-                git 'https://github.com/Tlordisme/Cinema_ManageMent.git'  // Địa chỉ repo của bạn
+                echo 'Checking out source code...'
+                checkout scm
             }
         }
 
-        stage('Build Docker Images') {
+        stage('Deploy with Docker Compose') {
             steps {
-                script {
-                    // Build cm_sql image (SQL Server)
-                    docker.build('cm_sql', 'docker-compose.yml#cm_sql')
-
-                    // Build cm_api image (API)
-                    docker.build('cm_api', 'docker-compose.yml#cm_api')
-                }
+                echo 'Deploying services using Docker Compose...'
+                bat 'docker-compose -f Jenkins/.jenkins/workspace/MovieTheater/MovieTheaterAPI/docker-compose.yml down' // Dừng các container cũ
+                bat 'docker-compose -f Jenkins/.jenkins/workspace/MovieTheater/MovieTheaterAPI/docker-compose.yml up --build -d' // Build lại image và khởi động container
             }
         }
 
-        stage('Deploy Containers') {
+        stage('Verify Deployment') {
             steps {
-                script {
-                    // Start up Docker Compose to deploy the services
-                    sh 'docker-compose -f docker-compose.yml up -d'
-                }
-            }
-        }
-
-        stage('Run Tests') {
-            steps {
-                script {
-                    // Đây là nơi bạn có thể thêm các bước kiểm tra (nếu có)
-                    echo "Running tests..."
-                }
-            }
-        }
-
-        stage('Clean up') {
-            steps {
-                script {
-                    // Dừng và xóa các container sau khi hoàn tất
-                    sh 'docker-compose -f docker-compose.yml down'
-                }
+                echo 'Verifying deployment...'
+                bat 'docker ps'
             }
         }
     }
 
     post {
-        always {
-            cleanWs()  // Dọn dẹp workspace sau khi pipeline hoàn thành
+        success {
+            echo 'Deployment completed successfully!'
+        }
+        failure {
+            echo 'Deployment failed. Check logs for details.'
         }
     }
 }
