@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Infrastructure\\CM.Infrastructure.csproj": {}
+    "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\CM.Infrastructure\\CM.Infrastructure.csproj": {}
   },
   "projects": {
-    "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\CM.Domain.csproj": {
+    "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\CM.Domain\\CM.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\CM.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\CM.Domain\\CM.Domain.csproj",
         "projectName": "CM.Domain",
-        "projectPath": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\CM.Domain.csproj",
+        "projectPath": "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\CM.Domain\\CM.Domain.csproj",
         "packagesPath": "C:\\Users\\yench\\.nuget\\packages\\",
-        "outputPath": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\obj\\",
+        "outputPath": "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\CM.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\yench\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -29,8 +29,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Cinema_Management\\Cinema_Management\\Services\\Shared\\Share.ApplicationService\\Share.ApplicationService.csproj": {
-                "projectPath": "D:\\Cinema_Management\\Cinema_Management\\Services\\Shared\\Share.ApplicationService\\Share.ApplicationService.csproj"
+              "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\Shared\\Share.ApplicationService\\Share.ApplicationService.csproj": {
+                "projectPath": "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\Shared\\Share.ApplicationService\\Share.ApplicationService.csproj"
               }
             }
           }
@@ -83,14 +83,14 @@
         }
       }
     },
-    "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Infrastructure\\CM.Infrastructure.csproj": {
+    "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\CM.Infrastructure\\CM.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Infrastructure\\CM.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\CM.Infrastructure\\CM.Infrastructure.csproj",
         "projectName": "CM.Infrastructure",
-        "projectPath": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Infrastructure\\CM.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\CM.Infrastructure\\CM.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\yench\\.nuget\\packages\\",
-        "outputPath": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\CM.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\yench\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -108,8 +108,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\CM.Domain.csproj": {
-                "projectPath": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\CM.Domain.csproj"
+              "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\CM.Domain\\CM.Domain.csproj": {
+                "projectPath": "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\CM.Domain\\CM.Domain.csproj"
               }
             }
           }
@@ -164,14 +164,14 @@
         }
       }
     },
-    "D:\\Cinema_Management\\Cinema_Management\\Services\\Shared\\Share.ApplicationService\\Share.ApplicationService.csproj": {
+    "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\Shared\\Share.ApplicationService\\Share.ApplicationService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Cinema_Management\\Cinema_Management\\Services\\Shared\\Share.ApplicationService\\Share.ApplicationService.csproj",
+        "projectUniqueName": "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\Shared\\Share.ApplicationService\\Share.ApplicationService.csproj",
         "projectName": "Share.ApplicationService",
-        "projectPath": "D:\\Cinema_Management\\Cinema_Management\\Services\\Shared\\Share.ApplicationService\\Share.ApplicationService.csproj",
+        "projectPath": "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\Shared\\Share.ApplicationService\\Share.ApplicationService.csproj",
         "packagesPath": "C:\\Users\\yench\\.nuget\\packages\\",
-        "outputPath": "D:\\Cinema_Management\\Cinema_Management\\Services\\Shared\\Share.ApplicationService\\obj\\",
+        "outputPath": "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\Shared\\Share.ApplicationService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\yench\\AppData\\Roaming\\NuGet\\NuGet.Config",

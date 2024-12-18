@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DJx13CE6KZc=",
+  "dgSpecHash": "WRugC8ct8Nk=",
   "success": true,
-  "projectFilePath": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\CM.Dtos.csproj",
+  "projectFilePath": "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\CM.Dtos\\CM.Dtos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yench\\.nuget\\packages\\catel.core\\6.0.4\\catel.core.6.0.4.nupkg.sha512",
     "C:\\Users\\yench\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",

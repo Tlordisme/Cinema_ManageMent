@@ -615,11 +615,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\CM.Dtos.csproj",
+      "projectUniqueName": "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\CM.Dtos\\CM.Dtos.csproj",
       "projectName": "CM.Dtos",
-      "projectPath": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\CM.Dtos.csproj",
+      "projectPath": "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\CM.Dtos\\CM.Dtos.csproj",
       "packagesPath": "C:\\Users\\yench\\.nuget\\packages\\",
-      "outputPath": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\obj\\",
+      "outputPath": "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\CM.Dtos\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\yench\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -637,8 +637,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\CM.Domain.csproj": {
-              "projectPath": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Domain\\CM.Domain.csproj"
+            "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\CM.Domain\\CM.Domain.csproj": {
+              "projectPath": "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\CM.Domain\\CM.Domain.csproj"
             }
           }
         }

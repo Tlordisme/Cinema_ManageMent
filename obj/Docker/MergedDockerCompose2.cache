@@ -1,0 +1,71 @@
+name: dockercompose4521192183155113006
+services:
+  cm_api:
+    build:
+      context: C:\Users\yench\Source\Repos\Cinema_ManageMent
+      dockerfile: CM_API/Dockerfile
+    command:
+      - sh
+      - -c
+      - dotnet ef database update && dotnet CM_API.dll
+    depends_on:
+      cm_sql:
+        condition: service_started
+        required: true
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "8080"
+      ASPNETCORE_HTTPS_PORTS: "8081"
+      ConnectionStrings__Default: Data Source=cm_sql;Initial Catalog=TestDb;User ID=sa;Password=Password12345!;Trust Server Certificate=True
+    image: cmapi
+    networks:
+      cm_network: null
+    ports:
+      - mode: ingress
+        target: 8080
+        published: "7000"
+        protocol: tcp
+      - mode: ingress
+        target: 8080
+        protocol: tcp
+      - mode: ingress
+        target: 8081
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: C:\Users\yench\AppData\Roaming/Microsoft/UserSecrets
+        target: /home/app/.microsoft/usersecrets
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\yench\AppData\Roaming/ASP.NET/Https
+        target: /home/app/.aspnet/https
+        read_only: true
+        bind:
+          create_host_path: true
+  cm_sql:
+    container_name: cm_sql
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: Password12345!
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    networks:
+      cm_network: null
+    ports:
+      - mode: ingress
+        target: 1433
+        published: "1433"
+        protocol: tcp
+    volumes:
+      - type: volume
+        source: sql_data
+        target: /var/opt/mssql
+        volume: {}
+networks:
+  cm_network:
+    name: dockercompose4521192183155113006_cm_network
+    driver: bridge
+volumes:
+  sql_data:
+    name: dockercompose4521192183155113006_sql_data

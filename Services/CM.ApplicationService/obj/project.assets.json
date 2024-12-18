@@ -7145,11 +7145,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\CM.ApplicationService.csproj",
+      "projectUniqueName": "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\CM.ApplicationService\\CM.ApplicationService.csproj",
       "projectName": "CM.ApplicationService",
-      "projectPath": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\CM.ApplicationService.csproj",
+      "projectPath": "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\CM.ApplicationService\\CM.ApplicationService.csproj",
       "packagesPath": "C:\\Users\\yench\\.nuget\\packages\\",
-      "outputPath": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.ApplicationService\\obj\\",
+      "outputPath": "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\CM.ApplicationService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\yench\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7167,17 +7167,17 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\CM.Dtos.csproj": {
-              "projectPath": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Dtos\\CM.Dtos.csproj"
+            "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\CM.Dtos\\CM.Dtos.csproj": {
+              "projectPath": "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\CM.Dtos\\CM.Dtos.csproj"
             },
-            "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Infrastructure\\CM.Infrastructure.csproj": {
-              "projectPath": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Infrastructure\\CM.Infrastructure.csproj"
+            "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\CM.Infrastructure\\CM.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\CM.Infrastructure\\CM.Infrastructure.csproj"
             },
-            "D:\\Cinema_Management\\Cinema_Management\\Services\\Shared\\Share.ApplicationService\\Share.ApplicationService.csproj": {
-              "projectPath": "D:\\Cinema_Management\\Cinema_Management\\Services\\Shared\\Share.ApplicationService\\Share.ApplicationService.csproj"
+            "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\Shared\\Share.ApplicationService\\Share.ApplicationService.csproj": {
+              "projectPath": "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\Shared\\Share.ApplicationService\\Share.ApplicationService.csproj"
             },
-            "D:\\Cinema_Management\\Cinema_Management\\Services\\Shared\\Share.Constant\\Share.Constant.csproj": {
-              "projectPath": "D:\\Cinema_Management\\Cinema_Management\\Services\\Shared\\Share.Constant\\Share.Constant.csproj"
+            "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\Shared\\Share.Constant\\Share.Constant.csproj": {
+              "projectPath": "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\Shared\\Share.Constant\\Share.Constant.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mdxzXb7YgjM=",
+  "dgSpecHash": "HHUxnrCBMVo=",
   "success": true,
-  "projectFilePath": "D:\\Cinema_Management\\Cinema_Management\\Services\\Shared\\Share.ApplicationService\\Share.ApplicationService.csproj",
+  "projectFilePath": "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\Shared\\Share.ApplicationService\\Share.ApplicationService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yench\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
     "C:\\Users\\yench\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.2\\microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512"

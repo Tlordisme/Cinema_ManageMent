@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Cinema_Management\\Cinema_Management\\Services\\Shared\\Share.Constant\\Share.Constant.csproj": {}
+    "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\Shared\\Share.Constant\\Share.Constant.csproj": {}
   },
   "projects": {
-    "D:\\Cinema_Management\\Cinema_Management\\Services\\Shared\\Share.Constant\\Share.Constant.csproj": {
+    "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\Shared\\Share.Constant\\Share.Constant.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Cinema_Management\\Cinema_Management\\Services\\Shared\\Share.Constant\\Share.Constant.csproj",
+        "projectUniqueName": "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\Shared\\Share.Constant\\Share.Constant.csproj",
         "projectName": "Share.Constant",
-        "projectPath": "D:\\Cinema_Management\\Cinema_Management\\Services\\Shared\\Share.Constant\\Share.Constant.csproj",
+        "projectPath": "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\Shared\\Share.Constant\\Share.Constant.csproj",
         "packagesPath": "C:\\Users\\yench\\.nuget\\packages\\",
-        "outputPath": "D:\\Cinema_Management\\Cinema_Management\\Services\\Shared\\Share.Constant\\obj\\",
+        "outputPath": "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\Shared\\Share.Constant\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\yench\\AppData\\Roaming\\NuGet\\NuGet.Config",

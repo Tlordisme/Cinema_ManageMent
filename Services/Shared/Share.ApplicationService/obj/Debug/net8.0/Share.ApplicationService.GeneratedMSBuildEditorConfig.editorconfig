@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Share.ApplicationService
-build_property.ProjectDir = D:\Cinema_Management\Cinema_Management\Services\Shared\Share.ApplicationService\
+build_property.ProjectDir = C:\Users\yench\Source\Repos\Cinema_ManageMent\Services\Shared\Share.ApplicationService\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

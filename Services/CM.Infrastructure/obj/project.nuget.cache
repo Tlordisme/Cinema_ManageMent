@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9Z5lwJcGij8=",
+  "dgSpecHash": "yjGBnWveZJ8=",
   "success": true,
-  "projectFilePath": "D:\\Cinema_Management\\Cinema_Management\\Services\\CM.Infrastructure\\CM.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\yench\\Source\\Repos\\Cinema_ManageMent\\Services\\CM.Infrastructure\\CM.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yench\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\yench\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

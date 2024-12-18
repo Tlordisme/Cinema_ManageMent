@@ -1,0 +1,36 @@
+services:
+  cm_api:
+    image: ${DOCKER_REGISTRY-}cmapi
+    build:
+      context: .
+      dockerfile: CM_API/Dockerfile
+    ports:
+      - "7000:8080"
+    environment:   
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__Default=Data Source=cm_sql;Initial Catalog=TestDb;User ID=sa;Password=Password12345!;Trust Server Certificate=True
+    depends_on:
+      - cm_sql
+    networks:
+      - cm_network
+    command: ["sh", "-c", "dotnet ef database update && dotnet CM_API.dll"]
+
+  cm_sql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: cm_sql
+    ports:
+      - "1433:1433"
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Password12345!
+    volumes:
+      - sql_data:/var/opt/mssql
+    networks:
+      - cm_network
+
+volumes:
+  sql_data:
+
+networks:
+  cm_network:
+    driver: bridge
