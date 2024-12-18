@@ -5,6 +5,9 @@ using CM.Dtos.Movie;
 using CM.Dtos.Seat;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using CM.ApplicantService.Auth.Permission.Abstracts;
+using Share.Constant.Permission;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CM_API.Controllers
 {
@@ -13,16 +16,25 @@ namespace CM_API.Controllers
     public class SeatController : ControllerBase
     {
         private readonly ISeatService _seatService;
+        private readonly IPermissionService _permissionService;
 
-        public SeatController(ISeatService seatService)
+        public SeatController(ISeatService seatService, IPermissionService permissionService)
         {
             _seatService = seatService;
+            _permissionService = permissionService;
         }
 
-        // Lấy danh sách ghế theo phòng
-        [HttpGet("{roomId}")]
+        [HttpGet("GetAllSeats{roomId}")]
+        [Authorize]
         public IActionResult GetSeatsByRoomId(string roomId)
         {
+            // Kiểm tra quyền lấy danh sách ghế theo phòng
+            var currentUserId = int.Parse(User.FindFirst("Id")?.Value);
+            if (!_permissionService.CheckPermission(currentUserId, PermissionKey.ViewSeatsByRoom))
+            {
+                return Unauthorized("Bạn không có quyền xem danh sách ghế theo phòng.");
+            }
+
             try
             {
                 var seats = _seatService.GetSeatsByRoomId(roomId);
@@ -34,10 +46,17 @@ namespace CM_API.Controllers
             }
         }
 
-        // Thêm ghế mới
-        [HttpPost]
+        [HttpPost("AddSeat")]
+        [Authorize]
         public IActionResult AddSeat([FromBody] AddSeatDto seatDto)
         {
+            // Kiểm tra quyền thêm ghế
+            var currentUserId = int.Parse(User.FindFirst("Id")?.Value);
+            if (!_permissionService.CheckPermission(currentUserId, PermissionKey.AddSeat))
+            {
+                return Unauthorized("Bạn không có quyền thêm ghế.");
+            }
+
             try
             {
                 _seatService.AddSeat(seatDto);
@@ -49,10 +68,17 @@ namespace CM_API.Controllers
             }
         }
 
-        // Cập nhật thông tin ghế
-        [HttpPut]
+        [HttpPut("UpdateSeat/{seatId}")]
+        [Authorize]
         public IActionResult UpdateSeat([FromBody] UpdateSeatDto seatDto)
         {
+            // Kiểm tra quyền cập nhật ghế
+            var currentUserId = int.Parse(User.FindFirst("Id")?.Value);
+            if (!_permissionService.CheckPermission(currentUserId, PermissionKey.UpdateSeat))
+            {
+                return Unauthorized("Bạn không có quyền cập nhật ghế.");
+            }
+
             try
             {
                 _seatService.UpdateSeat(seatDto);
@@ -63,9 +89,18 @@ namespace CM_API.Controllers
                 return BadRequest($"Có lỗi khi cập nhật ghế: {ex.Message}");
             }
         }
+
         [HttpPost("link-double-seat")]
+        [Authorize]
         public IActionResult LinkDoubleSeat([FromBody] LinkDoubleSeatDto dto)
         {
+            // Kiểm tra quyền liên kết ghế đôi
+            var currentUserId = int.Parse(User.FindFirst("Id")?.Value);
+            if (!_permissionService.CheckPermission(currentUserId, PermissionKey.LinkDoubleSeat))
+            {
+                return Unauthorized("Bạn không có quyền liên kết ghế đôi.");
+            }
+
             try
             {
                 _seatService.LinkDoubleSeat(dto.SeatId, dto.DoubleSeatId);
@@ -77,10 +112,17 @@ namespace CM_API.Controllers
             }
         }
 
-        // Xóa ghế
-        [HttpDelete("{seatId}")]
+        [HttpDelete("DeleteSeat/{seatId}")]
+        [Authorize]
         public IActionResult DeleteSeat(int seatId)
         {
+            // Kiểm tra quyền xóa ghế
+            var currentUserId = int.Parse(User.FindFirst("Id")?.Value);
+            if (!_permissionService.CheckPermission(currentUserId, PermissionKey.DeleteSeat))
+            {
+                return Unauthorized("Bạn không có quyền xóa ghế.");
+            }
+
             try
             {
                 _seatService.DeleteSeat(seatId);

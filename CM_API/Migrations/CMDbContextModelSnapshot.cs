@@ -130,6 +130,27 @@ namespace CM_API.Migrations
                     b.ToTable("UserRole");
                 });
 
+            modelBuilder.Entity("CM.Domain.Food.FoFood", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Foods");
+                });
+
             modelBuilder.Entity("CM.Domain.Movie.MoCast", b =>
                 {
                     b.Property<int>("Id")
@@ -295,6 +316,9 @@ namespace CM_API.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("CMRoomId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<int?>("DoubleSeatId")
                         .HasColumnType("int");
 
@@ -323,6 +347,8 @@ namespace CM_API.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CMRoomId");
 
                     b.HasIndex("RoomID");
 
@@ -391,6 +417,9 @@ namespace CM_API.Migrations
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("Capacity")
+                        .HasColumnType("int");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -495,6 +524,9 @@ namespace CM_API.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int?>("CMTicketId")
+                        .HasColumnType("int");
+
                     b.Property<int>("SeatId")
                         .HasColumnType("int");
 
@@ -505,6 +537,8 @@ namespace CM_API.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CMTicketId");
 
                     b.HasIndex("SeatId");
 
@@ -592,6 +626,10 @@ namespace CM_API.Migrations
 
             modelBuilder.Entity("CM.Domain.Seat.CMSeat", b =>
                 {
+                    b.HasOne("CM.Domain.Theater.CMRoom", null)
+                        .WithMany("Seats")
+                        .HasForeignKey("CMRoomId");
+
                     b.HasOne("CM.Domain.Theater.CMRoom", "Room")
                         .WithMany()
                         .HasForeignKey("RoomID")
@@ -663,6 +701,10 @@ namespace CM_API.Migrations
 
             modelBuilder.Entity("CM.Domain.Ticket.CMTicketSeat", b =>
                 {
+                    b.HasOne("CM.Domain.Ticket.CMTicket", null)
+                        .WithMany("TicketSeats")
+                        .HasForeignKey("CMTicketId");
+
                     b.HasOne("CM.Domain.Seat.CMSeat", "Seat")
                         .WithMany()
                         .HasForeignKey("SeatId")
@@ -697,6 +739,11 @@ namespace CM_API.Migrations
                     b.Navigation("MovieGenres");
                 });
 
+            modelBuilder.Entity("CM.Domain.Theater.CMRoom", b =>
+                {
+                    b.Navigation("Seats");
+                });
+
             modelBuilder.Entity("CM.Domain.Theater.CMTheater", b =>
                 {
                     b.Navigation("Rooms");
@@ -705,6 +752,11 @@ namespace CM_API.Migrations
             modelBuilder.Entity("CM.Domain.Theater.CMTheaterChain", b =>
                 {
                     b.Navigation("Theaters");
+                });
+
+            modelBuilder.Entity("CM.Domain.Ticket.CMTicket", b =>
+                {
+                    b.Navigation("TicketSeats");
                 });
 #pragma warning restore 612, 618
         }

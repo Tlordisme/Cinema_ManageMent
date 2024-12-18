@@ -1,8 +1,9 @@
-﻿using CM.ApplicationService.Movie.Abstracts;
+﻿using CM.ApplicantService.Auth.Permission.Abstracts;
+using CM.ApplicationService.Movie.Abstracts;
 using CM.Dtos.Movie;
-
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-
+using Share.Constant.Permission;
 
 namespace CM_API.Controllers
 {
@@ -11,15 +12,23 @@ namespace CM_API.Controllers
     public class MovieController : Controller
     {
         private readonly IMovieService _movieService;
+        private readonly IPermissionService _permissionService;
 
-        public MovieController(IMovieService movieService)
+        public MovieController(IMovieService movieService, IPermissionService permissionService)
         {
             _movieService = movieService;
+            _permissionService = permissionService;
         }
 
-        [HttpPost]
+        [HttpPost("AddMovie")]
+        [Authorize]
         public IActionResult AddMovie([FromBody] AddOrUpdateMovieDto movieDto)
         {
+            if (!_permissionService.CheckPermission(GetUserId(), PermissionKey.AddMovie))
+            {
+                return Unauthorized("You do not have permission to add a movie.");
+            }
+
             if (movieDto == null)
             {
                 return BadRequest("Movie data is null.");
@@ -36,9 +45,15 @@ namespace CM_API.Controllers
             }
         }
 
-        [HttpPut("{movieId}")]
+        [HttpPut("UpdateMovie/{movieId}")]
+        [Authorize]
         public IActionResult UpdateMovie(int movieId, [FromBody] AddOrUpdateMovieDto movieDto)
         {
+            if (!_permissionService.CheckPermission(GetUserId(), PermissionKey.UpdateMovie))
+            {
+                return Unauthorized("You do not have permission to update a movie.");
+            }
+
             if (movieDto == null)
             {
                 return BadRequest("Movie data is null.");
@@ -55,9 +70,15 @@ namespace CM_API.Controllers
             }
         }
 
-        [HttpDelete("{movieId}")]
+        [HttpDelete("DeleteMovie/{movieId}")]
+        [Authorize]
         public IActionResult DeleteMovie(int movieId)
         {
+            if (!_permissionService.CheckPermission(GetUserId(), PermissionKey.DeleteMovie))
+            {
+                return Unauthorized("You do not have permission to delete a movie.");
+            }
+
             try
             {
                 _movieService.DeleteMovie(movieId);
@@ -67,6 +88,26 @@ namespace CM_API.Controllers
             {
                 return BadRequest(ex.Message);
             }
+        }
+
+        [HttpGet("GetAllMovies")]
+        [AllowAnonymous]
+        public async Task<IActionResult> GetAllMovies()
+        {
+            try
+            {
+                var movies = await _movieService.GetAllMovies();
+                return Ok(movies);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { Error = ex.Message });
+            }
+        }
+
+        private int GetUserId()
+        {
+            return int.Parse(User.FindFirst("Id")?.Value);
         }
     }
 }

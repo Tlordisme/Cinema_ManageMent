@@ -10,6 +10,8 @@ namespace CM.ApplicationService.Ticket.Abstracts
     public interface ITicketRepository
     {
         Task<TicketDetailsDto> GetTicketDetailsAsync(int ticketId);
-
+        Task<bool> DeleteTicket(int ticketId);
+        Task<List<TicketDetailsDto>> GetTicketsByUserId(int userId);
+        Task<List<TicketDetailsDto>> GetAllTickets();
     }
 }

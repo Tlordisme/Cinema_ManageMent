@@ -1,93 +1,132 @@
-﻿using CM.ApplicationService.Seat.Abstracts;
+﻿using CM.ApplicantService.Auth.Permission.Abstracts;
+using CM.ApplicationService.Seat.Abstracts;
+using CM.Domain.Auth;
 using CM.Dtos.Seat;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Share.Constant.Permission;
 
-namespace CM_API.Controllers
+[Route("api/[controller]")]
+[ApiController]
+public class SeatPriceController : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class SeatPriceController : ControllerBase
+    private readonly ISeatPriceService _seatPriceService;
+    private readonly IPermissionService _permissionService;
+
+    public SeatPriceController(ISeatPriceService seatPriceService, IPermissionService permissionService)
     {
-        private readonly ISeatPriceService _seatPriceService;
+        _seatPriceService = seatPriceService;
+        _permissionService = permissionService;
+    }
 
-        public SeatPriceController(ISeatPriceService seatPriceService)
+    [HttpPost("AddSeatPrice")]
+    [Authorize]
+    public IActionResult AddSeatPrice([FromBody] AddSeatPriceDto seatPriceDto)
+    {
+        var currentUserId = int.Parse(User.FindFirst("Id")?.Value);
+
+        if (!_permissionService.CheckPermission(currentUserId, PermissionKey.AddSeatPrice))
         {
-            _seatPriceService = seatPriceService;
+            return Unauthorized("Bạn không có quyền thêm giá ghế.");
         }
 
-        // Thêm giá ghế mới
-        [HttpPost]
-        public IActionResult AddSeatPrice([FromBody] AddSeatPriceDto seatPriceDto)
+        try
         {
-            try
-            {
-                _seatPriceService.AddSeatPrice(seatPriceDto);
-                return Ok("Thêm giá ghế thành công!");
-            }
-            catch (Exception ex)
-            {
-                return BadRequest($"Có lỗi khi thêm giá ghế: {ex.Message}");
-            }
+            _seatPriceService.AddSeatPrice(seatPriceDto); // Pass user id to service for logging
+            return Ok("Thêm giá ghế thành công!");
+        }
+        catch (Exception ex)
+        {
+            return BadRequest($"Có lỗi khi thêm giá ghế: {ex.Message}");
+        }
+    }
+
+    [HttpPut("UpdateSeatPrice")]
+    [Authorize]
+    public IActionResult UpdateSeatPrice([FromBody] UpdateSeatPriceDto seatPriceDto)
+    {
+        var currentUserId = int.Parse(User.FindFirst("Id")?.Value);
+
+        if (!_permissionService.CheckPermission(currentUserId, PermissionKey.UpdateSeatPrice))
+        {
+            return Unauthorized("Bạn không có quyền cập nhật giá ghế.");
         }
 
-        // Cập nhật giá ghế
-        [HttpPut]
-        public IActionResult UpdateSeatPrice([FromBody] UpdateSeatPriceDto seatPriceDto)
+        try
         {
-            try
-            {
-                _seatPriceService.UpdateSeatPrice(seatPriceDto);
-                return Ok("Cập nhật giá ghế thành công!");
-            }
-            catch (Exception ex)
-            {
-                return BadRequest($"Có lỗi khi cập nhật giá ghế: {ex.Message}");
-            }
+            _seatPriceService.UpdateSeatPrice(seatPriceDto);
+            return Ok("Cập nhật giá ghế thành công!");
+        }
+        catch (Exception ex)
+        {
+            return BadRequest($"Có lỗi khi cập nhật giá ghế: {ex.Message}");
+        }
+    }
+
+    [HttpDelete("DeleteSeatPrice/{seatPriceId}")]
+    [Authorize]
+    public IActionResult DeleteSeatPrice(int seatPriceId)
+    {
+        var currentUserId = int.Parse(User.FindFirst("Id")?.Value);
+
+        if (!_permissionService.CheckPermission(currentUserId, PermissionKey.DeleteSeatPrice))
+        {
+            return Unauthorized("Bạn không có quyền xóa giá ghế.");
         }
 
-        // Xóa giá ghế
-        [HttpDelete("{seatPriceId}")]
-        public IActionResult DeleteSeatPrice(int seatPriceId)
+        try
         {
-            try
-            {
-                _seatPriceService.DeleteSeatPrice(seatPriceId);
-                return Ok("Xóa giá ghế thành công!");
-            }
-            catch (Exception ex)
-            {
-                return BadRequest($"Có lỗi khi xóa giá ghế: {ex.Message}");
-            }
+            _seatPriceService.DeleteSeatPrice(seatPriceId);
+            return Ok("Xóa giá ghế thành công!");
+        }
+        catch (Exception ex)
+        {
+            return BadRequest($"Có lỗi khi xóa giá ghế: {ex.Message}");
+        }
+    }
+
+    [HttpGet("GetPriceOfTypeSeat/{roomId}")]
+    [Authorize]
+    public IActionResult GetSeatPricesByRoomId(string roomId)
+    {
+        var currentUserId = int.Parse(User.FindFirst("Id")?.Value);
+
+        if (!_permissionService.CheckPermission(currentUserId, PermissionKey.ViewSeatPricesByRoom))
+        {
+            return Unauthorized("Bạn không có quyền xem danh sách giá ghế theo phòng.");
         }
 
-        // Lấy danh sách giá ghế theo phòng
-        [HttpGet("GetPriceOfTypeSeat/{roomId}")]
-        public IActionResult GetSeatPricesByRoomId(string roomId)
+        try
         {
-            try
-            {
-                var seatPrices = _seatPriceService.GetSeatPricesByRoomId(roomId);
-                return Ok(seatPrices);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest($"Có lỗi khi lấy giá ghế: {ex.Message}");
-            }
+            var seatPrices = _seatPriceService.GetSeatPricesByRoomId(roomId);
+            return Ok(seatPrices);
+        }
+        catch (Exception ex)
+        {
+            return BadRequest($"Có lỗi khi lấy giá ghế: {ex.Message}");
+        }
+    }
+
+
+    [HttpGet("GetPriceOfType/{seatPriceId}")]
+    [Authorize]
+    public IActionResult GetSeatPrice(int seatPriceId)
+    {
+        var currentUserId = int.Parse(User.FindFirst("Id")?.Value);
+
+        if (!_permissionService.CheckPermission(currentUserId, PermissionKey.ViewSeatPriceById))
+        {
+            return Unauthorized("Bạn không có quyền xem giá ghế theo ID.");
         }
 
-        // Lấy giá ghế theo ID
-        [HttpGet("GetPriceOfType/{seatPriceId}")]
-        public IActionResult GetSeatPrice(int seatPriceId)
+        try
         {
-            try
-            {
-                var seatPrice = _seatPriceService.GetSeatPrice(seatPriceId);
-                return Ok(seatPrice);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest($"Có lỗi khi lấy giá ghế: {ex.Message}");
-            }
+            var seatPrice = _seatPriceService.GetSeatPrice(seatPriceId);
+            return Ok(seatPrice);
+        }
+        catch (Exception ex)
+        {
+            return BadRequest($"Có lỗi khi lấy giá ghế: {ex.Message}");
         }
     }
 }

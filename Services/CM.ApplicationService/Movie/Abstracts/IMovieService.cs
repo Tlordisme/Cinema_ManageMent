@@ -13,5 +13,6 @@ namespace CM.ApplicationService.Movie.Abstracts
         void AddMovie(AddOrUpdateMovieDto movieDto);
         void UpdateMovie(int movieId, AddOrUpdateMovieDto movieDto);
         void DeleteMovie(int movieId);
+        Task<IEnumerable<MovieDto>> GetAllMovies();
     }
 }

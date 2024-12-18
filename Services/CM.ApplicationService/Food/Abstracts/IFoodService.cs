@@ -1,14 +1,15 @@
-﻿//using System;
-//using System.Collections.Generic;
-//using System.Linq;
-//using System.Text;
-//using System.Threading.Tasks;
+﻿using CM.Dtos.Food;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
-//namespace CM.ApplicationService.Food.Abstracts
-//{
-//    public interface IFoodService
-//    {
-//        List<FoodComboDto> GetAllFoodCombos();
-//        FoodComboDto GetFoodComboById(int id);
-//    }
-//}
+namespace CM.ApplicationService.Food.Abstracts
+{
+    public interface IFoodService
+    {
+        Task<List<FoodDto>> GetAllFoodsAsync();
+        Task<FoodDto> GetFoodByIdAsync(int id);
+        Task<FoodDto> AddFoodAsync(FoodDto foodDto);
+        Task<FoodDto> UpdateFoodAsync(FoodDto foodDto);
+        Task<bool> DeleteFoodAsync(int id);
+    }
+}

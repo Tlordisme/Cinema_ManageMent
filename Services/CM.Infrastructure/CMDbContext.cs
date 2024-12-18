@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CM.Domain.Auth;
+using CM.Domain.Food;
 using CM.Domain.Movie;
 using CM.Domain.Seat;
 using CM.Domain.Showtime;
@@ -34,7 +35,8 @@ namespace CM.Infrastructure
         public DbSet<CMTheater> Theaters { get; set; }
         public DbSet<CMTheaterChain> TheaterChains { get; set; }
         public DbSet<CMRoom> Rooms { get; set; }
-
+        //Food
+        public DbSet<FoFood> Foods { get; set; }
         //Showtime
         public DbSet<CMShowtime> Showtimes { get; set; }
 

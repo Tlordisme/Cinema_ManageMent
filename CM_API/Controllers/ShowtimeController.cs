@@ -1,7 +1,10 @@
 ﻿using CM.ApplicationService.Showtime.Abstracts;
 using CM.ApplicationService.Showtime.Implements;
 using CM.Dtos.Showtime;
+using CM.ApplicantService.Auth.Permission.Abstracts;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Share.Constant.Permission;
 
 namespace CM_API.Controllers
 {
@@ -10,40 +13,29 @@ namespace CM_API.Controllers
     public class ShowtimeController : Controller
     {
         private readonly IShowtimeService _showtimeService;
+        private readonly IPermissionService _permissionService;
 
-        public ShowtimeController(IShowtimeService showtimeService)
+        public ShowtimeController(IShowtimeService showtimeService, IPermissionService permissionService)
         {
             _showtimeService = showtimeService;
+            _permissionService = permissionService;
         }
 
-        
-        [HttpGet]
-        public async Task<IActionResult> GetAll()
-        {
-            var showtimes = await _showtimeService.GetAllShowtimesAsync();
-            return Ok(showtimes);
-        }
-
-        
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(string id)
-        {
-            try
-            {
-                var showtime = await _showtimeService.GetShowtimeByIdAsync(id);
-                return Ok(showtime);
-            }
-            catch (Exception ex)
-            {
-                return NotFound(new { message = ex.Message });
-            }
-        }
-
-        [HttpPost]
+        [HttpPost("AddShowtime")]
+        [Authorize]
         public async Task<IActionResult> Create([FromBody] CreateShowtimeDto createShowtimeDto)
         {
+            var currentUserId = int.Parse(User.FindFirst("Id")?.Value);
+
+            if (!_permissionService.CheckPermission(currentUserId, PermissionKey.CreateShowtime))
+            {
+                return Unauthorized("You do not have permission to create showtimes.");
+            }
+
             if (!ModelState.IsValid)
+            {
                 return BadRequest(ModelState);
+            }
 
             try
             {
@@ -56,21 +48,71 @@ namespace CM_API.Controllers
             }
         }
 
+        [HttpGet("GetAllShowtimes")]
+        [Authorize]
+        public async Task<IActionResult> GetAll()
+        {
+            var currentUserId = int.Parse(User.FindFirst("Id")?.Value);
 
-        [HttpPut("{id}")]
+            if (!_permissionService.CheckPermission(currentUserId, PermissionKey.ViewAllShowtimes))
+            {
+                return Unauthorized("You do not have permission to view all showtimes.");
+            }
+
+            var showtimes = await _showtimeService.GetAllShowtimesAsync();
+            return Ok(showtimes);
+        }
+
+        [HttpGet("GetShowtime/{id}")]
+        [Authorize]
+        public async Task<IActionResult> GetById(string id)
+        {
+            var currentUserId = int.Parse(User.FindFirst("Id")?.Value);
+
+            if (!_permissionService.CheckPermission(currentUserId, PermissionKey.ViewShowtimeById))
+            {
+                return Unauthorized("You do not have permission to view this showtime.");
+            }
+
+            try
+            {
+                var showtime = await _showtimeService.GetShowtimeByIdAsync(id);
+                return Ok(showtime);
+            }
+            catch (Exception ex)
+            {
+                return NotFound(new { message = ex.Message });
+            }
+        }
+
+        [HttpPut("UpdateShowtime/{id}")]
+        [Authorize]
         public async Task<IActionResult> Update(string id, [FromBody] UpdateShowtimeDto updateShowtimeDto)
         {
+            var currentUserId = int.Parse(User.FindFirst("Id")?.Value);
+
+            if (!_permissionService.CheckPermission(currentUserId, PermissionKey.UpdateShowtime))
+            {
+                return Unauthorized("You do not have permission to update showtimes.");
+            }
+
             if (!ModelState.IsValid)
+            {
                 return BadRequest(ModelState);
+            }
 
             if (id != updateShowtimeDto.Id)
+            {
                 return BadRequest(new { message = "ID mismatch" });
+            }
 
             try
             {
                 var updated = await _showtimeService.UpdateShowtimeAsync(updateShowtimeDto);
                 if (updated)
+                {
                     return NoContent();
+                }
 
                 return NotFound(new { message = "Showtime not found" });
             }
@@ -80,14 +122,24 @@ namespace CM_API.Controllers
             }
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("DeleteShowtime/{id}")]
+        [Authorize]
         public async Task<IActionResult> Delete(string id)
         {
+            var currentUserId = int.Parse(User.FindFirst("Id")?.Value);
+
+            if (!_permissionService.CheckPermission(currentUserId, PermissionKey.DeleteShowtime))
+            {
+                return Unauthorized("You do not have permission to delete this showtime.");
+            }
+
             try
             {
                 var deleted = await _showtimeService.DeleteShowtimeAsync(id);
                 if (deleted)
+                {
                     return NoContent();
+                }
 
                 return NotFound(new { message = "Showtime not found" });
             }

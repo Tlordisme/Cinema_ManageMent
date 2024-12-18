@@ -12,5 +12,7 @@ namespace CM.ApplicationService.Theater.Abstracts
     {
         string CreateTheaterChain(TheaterChainDto dto);
         List<CMTheaterChain> GetAllTheaterChains();
+        void DeleteTheaterChain(string theaterChainId);
+        string UpdateTheaterChain(TheaterChainDto dto);
     }
 }

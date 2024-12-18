@@ -32,7 +32,7 @@ namespace CM.Domain.Ticket
 
         // Tổng giá vé (bao gồm ghế, combo, ...)
         public decimal TotalPrice { get; set; }
-
+        public List<CMTicketSeat> TicketSeats { get; set; }
 
     }
     public enum TicketStatus

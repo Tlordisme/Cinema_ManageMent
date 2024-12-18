@@ -1,17 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CloudinaryDotNet.Actions;
-using CM.ApplicationService.Cloudinary.Abstracts;
+﻿using CM.ApplicationService.Cloudinary.Abstracts;
 using CM.ApplicationService.Common;
 using CM.ApplicationService.Movie.Abstracts;
-using CM.ApplicationService.RoleModule.Abstracts;
-using CM.Domain.Auth;
 using CM.Domain.Movie;
 using CM.Dtos.Movie;
-using CM.Dtos.Role;
 using CM.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -42,8 +33,6 @@ namespace CM.ApplicationService.Movie.Implements
             }
 
             string? imgUrl = null;
-
-
             if (dto.Image != null && dto.Image.Length > 0)
             {
                 imgUrl = await _cloudService.UploadImageAsync(dto.Image, "Comment Images");
@@ -60,9 +49,7 @@ namespace CM.ApplicationService.Movie.Implements
                 Rating = dto.Rating,
                 ImageUrl = imgUrl,
                 CreateAt = DateTime.Now,
-                UserId =
-                    userId // Gắn UserId từ JWT Token
-                ,
+                UserId = userId,
             };
 
             await _dbContext.Comments.AddAsync(newComment);
@@ -70,11 +57,25 @@ namespace CM.ApplicationService.Movie.Implements
             _logger.LogInformation($"Comment added for movie ID {dto.MovieId} by user {userId}");
         }
 
+        public async Task DeleteCommentAsync(int commentId)
+        {
+            var comment = await _dbContext.Set<CommentDto>()
+                                         .FirstOrDefaultAsync(c => c.Id == commentId);
+
+            if (comment == null)
+            {
+                throw new Exception("Comment not found.");
+            }
+
+            _dbContext.Set<CommentDto>().Remove(comment);
+            await _dbContext.SaveChangesAsync();
+            _logger.LogInformation($"Comment ID {commentId} deleted.");
+        }
+
         public async Task<IEnumerable<CommentDto>> GetCommentsByMovieId(int movieId)
         {
             try
             {
-                // Lấy tất cả các bình luận cho phim
                 var comments = await _dbContext
                     .Comments.Where(c => c.MovieId == movieId)
                     .OrderByDescending(c => c.CreateAt)

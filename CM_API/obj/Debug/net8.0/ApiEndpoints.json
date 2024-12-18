@@ -1,6 +1,6 @@
 [
   {
-    "ContainingType": "CM_API.Controllers.AuthController",
+    "ContainingType": "AuthController",
     "Method": "Login",
     "RelativePath": "api/Auth/login",
     "HttpMethod": "POST",
@@ -16,7 +16,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CM_API.Controllers.AuthController",
+    "ContainingType": "AuthController",
     "Method": "Register",
     "RelativePath": "api/Auth/register",
     "HttpMethod": "POST",
@@ -34,7 +34,7 @@
   {
     "ContainingType": "CM_API.Controllers.CommentController",
     "Method": "AddComment",
-    "RelativePath": "api/Comment",
+    "RelativePath": "api/Comment/AddComment",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -63,17 +63,112 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CM_API.Controllers.EmailController",
-    "Method": "SendEmail",
-    "RelativePath": "api/Email",
+    "ContainingType": "CM_API.Controllers.CommentController",
+    "Method": "DeleteComment",
+    "RelativePath": "api/Comment/DeleteComment/{commentId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "commentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CM_API.Controllers.CommentController",
+    "Method": "GetCommentsByMovieId",
+    "RelativePath": "api/Comment/GetCommentsMovie/{movieId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "movieId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CM_API.Controllers.FoodController",
+    "Method": "AddFood",
+    "RelativePath": "api/Food/AddFood",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "body",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "foodDto",
+        "Type": "CM.Dtos.Food.FoodDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CM_API.Controllers.FoodController",
+    "Method": "DeleteFood",
+    "RelativePath": "api/Food/DeleteFood/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CM_API.Controllers.FoodController",
+    "Method": "GetAllFoods",
+    "RelativePath": "api/Food/GetAllFoods",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CM_API.Controllers.FoodController",
+    "Method": "GetFoodById",
+    "RelativePath": "api/Food/GetFood/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CM_API.Controllers.FoodController",
+    "Method": "UpdateFood",
+    "RelativePath": "api/Food/UpdateFood/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "foodDto",
+        "Type": "CM.Dtos.Food.FoodDto",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -81,7 +176,7 @@
   {
     "ContainingType": "CM_API.Controllers.MovieController",
     "Method": "AddMovie",
-    "RelativePath": "api/Movie",
+    "RelativePath": "api/Movie/AddMovie",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -96,8 +191,34 @@
   },
   {
     "ContainingType": "CM_API.Controllers.MovieController",
+    "Method": "DeleteMovie",
+    "RelativePath": "api/Movie/DeleteMovie/{movieId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "movieId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CM_API.Controllers.MovieController",
+    "Method": "GetAllMovies",
+    "RelativePath": "api/Movie/GetAllMovies",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CM_API.Controllers.MovieController",
     "Method": "UpdateMovie",
-    "RelativePath": "api/Movie/{movieId}",
+    "RelativePath": "api/Movie/UpdateMovie/{movieId}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -116,23 +237,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CM_API.Controllers.MovieController",
-    "Method": "DeleteMovie",
-    "RelativePath": "api/Movie/{movieId}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "movieId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CM_API.Controllers.PaymentController",
+    "ContainingType": "PaymentController",
     "Method": "CreatePaymentUrl",
     "RelativePath": "api/payment/create-payment-url",
     "HttpMethod": "POST",
@@ -148,7 +253,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CM_API.Controllers.PaymentController",
+    "ContainingType": "PaymentController",
     "Method": "VnPayResponseAsync",
     "RelativePath": "api/payment/PaymentCallbackVnpay",
     "HttpMethod": "GET",
@@ -158,9 +263,51 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CM_API.Controllers.RoleController",
+    "ContainingType": "CM_API.Controllers.RevenueController",
+    "Method": "GetRevenueByDate",
+    "RelativePath": "api/Revenue/revenue-by-date/{date}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "date",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "date",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CM_API.Controllers.RevenueController",
+    "Method": "GetRevenueByMovie",
+    "RelativePath": "api/Revenue/revenue-by-movie/{MovieId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "movieId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "MovieId",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RoleController",
     "Method": "AddRoleToUser",
-    "RelativePath": "api/Role/AddRoletouser/{userId}",
+    "RelativePath": "api/Role/AddRoleToUser/{userId}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -179,9 +326,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CM_API.Controllers.RoleController",
+    "ContainingType": "RoleController",
     "Method": "CreateRole",
-    "RelativePath": "api/Role/Createroles",
+    "RelativePath": "api/Role/CreateRole",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -195,9 +342,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CM_API.Controllers.RoleController",
+    "ContainingType": "RoleController",
     "Method": "DeleteRole",
-    "RelativePath": "api/Role/Deleteroles/{roleId}",
+    "RelativePath": "api/Role/DeleteRole/{RoleId}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -211,9 +358,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CM_API.Controllers.RoleController",
+    "ContainingType": "RoleController",
     "Method": "GetAllRoles",
-    "RelativePath": "api/Role/GetAllroles",
+    "RelativePath": "api/Role/GetAllRoles",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -221,9 +368,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CM_API.Controllers.RoleController",
+    "ContainingType": "RoleController",
     "Method": "GetRoleById",
-    "RelativePath": "api/Role/Getroles/{id}",
+    "RelativePath": "api/Role/GetRole/{RoleId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -231,15 +378,20 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "RoleId",
+        "Type": "",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CM_API.Controllers.RoleController",
+    "ContainingType": "RoleController",
     "Method": "UpdateRole",
-    "RelativePath": "api/Role/Updateroles",
+    "RelativePath": "api/Role/UpdateRole/{RoleId}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -248,6 +400,11 @@
         "Name": "updateRoleDto",
         "Type": "CM.Dtos.Role.UpdateRoleDto",
         "IsRequired": true
+      },
+      {
+        "Name": "RoleId",
+        "Type": "",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -255,7 +412,7 @@
   {
     "ContainingType": "CM_API.Controllers.RoomController",
     "Method": "CreateRoom",
-    "RelativePath": "api/Room",
+    "RelativePath": "api/Room/AddRoom",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -270,8 +427,24 @@
   },
   {
     "ContainingType": "CM_API.Controllers.RoomController",
+    "Method": "DeleteRoom",
+    "RelativePath": "api/Room/DeleteRoom/{roomId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roomId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CM_API.Controllers.RoomController",
     "Method": "GetRoomsByTheaterId",
-    "RelativePath": "api/Room/{theaterId}",
+    "RelativePath": "api/Room/GetAllRooms/{theaterId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -285,9 +458,35 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "CM_API.Controllers.RoomController",
+    "Method": "UpdateRoom",
+    "RelativePath": "api/Room/UpdateRoom/{roomId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "dto",
+        "Type": "CM.Dtos.Theater.RoomDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "roomId",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CM_API.Controllers.SeatController",
     "Method": "AddSeat",
-    "RelativePath": "api/Seat",
+    "RelativePath": "api/Seat/AddSeat",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -302,15 +501,15 @@
   },
   {
     "ContainingType": "CM_API.Controllers.SeatController",
-    "Method": "UpdateSeat",
-    "RelativePath": "api/Seat",
-    "HttpMethod": "PUT",
+    "Method": "DeleteSeat",
+    "RelativePath": "api/Seat/DeleteSeat/{seatId}",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "seatDto",
-        "Type": "CM.Dtos.Seat.UpdateSeatDto",
+        "Name": "seatId",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
@@ -319,7 +518,7 @@
   {
     "ContainingType": "CM_API.Controllers.SeatController",
     "Method": "GetSeatsByRoomId",
-    "RelativePath": "api/Seat/{roomId}",
+    "RelativePath": "api/Seat/GetAllSeats{roomId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -327,22 +526,6 @@
       {
         "Name": "roomId",
         "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CM_API.Controllers.SeatController",
-    "Method": "DeleteSeat",
-    "RelativePath": "api/Seat/{seatId}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "seatId",
-        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
@@ -365,9 +548,30 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CM_API.Controllers.SeatPriceController",
+    "ContainingType": "CM_API.Controllers.SeatController",
+    "Method": "UpdateSeat",
+    "RelativePath": "api/Seat/UpdateSeat/{seatId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "seatDto",
+        "Type": "CM.Dtos.Seat.UpdateSeatDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "seatId",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SeatPriceController",
     "Method": "AddSeatPrice",
-    "RelativePath": "api/SeatPrice",
+    "RelativePath": "api/SeatPrice/AddSeatPrice",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -381,25 +585,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CM_API.Controllers.SeatPriceController",
-    "Method": "UpdateSeatPrice",
-    "RelativePath": "api/SeatPrice",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "seatPriceDto",
-        "Type": "CM.Dtos.Seat.UpdateSeatPriceDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CM_API.Controllers.SeatPriceController",
+    "ContainingType": "SeatPriceController",
     "Method": "DeleteSeatPrice",
-    "RelativePath": "api/SeatPrice/{seatPriceId}",
+    "RelativePath": "api/SeatPrice/DeleteSeatPrice/{seatPriceId}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -413,7 +601,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CM_API.Controllers.SeatPriceController",
+    "ContainingType": "SeatPriceController",
     "Method": "GetSeatPrice",
     "RelativePath": "api/SeatPrice/GetPriceOfType/{seatPriceId}",
     "HttpMethod": "GET",
@@ -429,7 +617,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CM_API.Controllers.SeatPriceController",
+    "ContainingType": "SeatPriceController",
     "Method": "GetSeatPricesByRoomId",
     "RelativePath": "api/SeatPrice/GetPriceOfTypeSeat/{roomId}",
     "HttpMethod": "GET",
@@ -445,19 +633,25 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CM_API.Controllers.ShowtimeController",
-    "Method": "GetAll",
-    "RelativePath": "api/Showtime",
-    "HttpMethod": "GET",
+    "ContainingType": "SeatPriceController",
+    "Method": "UpdateSeatPrice",
+    "RelativePath": "api/SeatPrice/UpdateSeatPrice",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "seatPriceDto",
+        "Type": "CM.Dtos.Seat.UpdateSeatPriceDto",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
     "ContainingType": "CM_API.Controllers.ShowtimeController",
     "Method": "Create",
-    "RelativePath": "api/Showtime",
+    "RelativePath": "api/Showtime/AddShowtime",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -472,8 +666,34 @@
   },
   {
     "ContainingType": "CM_API.Controllers.ShowtimeController",
+    "Method": "Delete",
+    "RelativePath": "api/Showtime/DeleteShowtime/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CM_API.Controllers.ShowtimeController",
+    "Method": "GetAll",
+    "RelativePath": "api/Showtime/GetAllShowtimes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CM_API.Controllers.ShowtimeController",
     "Method": "GetById",
-    "RelativePath": "api/Showtime/{id}",
+    "RelativePath": "api/Showtime/GetShowtime/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -489,7 +709,7 @@
   {
     "ContainingType": "CM_API.Controllers.ShowtimeController",
     "Method": "Update",
-    "RelativePath": "api/Showtime/{id}",
+    "RelativePath": "api/Showtime/UpdateShowtime/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -508,25 +728,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CM_API.Controllers.ShowtimeController",
-    "Method": "Delete",
-    "RelativePath": "api/Showtime/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "CM_API.Controllers.TheaterController",
     "Method": "CreateTheater",
-    "RelativePath": "api/Theater",
+    "RelativePath": "api/Theater/AddTheater",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -541,8 +745,24 @@
   },
   {
     "ContainingType": "CM_API.Controllers.TheaterController",
+    "Method": "DeleteTheater",
+    "RelativePath": "api/Theater/DeleteTheater/{theaterId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "theaterId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CM_API.Controllers.TheaterController",
     "Method": "GetTheatersByChainId",
-    "RelativePath": "api/Theater/{chainId}",
+    "RelativePath": "api/Theater/GetTheaterByChainId/{chainId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -556,9 +776,30 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CM_API.Controllers.TheaterChainController",
+    "ContainingType": "CM_API.Controllers.TheaterController",
+    "Method": "UpdateTheater",
+    "RelativePath": "api/Theater/UpdateTheater/{theaterId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "CM.Dtos.Theater.TheaterDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "theaterId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TheaterChainController",
     "Method": "CreateTheaterChain",
-    "RelativePath": "api/TheaterChain",
+    "RelativePath": "api/TheaterChain/CreateTheaterChain",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -572,9 +813,25 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CM_API.Controllers.TheaterChainController",
+    "ContainingType": "TheaterChainController",
+    "Method": "DeleteTheaterChain",
+    "RelativePath": "api/TheaterChain/DeleteTheaterChain/{theaterChainId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "theaterChainId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TheaterChainController",
     "Method": "GetAllTheaterChains",
-    "RelativePath": "api/TheaterChain",
+    "RelativePath": "api/TheaterChain/GetAllTheaterChains",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -582,9 +839,30 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CM_API.Controllers.TicketController",
+    "ContainingType": "TheaterChainController",
+    "Method": "UpdateTheaterChain",
+    "RelativePath": "api/TheaterChain/UpdateTheaterChain/{theaterChainId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "CM.Dtos.Theater.TheaterChainDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "theaterChainId",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TicketController",
     "Method": "BookTicket",
-    "RelativePath": "api/Ticket/book",
+    "RelativePath": "api/Ticket/BookTicket",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -598,9 +876,67 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CM_API.Controllers.UserController",
+    "ContainingType": "TicketController",
+    "Method": "CreateTicketWithFood",
+    "RelativePath": "api/Ticket/CreateTicketWithFood",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CM.Dtos.Ticket.TicketFoodDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TicketController",
+    "Method": "DeleteTicket",
+    "RelativePath": "api/Ticket/DeleteTicket/{ticketId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ticketId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TicketController",
+    "Method": "GetAllTickets",
+    "RelativePath": "api/Ticket/GetAllTickets",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TicketController",
+    "Method": "GetTicketDetails",
+    "RelativePath": "api/Ticket/GetDetailTicket/{ticketId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ticketId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UserController",
     "Method": "CreateUser",
-    "RelativePath": "Createusers",
+    "RelativePath": "CreateUser",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -614,9 +950,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CM_API.Controllers.UserController",
+    "ContainingType": "UserController",
     "Method": "DeleteUser",
-    "RelativePath": "Deleteusers/{userId}",
+    "RelativePath": "DeleteUsers/{userId}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -630,9 +966,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CM_API.Controllers.UserController",
+    "ContainingType": "UserController",
     "Method": "GetAllUsers",
-    "RelativePath": "GetAllusers",
+    "RelativePath": "GetAllUsers",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -640,9 +976,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CM_API.Controllers.UserController",
-    "Method": "GetUserData",
-    "RelativePath": "Getusers/{id}",
+    "ContainingType": "UserController",
+    "Method": "GetUserById",
+    "RelativePath": "GetUser/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -656,9 +992,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CM_API.Controllers.UserController",
+    "ContainingType": "UserController",
     "Method": "UpdateUser",
-    "RelativePath": "Updateusers",
+    "RelativePath": "UpdateUsers/{userId}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -666,6 +1002,11 @@
       {
         "Name": "updateUserDto",
         "Type": "CM.Dtos.User.UpdateUserDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "userId",
+        "Type": "",
         "IsRequired": true
       }
     ],

@@ -8,9 +8,11 @@ using System.Threading.Tasks;
 
 namespace CM.ApplicationService.Theater.Abstracts
 {
-    public interface  ITheaterService
+    public interface ITheaterService
     {
-        string CreateTheater(TheaterDto dto); 
+        string CreateTheater(TheaterDto dto);
         List<CMTheater> GetTheatersByChainId(string chainId);
+        void DeleteTheater(string theaterId);
+        string UpdateTheater(TheaterDto dto);
     }
 }

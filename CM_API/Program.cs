@@ -4,6 +4,7 @@ using CM.Infrastructure;
 using Hangfire;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using Serilog;
 
 namespace CM_API
 {
@@ -52,7 +53,7 @@ namespace CM_API
                 );
             });
             builder.Services.AddEndpointsApiExplorer();
-
+            builder.Host.UseSerilog((context, config) => config.ReadFrom.Configuration(context.Configuration));
             var app = builder.Build();
 
          
@@ -70,7 +71,7 @@ namespace CM_API
             app.UseAuthorization();
 
             app.MapControllers();
-
+            app.UseSerilogRequestLogging();
             app.Run();
         }
     }

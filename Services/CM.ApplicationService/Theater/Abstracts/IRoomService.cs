@@ -10,8 +10,9 @@ namespace CM.ApplicationService.Theater.Abstracts
 {
     public interface IRoomService
     {
-        string CreateRoom(RoomDto dto); 
+        string CreateRoom(RoomDto dto);
         List<CMRoom> GetRoomsByTheaterId(string theaterId);
-        
+        void DeleteRoom(string roomId);
+        void UpdateRoom(RoomDto dto);
     }
 }
